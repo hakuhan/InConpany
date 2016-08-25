@@ -1,0 +1,22 @@
+<Solution>
+  <PropertyGroup Name="meijia" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="game">
+          <Project Name="createNeilpolish.csd" Type="Scene" />
+          <Project Name="PaintingNails.csd" Type="Layer" />
+        </Folder>
+        <Folder Name="Help">
+          <Project Name="discrib.csd" Type="Layer" />
+          <Project Name="guidance_2.csd" Type="Layer" />
+          <Project Name="guidance_3.csd" Type="Layer" />
+        </Folder>
+        <Image Name="btn-music-off.png" />
+        <Image Name="btn-share.png" />
+        <Image Name="btn-sound-on.png" />
+        <Image Name="HelloWorld.png" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

@@ -1,0 +1,6 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="firstScenePic" Type="Plist" ID="9d4d0941-5c19-4d5a-807f-044bf95e707e" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="False" AllowTrim="False" ctype="PlistInfoData">
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>
