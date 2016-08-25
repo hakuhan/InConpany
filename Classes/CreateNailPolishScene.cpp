@@ -271,10 +271,10 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     ccBezierConfig bzr;
     bzr.controlPoint_1 = Vec2((movePosition.x-sprite->getPositionX())*0.3, (movePosition.y-getPositionY())*0.3);
     bzr.controlPoint_2 = Vec2((movePosition.x-sprite->getPositionX())*0.7, (movePosition.y-getPositionY())*0.7);
-    bzr.endPosition = Vec2(movePosition.x-sprite->getPositionX(), movePosition.y-sprite->getPositionY());
+    bzr.endPosition = Vec2(movePosition.x-sprite->getPositionX(), movePosition.y-sprite->getPositionY()+sprite->getContentSize().height);
     auto move = BezierBy::create(0.5, bzr);
     auto spriteMove = TargetedAction::create(sprite, move);
-    auto moveB = MoveBy::create(0.5, Vec2(-(movePosition.x-sprite->getPositionX()), -(movePosition.y-sprite->getPositionY())));
+    auto moveB = MoveBy::create(0.5, Vec2(-(movePosition.x-sprite->getPositionX()), -(movePosition.y-sprite->getPositionY()+sprite->getContentSize().height)));
     auto rotate = RotateBy::create(0.5, -90);
     auto rotateB = RotateBy::create(0.5, 90);
     auto spawn2 = Spawn::create(moveB, rotateB, NULL);
