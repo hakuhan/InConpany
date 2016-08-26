@@ -433,14 +433,6 @@ void CreateNailPolishScene::onClickYes() {
 #pragma mark 通过用户选择保存数据
     std::string str;
     //判断
-//    switch () {
-//        case colors.bottle1:
-//            
-//            break;
-//            
-//        default:
-//            break;
-//    }
     //保存
     
     

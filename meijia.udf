@@ -25,17 +25,5 @@
         <LastRunType Value="Mac" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="game/createNeilpolish.csd" />
-          <FilePathData Path="Help/guidance_2.csd" />
-          <FilePathData Path="Help/guidance_3.csd" />
-          <FilePathData Path="Help/discrib.csd" />
-          <FilePathData Path="game/PaintingNails.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="Help/discrib.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>
