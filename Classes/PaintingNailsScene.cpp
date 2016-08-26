@@ -34,7 +34,11 @@ bool PaintingNailsScene::init() {
     colors.bottle4 = UD->getStringForKey("b4Color", "0");
     colors.bottle5 = UD->getStringForKey("b5Color", "0");
     isCleanBtnClicked = false;
-    
+    //指甲位置
+    for (int i = 0; i<10; i++) {
+#pragma mark 设置脚趾坐标
+        neils[i] = Rect(0+i*10, 0+i*10, 100, 100);
+    }
     //设置界面
     auto node = CSLoader::createNodeWithVisibleSize("game/PaintingNails.csb");
     auto bg =(Layout *)(node->getChildByName("bg"));
@@ -146,12 +150,11 @@ void PaintingNailsScene::setBrushWithBottle(Sprite *bottle) {
     Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
     Vec2 brushPosition = brush->getPosition();
     brush->setVisible(true);
-#pragma mark 设置拖动刷子
     auto dragLisener = EventListenerTouchOneByOne::create();
     dragLisener->setSwallowTouches(true);
     
     dragLisener->onTouchBegan = [](Touch *touch, Event *event)->bool {
-        //获取书简绑定的taget
+        //获取绑定的taget
         auto target = static_cast<Sprite *>(event->getCurrentTarget());
         //获取当前点击所在位置的坐标
         Point locationInNode = target->convertToNodeSpace((touch->getLocation()));
@@ -168,7 +171,7 @@ void PaintingNailsScene::setBrushWithBottle(Sprite *bottle) {
         //得到target
         auto target = static_cast<Sprite *>(event->getCurrentTarget());
         target->setPosition(target->getPosition() + touch->getDelta());
-#pragma mark 碰撞检测
+#pragma mark 涂上指甲油
     };
     
     dragLisener->onTouchEnded = [brushPosition](Touch *touch, Event *event) {
@@ -257,9 +260,24 @@ void PaintingNailsScene::onClickCleanBtn() {
         return false;
     };
     
-    listener1->onTouchMoved = [](Touch *touch, Event *event) {
+    listener1->onTouchMoved = [=](Touch *touch, Event *event) {
         auto target = static_cast<Sprite*>(event->getCurrentTarget());
         target->setPosition(target->getPosition() + touch->getDelta());
+        //距离判断
+        //获取当前位置
+        Point location = touch->getLocation();
+        //得到指甲位置
+        //判断
+        for (int i = 0; i < 10; i++) {
+            if (neils[i].containsPoint(location)) {
+                log("涂抹了第%d个指甲", i);
+#pragma mark 清除指甲油
+                //判断是否已经涂上
+                //改变颜色
+            }
+        }
+        
+        
     };
     
     listener1->onTouchEnded = [positionOfConttonBall, this, listener1](Touch *touch, Event *event){

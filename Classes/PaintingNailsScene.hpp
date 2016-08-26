@@ -25,6 +25,7 @@ public:
 private:
     bottleColors colors;
     bool isCleanBtnClicked; //判断清理按钮是否点击
+    Rect neils [10];
     
     void onClickPolishBtn();
     void onClickCrossBtnWithTag(int tag);

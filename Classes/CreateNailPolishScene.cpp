@@ -339,6 +339,7 @@ void CreateNailPolishScene::showNotice() {
     bool noticeAreaL = true;
     bool noticeAreaR = true;
     bool noticeAreaT = true;
+    bool specailCondition = false;
     if (choices.lFirstC!=0 || choices.lSecondC!=0) {
         noticeAreaL = false;
     }
@@ -347,6 +348,9 @@ void CreateNailPolishScene::showNotice() {
     }
     if (choices.tChoice!=0) {
         noticeAreaT = false;
+    }
+    if (choices.lFirstC!=0 && choices.lSecondC == 0) {
+        specailCondition = true;
     }
     //提示
     if (noticeAreaL == true) {
@@ -358,7 +362,7 @@ void CreateNailPolishScene::showNotice() {
     if (noticeAreaT == true) {
         log("上方没有选择");
     }
-    if (noticeAreaL == false && noticeAreaR == false){
+    if ((noticeAreaL == false && noticeAreaR == false) || specailCondition == true){
         log("可以点击确定按钮");
         canSelectedMixButton = true;
     } else {
@@ -416,8 +420,10 @@ Sprite* CreateNailPolishScene::createSpriteWithTagAndPosition(int tag, Vec2 posi
 
 //判断是否能够选择
 void CreateNailPolishScene::chechStateOfMixButton() {
-    if ((choices.lFirstC != 0 || choices.lSecondC != 0)&&choices.rChoice != 0) {
+    if (((choices.lFirstC != 0 || choices.lSecondC != 0)&&choices.rChoice != 0)||(choices.lFirstC != 0 && choices.lSecondC == 0)) {
         canSelectedMixButton = true;
+    } else {
+        canSelectedMixButton = false;
     }
 }
 
