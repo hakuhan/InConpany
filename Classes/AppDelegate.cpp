@@ -40,7 +40,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     FileUtils::getInstance()->addSearchPath("res");
-
+    FileUtils::getInstance()->addSearchPath("res/firstSceneView");
     // create a scene. it's an autorelease object
     auto scene = MainScene::createScene();
 

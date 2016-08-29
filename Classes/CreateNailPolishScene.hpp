@@ -25,10 +25,11 @@ public:
     
 private:
     selectedTag choices;  //标记选择
+    
     bool canSelectedMixButton;  //是否能够点击确定按钮
     int numberOfBottle;     //记录瓶子的个数
     bottleColors colors;    //5个瓶子颜色
-    
+    Vector<Sprite *>seletecdBottle; //选中的瓶子
     void onClickColor(Button* btn, Vec2 movePosition);
     Sprite* createSpriteWithTagAndPosition(int tag, Vec2 position);
     void showNotice();
@@ -44,6 +45,7 @@ private:
     void onClickYes();
     void onClickNo();
     void onClickNeilBtn();
+    void showCenterBottleWithTag(int tag);
 };
 
 #endif /* CreateNailPolishScene_hpp */

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>firstSceneView/dumpFlowerA1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/dumpFlowerA2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{223,0},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/dumpHeartA1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,159},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/dumpHeartA2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{223,159},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/dumpShapA1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,318},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/dumpShapA2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{223,318},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/dumpSlashA1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,477},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/dumpSlashA2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{223,477},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>rightFrameAction.png</string>
+			<key>realTextureFileName</key>
+			<string>rightFrameAction.png</string>
+			<key>size</key>
+			<string>{446,636}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>446</integer>
+			<key>height</key>
+			<integer>636</integer>
+		</dict>
+	</dict>
+</plist>

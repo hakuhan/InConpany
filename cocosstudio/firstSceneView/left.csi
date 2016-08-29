@@ -1,0 +1,18 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="left" Type="Plist" ID="335e2f3d-ba83-405c-9241-b6252e1eeae0" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="firstSceneView/blackPolishU1.png" />
+      <FilePathData Path="firstSceneView/bluePolishU1.png" />
+      <FilePathData Path="firstSceneView/pinkPolishU.png" />
+      <FilePathData Path="firstSceneView/whitePolishU1.png" />
+      <FilePathData Path="firstSceneView/yellowPolishU1.png" />
+      <FilePathData Path="firstSceneView/shapBottleU.png" />
+      <FilePathData Path="firstSceneView/slashBottleU.png" />
+      <FilePathData Path="firstSceneView/heartBottleU.png" />
+      <FilePathData Path="firstSceneView/flowBottleU.png" />
+      <FilePathData Path="firstSceneView/specialBottle.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

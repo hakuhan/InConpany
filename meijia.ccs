@@ -3,27 +3,20 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Folder Name="game">
-          <Project Name="createNeilpolish.csd" Type="Scene" />
-          <Project Name="PaintingNails.csd" Type="Layer" />
-        </Folder>
-        <Folder Name="Help">
-          <Project Name="discrib.csd" Type="Layer" />
-          <Project Name="guidance_2.csd" Type="Layer" />
-          <Project Name="guidance_3.csd" Type="Layer" />
-        </Folder>
-        <Image Name="btn-music-off.png" />
-        <Image Name="btn-share.png" />
-        <Image Name="btn-sound-on.png" />
-        <Image Name="HelloWorld.png" />
         <Folder Name="firstSceneView">
           <Image Name="bg.png" />
+          <Image Name="blackDrop.png" />
           <Image Name="blackDrop1.png" />
+          <Image Name="blackPolish.png" />
           <Image Name="blackPolish1.png" />
+          <Image Name="blackPolishC.png" />
           <Image Name="blackPolishC1.png" />
           <Image Name="blackPolishU1.png" />
+          <Image Name="blueDrop.png" />
           <Image Name="blueDrop1.png" />
+          <Image Name="bluePolish.png" />
           <Image Name="bluePolish1.png" />
+          <Image Name="bluePolishC.png" />
           <Image Name="bluePolishC1.png" />
           <Image Name="bluePolishU1.png" />
           <Image Name="c1_1.png" />
@@ -62,11 +55,13 @@
           <Image Name="heartBottle.png" />
           <Image Name="heartBottleC.png" />
           <Image Name="heartBottleU.png" />
+          <PlistInfo Name="left.csi" Type="Plist" />
           <Image Name="mixButton.png" />
           <Image Name="mixButtonU.png" />
           <Image Name="mixPod.png" />
           <Image Name="noB.png" />
           <Image Name="noticeMarker.png" />
+          <Image Name="pinkDrop.png" />
           <Image Name="pinkDrop1.png" />
           <Image Name="pinkPolish.png" />
           <Image Name="pinkPolishC.png" />
@@ -86,16 +81,38 @@
           <Image Name="switchToNeilB.png" />
           <Image Name="switchToPolishB.png" />
           <Image Name="topPanel.png" />
+          <Image Name="whiteDrop.png" />
           <Image Name="whiteDrop1.png" />
+          <Image Name="whitePolish.png" />
           <Image Name="whitePolish1.png" />
+          <Image Name="whitePolishC.png" />
           <Image Name="whitePolishC1.png" />
+          <Image Name="whitePolishU.png" />
           <Image Name="whitePolishU1.png" />
+          <Image Name="yellowDrop.png" />
           <Image Name="yellowDrop1.png" />
+          <Image Name="yellowPolish.png" />
           <Image Name="yellowPolish1.png" />
+          <Image Name="yellowPolishC.png" />
           <Image Name="yellowPolishC1.png" />
+          <Image Name="yellowPolishU.png" />
           <Image Name="yellowPolishU1.png" />
           <Image Name="yesB.png" />
+          <PlistInfo Name="rightFrameAction.csi" Type="Plist" />
         </Folder>
+        <Folder Name="game">
+          <Project Name="createNeilpolish.csd" Type="Scene" />
+          <Project Name="PaintingNails.csd" Type="Layer" />
+        </Folder>
+        <Folder Name="Help">
+          <Project Name="discrib.csd" Type="Layer" />
+          <Project Name="guidance_2.csd" Type="Layer" />
+          <Project Name="guidance_3.csd" Type="Layer" />
+        </Folder>
+        <Image Name="btn-music-off.png" />
+        <Image Name="btn-share.png" />
+        <Image Name="btn-sound-on.png" />
+        <Image Name="HelloWorld.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

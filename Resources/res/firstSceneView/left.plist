@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>firstSceneView/blackPolishU1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{232,283}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{232,283}</string>
+			</dict>
+			<key>firstSceneView/bluePolishU1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,286},{232,283}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{232,283}</string>
+			</dict>
+			<key>firstSceneView/pinkPolishU.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,571},{232,283}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{232,283}</string>
+			</dict>
+			<key>firstSceneView/whitePolishU1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{235,1},{232,283}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{232,283}</string>
+			</dict>
+			<key>firstSceneView/yellowPolishU1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{520,1},{232,283}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{232,283}</string>
+			</dict>
+			<key>firstSceneView/shapBottleU.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{805,1},{206,308}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{206,308}</string>
+			</dict>
+			<key>firstSceneView/slashBottleU.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{235,235},{206,308}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{206,308}</string>
+			</dict>
+			<key>firstSceneView/heartBottleU.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{545,235},{206,308}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{206,308}</string>
+			</dict>
+			<key>firstSceneView/flowBottleU.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{235,443},{206,308}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{206,308}</string>
+			</dict>
+			<key>firstSceneView/specialBottle.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{753,311},{188,246}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{188,246}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>left.png</string>
+			<key>realTextureFileName</key>
+			<string>left.png</string>
+			<key>size</key>
+			<string>{1012,855}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1012</integer>
+			<key>height</key>
+			<integer>855</integer>
+		</dict>
+	</dict>
+</plist>

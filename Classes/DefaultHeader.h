@@ -23,17 +23,16 @@ struct XXX{
 typedef struct XXX xx1;
 
 enum Pptag{
-    lPurple = 11,
-    lWhite = 12,
-    lRed = 13,
-    lBlack=14,
-    lYellow=15,
-    rYellow = 21,
-    rPurple = 22,
-    rBlue = 23,
-    rGreen = 24,
-    tBlue = 31,
-    tGreen = 32
+    lYellow = 11,
+    lBlack = 12,
+    lBlue = 13,
+    lPink=14,
+    lWhite=15,
+    rSlash = 21,
+    rFlower = 22,
+    rShap = 23,
+    rHeart = 24,
+    tSpecial = 31
 };
 
 struct selectedTag{
