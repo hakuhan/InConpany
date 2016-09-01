@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>commonViews/4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/411.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,228},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/412.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,455},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/413.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,682},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/414.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{190,1},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/421.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{417,1},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/422.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{644,1},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/423.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{190,190},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/424.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{190,417},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/431.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{190,644},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/432.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{379,190},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/433.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{606,190},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/434.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{833,190},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/451.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{379,379},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/452.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{606,379},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/453.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{833,417},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+			<key>commonViews/454.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{379,568},{187,225}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,225}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>bottles4.png</string>
+			<key>realTextureFileName</key>
+			<string>bottles4.png</string>
+			<key>size</key>
+			<string>{1021,908}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1021</integer>
+			<key>height</key>
+			<integer>908</integer>
+		</dict>
+	</dict>
+</plist>

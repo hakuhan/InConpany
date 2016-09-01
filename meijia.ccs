@@ -3,17 +3,111 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Folder Name="commonViews">
+          <Image Name="1.png" />
+          <Image Name="121.png" />
+          <Image Name="122.png" />
+          <Image Name="123.png" />
+          <Image Name="124.png" />
+          <Image Name="131.png" />
+          <Image Name="132.png" />
+          <Image Name="133.png" />
+          <Image Name="134.png" />
+          <Image Name="141.png" />
+          <Image Name="142.png" />
+          <Image Name="143.png" />
+          <Image Name="144.png" />
+          <Image Name="151.png" />
+          <Image Name="152.png" />
+          <Image Name="153.png" />
+          <Image Name="154.png" />
+          <Image Name="2.png" />
+          <Image Name="211.png" />
+          <Image Name="212.png" />
+          <Image Name="213.png" />
+          <Image Name="214.png" />
+          <Image Name="231.png" />
+          <Image Name="232.png" />
+          <Image Name="233.png" />
+          <Image Name="234.png" />
+          <Image Name="241.png" />
+          <Image Name="242.png" />
+          <Image Name="243.png" />
+          <Image Name="244.png" />
+          <Image Name="251.png" />
+          <Image Name="252.png" />
+          <Image Name="253.png" />
+          <Image Name="254.png" />
+          <Image Name="3.png" />
+          <Image Name="311.png" />
+          <Image Name="312.png" />
+          <Image Name="313.png" />
+          <Image Name="314.png" />
+          <Image Name="321.png" />
+          <Image Name="322.png" />
+          <Image Name="323.png" />
+          <Image Name="324.png" />
+          <Image Name="341.png" />
+          <Image Name="342.png" />
+          <Image Name="343.png" />
+          <Image Name="344.png" />
+          <Image Name="351.png" />
+          <Image Name="352.png" />
+          <Image Name="353.png" />
+          <Image Name="354.png" />
+          <Image Name="4.png" />
+          <Image Name="411.png" />
+          <Image Name="412.png" />
+          <Image Name="413.png" />
+          <Image Name="414.png" />
+          <Image Name="421.png" />
+          <Image Name="422.png" />
+          <Image Name="423.png" />
+          <Image Name="424.png" />
+          <Image Name="431.png" />
+          <Image Name="432.png" />
+          <Image Name="433.png" />
+          <Image Name="434.png" />
+          <Image Name="451.png" />
+          <Image Name="452.png" />
+          <Image Name="453.png" />
+          <Image Name="454.png" />
+          <Image Name="5.png" />
+          <Image Name="511.png" />
+          <Image Name="512.png" />
+          <Image Name="513.png" />
+          <Image Name="514.png" />
+          <Image Name="521.png" />
+          <Image Name="522.png" />
+          <Image Name="523.png" />
+          <Image Name="524.png" />
+          <Image Name="531.png" />
+          <Image Name="532.png" />
+          <Image Name="533.png" />
+          <Image Name="534.png" />
+          <Image Name="541.png" />
+          <Image Name="542.png" />
+          <Image Name="543.png" />
+          <Image Name="544.png" />
+          <PlistInfo Name="bottles1.csi" Type="Plist" />
+          <PlistInfo Name="bottles2.csi" Type="Plist" />
+          <PlistInfo Name="bottles3.csi" Type="Plist" />
+          <PlistInfo Name="bottles4.csi" Type="Plist" />
+          <PlistInfo Name="bottles5.csi" Type="Plist" />
+          <Image Name="button.png" />
+          <Image Name="loadiingBar1.png" />
+          <Image Name="loadingBar2.png" />
+          <Project Name="rmAds.csd" Type="Layer" />
+        </Folder>
         <Folder Name="firstSceneView">
           <Image Name="bg.png" />
           <Image Name="blackDrop.png" />
-          <Image Name="blackDrop1.png" />
           <Image Name="blackPolish.png" />
           <Image Name="blackPolish1.png" />
           <Image Name="blackPolishC.png" />
           <Image Name="blackPolishC1.png" />
           <Image Name="blackPolishU1.png" />
           <Image Name="blueDrop.png" />
-          <Image Name="blueDrop1.png" />
           <Image Name="bluePolish.png" />
           <Image Name="bluePolish1.png" />
           <Image Name="bluePolishC.png" />
@@ -46,6 +140,7 @@
           <Image Name="dumpShapA2.png" />
           <Image Name="dumpSlashA1.png" />
           <Image Name="dumpSlashA2.png" />
+          <PlistInfo Name="efectsImage.csi" Type="Plist" />
           <Image Name="effectPanel.png" />
           <Image Name="emptyBottle.png" />
           <Image Name="floralBoard.png" />
@@ -58,15 +153,16 @@
           <PlistInfo Name="left.csi" Type="Plist" />
           <Image Name="mixButton.png" />
           <Image Name="mixButtonU.png" />
+          <Image Name="mixComplite.png" />
           <Image Name="mixPod.png" />
           <Image Name="noB.png" />
           <Image Name="noticeMarker.png" />
           <Image Name="pinkDrop.png" />
-          <Image Name="pinkDrop1.png" />
           <Image Name="pinkPolish.png" />
           <Image Name="pinkPolishC.png" />
           <Image Name="pinkPolishU.png" />
           <Image Name="plug.png" />
+          <PlistInfo Name="rightFrameAction.csi" Type="Plist" />
           <Image Name="savePanel.png" />
           <Image Name="scoreButton.png" />
           <Image Name="shapBottle.png" />
@@ -82,7 +178,6 @@
           <Image Name="switchToPolishB.png" />
           <Image Name="topPanel.png" />
           <Image Name="whiteDrop.png" />
-          <Image Name="whiteDrop1.png" />
           <Image Name="whitePolish.png" />
           <Image Name="whitePolish1.png" />
           <Image Name="whitePolishC.png" />
@@ -90,7 +185,6 @@
           <Image Name="whitePolishU.png" />
           <Image Name="whitePolishU1.png" />
           <Image Name="yellowDrop.png" />
-          <Image Name="yellowDrop1.png" />
           <Image Name="yellowPolish.png" />
           <Image Name="yellowPolish1.png" />
           <Image Name="yellowPolishC.png" />
@@ -98,7 +192,6 @@
           <Image Name="yellowPolishU.png" />
           <Image Name="yellowPolishU1.png" />
           <Image Name="yesB.png" />
-          <PlistInfo Name="rightFrameAction.csi" Type="Plist" />
         </Folder>
         <Folder Name="game">
           <Project Name="createNeilpolish.csd" Type="Scene" />
@@ -109,10 +202,37 @@
           <Project Name="guidance_2.csd" Type="Layer" />
           <Project Name="guidance_3.csd" Type="Layer" />
         </Folder>
+        <Folder Name="introScene">
+          <Project Name="introScene.csd" Type="Scene" />
+        </Folder>
+        <Folder Name="SecondSceneView">
+          <Image Name="2-11.png" />
+          <Image Name="2-12.png" />
+          <Image Name="2-13.png" />
+          <Image Name="2-14.png" />
+          <Image Name="2-15.png" />
+          <Image Name="2-21.png" />
+          <Image Name="2-22.png" />
+          <Image Name="2-23.png" />
+          <Image Name="2-24.png" />
+          <Image Name="2-25.png" />
+          <Image Name="bottom.png" />
+          <Image Name="brush.png" />
+          <Image Name="cotton.png" />
+          <Image Name="cross.png" />
+          <Image Name="effect1.png" />
+          <Image Name="effect2.png" />
+          <Image Name="eluent.png" />
+          <Image Name="emptyB.png" />
+          <Image Name="foot.png" />
+          <Image Name="mat.png" />
+          <Image Name="reset.png" />
+        </Folder>
         <Image Name="btn-music-off.png" />
         <Image Name="btn-share.png" />
         <Image Name="btn-sound-on.png" />
         <Image Name="HelloWorld.png" />
+        <TTF Name="Lieben_Font_Light.ttf" />
       </RootFolder>
     </Group>
   </SolutionFolder>

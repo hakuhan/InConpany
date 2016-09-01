@@ -13,8 +13,7 @@
 #define SCREAN_SIZE Director::getInstance()->getVisibleSize()
 #define TITLE_POSITION Vec2(30, SCREAN_SIZE.height-30)
 #define UD UserDefault::getInstance()
-#define BOTTLENUMBER UserDefault::getInstance()->getIntegerForKey("numberOfBottle", 0)
-
+#define ISADDEXITS "isAddExists"
 
 struct XXX{
     int a;
@@ -23,14 +22,14 @@ struct XXX{
 typedef struct XXX xx1;
 
 enum Pptag{
-    lYellow = 11,
+    lYellow = 14,
     lBlack = 12,
-    lBlue = 13,
-    lPink=14,
-    lWhite=15,
-    rSlash = 21,
+    lBlue = 15,
+    lPink=13,
+    lWhite=11,
+    rSlash = 23,
     rFlower = 22,
-    rShap = 23,
+    rShap = 21,
     rHeart = 24,
     tSpecial = 31
 };

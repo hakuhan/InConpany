@@ -6,161 +6,208 @@
       <ObjectData Name="Layer" Tag="10" ctype="GameLayerObjectData">
         <Size X="1920.0000" Y="1440.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_A" ActionTag="1802339088" Tag="45" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1051.9680" RightMargin="-91.9680" TopMargin="30.3521" BottomMargin="769.6479" ctype="SpriteObjectData">
-            <Size X="960.0000" Y="640.0000" />
+          <AbstractNodeData Name="bg" ActionTag="-1949607268" Tag="80" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+            <Size X="1920.0000" Y="1440.0000" />
             <Children>
-              <AbstractNodeData Name="Pot_A" ActionTag="-1061456145" Tag="20" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="551.3440" RightMargin="212.6560" TopMargin="246.2836" BottomMargin="277.7164" ctype="SpriteObjectData">
-                <Size X="196.0000" Y="116.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5201" />
-                <Position X="649.3440" Y="338.0480" />
-                <Scale ScaleX="1.0439" ScaleY="1.1601" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.6764" Y="0.5282" />
-                <PreSize X="0.2042" Y="0.1813" />
-                <FileData Type="Normal" Path="btn-sound-on.png" Plist="" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="little_pod_a" ActionTag="-996986313" Tag="24" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="147.9520" RightMargin="616.0480" TopMargin="392.9440" BottomMargin="131.0560" ctype="SpriteObjectData">
-                <Size X="196.0000" Y="116.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="245.9520" Y="189.0560" />
-                <Scale ScaleX="1.2481" ScaleY="1.4173" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2562" Y="0.2954" />
-                <PreSize X="0.2042" Y="0.1813" />
-                <FileData Type="Normal" Path="btn-share.png" Plist="" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="BitmapFontLabel_1" ActionTag="1505156004" Tag="29" IconVisible="False" LeftMargin="881.5681" RightMargin="69.4319" TopMargin="57.2101" BottomMargin="567.7899" LabelText="A" ctype="TextBMFontObjectData">
-                <Size X="9.0000" Y="15.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="886.0681" Y="575.2899" />
-                <Scale ScaleX="0.4122" ScaleY="1.0000" />
-                <CColor A="255" R="0" G="0" B="0" />
-                <PrePosition X="0.9230" Y="0.8989" />
-                <PreSize X="0.0094" Y="0.0234" />
-              </AbstractNodeData>
-            </Children>
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1531.9680" Y="1089.6479" />
-            <Scale ScaleX="0.3845" ScaleY="0.3312" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7979" Y="0.7567" />
-            <PreSize X="0.5000" Y="0.4444" />
-            <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Panel_B" ActionTag="928175506" Tag="46" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1021.2479" RightMargin="-61.2479" TopMargin="597.7120" BottomMargin="202.2880" ctype="SpriteObjectData">
-            <Size X="960.0000" Y="640.0000" />
-            <Children>
-              <AbstractNodeData Name="Pot_B" ActionTag="1717317425" Tag="23" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="609.8080" RightMargin="154.1920" TopMargin="186.2880" BottomMargin="337.7120" ctype="SpriteObjectData">
-                <Size X="196.0000" Y="116.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="707.8080" Y="395.7120" />
-                <Scale ScaleX="0.8350" ScaleY="1.7089" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7373" Y="0.6183" />
-                <PreSize X="0.2042" Y="0.1813" />
-                <FileData Type="Normal" Path="btn-sound-on.png" Plist="" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="little_pod_b" ActionTag="-546141089" Tag="25" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="224.4640" RightMargin="539.5360" TopMargin="399.2160" BottomMargin="124.7840" ctype="SpriteObjectData">
-                <Size X="196.0000" Y="116.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="322.4640" Y="182.7840" />
-                <Scale ScaleX="0.9348" ScaleY="1.1712" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3359" Y="0.2856" />
-                <PreSize X="0.2042" Y="0.1813" />
-                <FileData Type="Normal" Path="btn-share.png" Plist="" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="little_pod_b2" ActionTag="1467521845" Tag="28" IconVisible="False" LeftMargin="97.0874" RightMargin="666.9126" TopMargin="447.5125" BottomMargin="76.4875" ctype="SpriteObjectData">
-                <Size X="196.0000" Y="116.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="195.0874" Y="134.4875" />
-                <Scale ScaleX="0.7340" ScaleY="1.4378" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2032" Y="0.2101" />
-                <PreSize X="0.2042" Y="0.1813" />
-                <FileData Type="Normal" Path="btn-share.png" Plist="" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="BitmapFontLabel_2" ActionTag="-922254903" Tag="30" IconVisible="False" LeftMargin="23.3071" RightMargin="927.6929" TopMargin="371.0841" BottomMargin="253.9159" LabelText="B" ctype="TextBMFontObjectData">
-                <Size X="9.0000" Y="15.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="27.8071" Y="261.4159" />
+              <AbstractNodeData Name="Panel_A" ActionTag="1802339088" Tag="45" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="864.0000" RightMargin="96.0000" TopMargin="30.3541" BottomMargin="769.6459" ctype="SpriteObjectData">
+                <Size X="960.0000" Y="640.0000" />
+                <Children>
+                  <AbstractNodeData Name="Pot_A" ActionTag="-1061456145" Tag="20" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="547.8440" RightMargin="209.1560" TopMargin="188.2157" BottomMargin="214.7843" ctype="SpriteObjectData">
+                    <Size X="203.0000" Y="237.0000" />
+                    <Children>
+                      <AbstractNodeData Name="effects" ActionTag="-1101924475" Alpha="0" Tag="121" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="19.0000" RightMargin="19.0000" TopMargin="-47.6019" BottomMargin="164.6019" ctype="SpriteObjectData">
+                        <Size X="165.0000" Y="120.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="101.5000" Y="224.6019" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5000" Y="0.9477" />
+                        <PreSize X="0.8128" Y="0.5063" />
+                        <FileData Type="MarkedSubImage" Path="firstSceneView/dumpedSpecialEffect.png" Plist="firstSceneView/efectsImage.plist" />
+                        <BlendFunc Src="1" Dst="771" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5201" />
+                    <Position X="649.3440" Y="338.0480" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.6764" Y="0.5282" />
+                    <PreSize X="0.2115" Y="0.3703" />
+                    <FileData Type="Normal" Path="firstSceneView/mixPod.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="little_pod_a" ActionTag="-996986313" Tag="24" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="147.9520" RightMargin="616.0480" TopMargin="392.9440" BottomMargin="131.0560" ctype="SpriteObjectData">
+                    <Size X="232.0000" Y="283.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="245.9520" Y="189.0560" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.2562" Y="0.2954" />
+                    <PreSize X="0.2042" Y="0.1813" />
+                    <FileData Type="MarkedSubImage" Path="firstSceneView/pinkPolishU.png" Plist="firstSceneView/left.plist" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="BitmapFontLabel_1" ActionTag="1505156004" Tag="29" IconVisible="False" LeftMargin="881.5681" RightMargin="69.4319" TopMargin="57.2101" BottomMargin="567.7899" LabelText="A" ctype="TextBMFontObjectData">
+                    <Size X="9.0000" Y="15.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="886.0681" Y="575.2899" />
+                    <Scale ScaleX="0.4122" ScaleY="1.0000" />
+                    <CColor A="255" R="0" G="0" B="0" />
+                    <PrePosition X="0.9230" Y="0.8989" />
+                    <PreSize X="0.0094" Y="0.0234" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
+                <Position X="1824.0000" Y="1089.6459" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="0" G="0" B="0" />
-                <PrePosition X="0.0290" Y="0.4085" />
-                <PreSize X="0.0094" Y="0.0234" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="podB_1_1" ActionTag="-880572617" Tag="31" IconVisible="False" LeftMargin="225.3730" RightMargin="538.6270" TopMargin="307.9741" BottomMargin="216.0259" ctype="SpriteObjectData">
-                <Size X="196.0000" Y="116.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="323.3730" Y="274.0259" />
-                <Scale ScaleX="0.5264" ScaleY="0.8185" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3368" Y="0.4282" />
-                <PreSize X="0.2042" Y="0.1813" />
+                <PrePosition X="0.9500" Y="0.7567" />
+                <PreSize X="0.5000" Y="0.4444" />
+                <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
+                <BlendFunc Src="770" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="Panel_B" ActionTag="928175506" Tag="46" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="864.0000" RightMargin="96.0000" TopMargin="597.7121" BottomMargin="202.2879" ctype="SpriteObjectData">
+                <Size X="960.0000" Y="640.0000" />
+                <Children>
+                  <AbstractNodeData Name="Pot_B" ActionTag="1717317425" Tag="23" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="606.3080" RightMargin="150.6920" TopMargin="125.7880" BottomMargin="277.2120" ctype="SpriteObjectData">
+                    <Size X="203.0000" Y="237.0000" />
+                    <Children>
+                      <AbstractNodeData Name="effects" ActionTag="1420323914" Alpha="0" Tag="122" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="19.0000" RightMargin="19.0000" TopMargin="-45.1220" BottomMargin="162.1220" ctype="SpriteObjectData">
+                        <Size X="165.0000" Y="120.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="101.5000" Y="222.1220" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5000" Y="0.9372" />
+                        <PreSize X="0.8128" Y="0.5063" />
+                        <FileData Type="MarkedSubImage" Path="firstSceneView/dumpedSpecialEffect.png" Plist="firstSceneView/efectsImage.plist" />
+                        <BlendFunc Src="1" Dst="771" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="707.8080" Y="395.7120" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.7373" Y="0.6183" />
+                    <PreSize X="0.2115" Y="0.3703" />
+                    <FileData Type="Normal" Path="firstSceneView/mixPod.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="podB_1_1" ActionTag="-880572617" Tag="31" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="279.8589" RightMargin="598.1411" TopMargin="288.6552" BottomMargin="246.3448" ctype="SpriteObjectData">
+                    <Size X="82.0000" Y="105.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="320.8589" Y="298.8448" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.3342" Y="0.4669" />
+                    <PreSize X="0.0854" Y="0.1641" />
+                    <FileData Type="Normal" Path="firstSceneView/plug.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="little_pod_b" ActionTag="-546141089" Tag="25" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="219.4640" RightMargin="534.5360" TopMargin="303.2160" BottomMargin="28.7840" ctype="SpriteObjectData">
+                    <Size X="206.0000" Y="308.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="322.4640" Y="182.7840" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.3359" Y="0.2856" />
+                    <PreSize X="0.2146" Y="0.4812" />
+                    <FileData Type="MarkedSubImage" Path="firstSceneView/heartBottleU.png" Plist="firstSceneView/left.plist" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="little_pod_b2" ActionTag="1467521845" Tag="28" IconVisible="False" LeftMargin="101.0874" RightMargin="670.9126" TopMargin="382.5125" BottomMargin="11.4875" ctype="SpriteObjectData">
+                    <Size X="188.0000" Y="246.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="195.0874" Y="134.4875" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.2032" Y="0.2101" />
+                    <PreSize X="0.1958" Y="0.3844" />
+                    <FileData Type="MarkedSubImage" Path="firstSceneView/specialBottle.png" Plist="firstSceneView/left.plist" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
+                <Position X="1824.0000" Y="522.2879" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.9500" Y="0.3627" />
+                <PreSize X="0.5000" Y="0.4444" />
+                <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
+                <BlendFunc Src="770" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="dscrbP" ActionTag="-933301310" Tag="81" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="192.0000" RightMargin="1152.0000" TopMargin="576.0001" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+                <Size X="575.9999" Y="863.9999" />
+                <Children>
+                  <AbstractNodeData Name="Text_1" ActionTag="-314316736" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="156.0599" BottomMargin="512.5462" IsCustomSize="True" FontSize="36" LabelText="A.通过添加1个或2个色彩，来装扮你自己&#xA;" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="575.9999" Y="195.3938" />
+                    <AnchorPoint ScaleY="1.0000" />
+                    <Position Y="707.9400" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition Y="0.8194" />
+                    <PreSize X="1.0000" Y="0.2262" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Text_2" ActionTag="531270748" Tag="13" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="470.4993" BottomMargin="203.3506" IsCustomSize="True" FontSize="36" LabelText="B.添加闪光粉，会产生意想不到的效果!" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="575.9999" Y="190.1500" />
+                    <AnchorPoint ScaleY="1.0000" />
+                    <Position Y="393.5006" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition Y="0.4554" />
+                    <PreSize X="1.0000" Y="0.2201" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint />
+                <Position X="192.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.1000" />
+                <PreSize X="0.3000" Y="0.6000" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="title" ActionTag="1620444689" Tag="26" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="96.0000" RightMargin="1628.0000" TopMargin="72.0000" BottomMargin="1252.0000" ctype="SpriteObjectData">
+                <Size X="196.0000" Y="116.0000" />
+                <AnchorPoint ScaleY="1.0000" />
+                <Position X="96.0000" Y="1368.0000" />
+                <Scale ScaleX="0.6329" ScaleY="0.4893" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.0500" Y="0.9500" />
+                <PreSize X="0.1021" Y="0.0806" />
                 <FileData Type="Normal" Path="btn-share.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
+              <AbstractNodeData Name="next_button" ActionTag="-678463574" Tag="27" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1641.7435" RightMargin="192.0000" TopMargin="1302.2991" BottomMargin="72.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="94" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="86.2565" Y="65.7009" />
+                <AnchorPoint ScaleX="1.0000" />
+                <Position X="1728.0000" Y="72.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.9000" Y="0.0500" />
+                <PreSize X="0.0449" Y="0.0456" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <NormalFileData Type="Normal" Path="btn-share.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
             </Children>
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1501.2479" Y="522.2880" />
-            <Scale ScaleX="0.3657" ScaleY="0.3783" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7819" Y="0.3627" />
-            <PreSize X="0.5000" Y="0.4444" />
-            <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Text_1" ActionTag="-314316736" Tag="12" IconVisible="False" LeftMargin="-1.7542" RightMargin="1319.5110" TopMargin="993.8223" BottomMargin="250.7839" IsCustomSize="True" FontSize="30" LabelText="A.通过添加1个或2个色彩，来装扮你自己&#xA;" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="602.2433" Y="195.3938" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="299.3674" Y="348.4808" />
+            <AnchorPoint />
+            <Position />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1559" Y="0.2420" />
-            <PreSize X="0.3137" Y="0.1357" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Text_2" ActionTag="531270748" Tag="13" IconVisible="False" LeftMargin="23.6973" RightMargin="1304.4698" TopMargin="1140.5410" BottomMargin="109.3072" IsCustomSize="True" FontSize="30" LabelText="B.添加闪光粉，会产生意想不到的效果!" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="591.8328" Y="190.1518" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="319.6137" Y="204.3831" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1665" Y="0.1419" />
-            <PreSize X="0.3082" Y="0.1320" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="title" ActionTag="1620444689" Tag="26" IconVisible="False" LeftMargin="123.2973" RightMargin="1600.7026" TopMargin="83.0575" BottomMargin="1240.9425" ctype="SpriteObjectData">
-            <Size X="196.0000" Y="116.0000" />
-            <AnchorPoint ScaleY="1.0000" />
-            <Position X="123.2973" Y="1356.9425" />
-            <Scale ScaleX="0.6329" ScaleY="0.4893" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0642" Y="0.9423" />
-            <PreSize X="0.1021" Y="0.0806" />
-            <FileData Type="Normal" Path="btn-share.png" Plist="" />
-            <BlendFunc Src="1" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="next_button" ActionTag="-678463574" Tag="27" IconVisible="False" LeftMargin="798.4799" RightMargin="1035.2637" TopMargin="1340.1532" BottomMargin="34.1459" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="94" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="86.2565" Y="65.7009" />
-            <AnchorPoint ScaleX="1.0000" />
-            <Position X="884.7363" Y="34.1459" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4608" Y="0.0237" />
-            <PreSize X="0.0449" Y="0.0456" />
-            <TextColor A="255" R="65" G="65" B="70" />
-            <NormalFileData Type="Normal" Path="btn-share.png" Plist="" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
+            <PrePosition />
+            <PreSize X="1.0000" Y="1.0000" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

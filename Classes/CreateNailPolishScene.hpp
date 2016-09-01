@@ -41,11 +41,11 @@ private:
     void updateCustom(float dt);
     void chechStateOfMixButton();
     bool isBottleFull();
-    void showBottleFullNotice();
     void onClickYes();
     void onClickNo();
     void onClickNeilBtn();
     void showCenterBottleWithTag(int tag);
+    void showNoticeAnimationBySprite(Sprite *sprite);
 };
 
 #endif /* CreateNailPolishScene_hpp */

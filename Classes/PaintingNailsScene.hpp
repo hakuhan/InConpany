@@ -12,6 +12,7 @@
 #include <cocos2d.h>
 #include "ui/CocosGUI.h"
 #include "DefaultHeader.h"
+#include "CreateNailPolishScene.hpp"
 
 USING_NS_CC;
 using namespace ui;
@@ -25,13 +26,14 @@ public:
 private:
     bottleColors colors;
     bool isCleanBtnClicked; //判断清理按钮是否点击
-    Rect neils [10];
+    Vector<Sprite *> neils;
     
     void onClickPolishBtn();
     void onClickCrossBtnWithTag(int tag);
     void onClickCleanBtn();
     void onClickResetBtn();
     void setBrushWithBottle(Sprite* bottle);
+    void updateBottle();
 };
 
 #endif /* PaintingNailsScene_hpp */

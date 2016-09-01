@@ -47,12 +47,11 @@
 		520DFA581D644A410078CC9F /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 520DFA561D644A410078CC9F /* MainScene.cpp */; settings = {ASSET_TAGS = (); }; };
 		521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6219F0C34300D177D7 /* Default-667h@2x.png */; };
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
-		521D8F571D65B044001A7B52 /* SecondSceneOfHelp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 521D8F551D65B044001A7B52 /* SecondSceneOfHelp.cpp */; settings = {ASSET_TAGS = (); }; };
+		52B13B281D77C7AE00CAA665 /* IAPManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B13B261D77C7AE00CAA665 /* IAPManager.mm */; settings = {ASSET_TAGS = (); }; };
+		52B13B2A1D77CC6A00CAA665 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B13B291D77CC6A00CAA665 /* StoreKit.framework */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		52C34F4A1D6D4EF600B05352 /* PaintingNailsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C34F481D6D4EF600B05352 /* PaintingNailsScene.cpp */; settings = {ASSET_TAGS = (); }; };
-		52F752371D66A04B00CCAA4F /* ThirdSceneOfHelp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F752351D66A04B00CCAA4F /* ThirdSceneOfHelp.cpp */; settings = {ASSET_TAGS = (); }; };
 		52F7523A1D66F31900CCAA4F /* CreateNailPolishScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F752381D66F31900CCAA4F /* CreateNailPolishScene.cpp */; settings = {ASSET_TAGS = (); }; };
-		52FB1BF01D646BF2006ABA97 /* FirstSceneOfHelp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FB1BEE1D646BF2006ABA97 /* FirstSceneOfHelp.cpp */; settings = {ASSET_TAGS = (); }; };
 		67264650BD08F5A9E8B7ED1D /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D65417CAF89D7ADE4119FEC /* libcocos2d iOS.a */; };
 		6CC743B7AEC6C4A1F5FEC304 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 01F741B993AED8B544209AD5 /* res */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
@@ -113,18 +112,15 @@
 		520DFA571D644A410078CC9F /* MainScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainScene.hpp; sourceTree = "<group>"; };
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		521D8F551D65B044001A7B52 /* SecondSceneOfHelp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SecondSceneOfHelp.cpp; sourceTree = "<group>"; };
-		521D8F561D65B044001A7B52 /* SecondSceneOfHelp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SecondSceneOfHelp.hpp; sourceTree = "<group>"; };
 		524F361E1D6AF48D00608E03 /* DefaultHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultHeader.h; sourceTree = "<group>"; };
+		52B13B261D77C7AE00CAA665 /* IAPManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IAPManager.mm; sourceTree = "<group>"; };
+		52B13B271D77C7AE00CAA665 /* IAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPManager.h; sourceTree = "<group>"; };
+		52B13B291D77CC6A00CAA665 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		52C34F481D6D4EF600B05352 /* PaintingNailsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PaintingNailsScene.cpp; sourceTree = "<group>"; };
 		52C34F491D6D4EF600B05352 /* PaintingNailsScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PaintingNailsScene.hpp; sourceTree = "<group>"; };
-		52F752351D66A04B00CCAA4F /* ThirdSceneOfHelp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ThirdSceneOfHelp.cpp; sourceTree = "<group>"; };
-		52F752361D66A04B00CCAA4F /* ThirdSceneOfHelp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ThirdSceneOfHelp.hpp; sourceTree = "<group>"; };
 		52F752381D66F31900CCAA4F /* CreateNailPolishScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreateNailPolishScene.cpp; sourceTree = "<group>"; };
 		52F752391D66F31900CCAA4F /* CreateNailPolishScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CreateNailPolishScene.hpp; sourceTree = "<group>"; };
-		52FB1BEE1D646BF2006ABA97 /* FirstSceneOfHelp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirstSceneOfHelp.cpp; sourceTree = "<group>"; };
-		52FB1BEF1D646BF2006ABA97 /* FirstSceneOfHelp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FirstSceneOfHelp.hpp; sourceTree = "<group>"; };
 		5D65417CAF89D7ADE4119FEC /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -143,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B13B2A1D77CC6A00CAA665 /* StoreKit.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
@@ -223,6 +220,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52B13B291D77CC6A00CAA665 /* StoreKit.framework */,
 				ED545A7D1B68A1FA00C3958E /* libiconv.dylib */,
 				ED545A7B1B68A1F400C3958E /* libiconv.dylib */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
@@ -258,8 +256,8 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				52B13B221D77C73300CAA665 /* purchase */,
 				520DFA591D644F8C0078CC9F /* DefaultFile */,
-				520DFA521D6448C60078CC9F /* helpScene */,
 				520DFA511D6448B10078CC9F /* gameScene */,
 				520DFA501D64488F0078CC9F /* mainScene */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
@@ -336,25 +334,21 @@
 			name = gameScene;
 			sourceTree = "<group>";
 		};
-		520DFA521D6448C60078CC9F /* helpScene */ = {
-			isa = PBXGroup;
-			children = (
-				52FB1BEE1D646BF2006ABA97 /* FirstSceneOfHelp.cpp */,
-				52FB1BEF1D646BF2006ABA97 /* FirstSceneOfHelp.hpp */,
-				521D8F551D65B044001A7B52 /* SecondSceneOfHelp.cpp */,
-				521D8F561D65B044001A7B52 /* SecondSceneOfHelp.hpp */,
-				52F752351D66A04B00CCAA4F /* ThirdSceneOfHelp.cpp */,
-				52F752361D66A04B00CCAA4F /* ThirdSceneOfHelp.hpp */,
-			);
-			name = helpScene;
-			sourceTree = "<group>";
-		};
 		520DFA591D644F8C0078CC9F /* DefaultFile */ = {
 			isa = PBXGroup;
 			children = (
 				524F361E1D6AF48D00608E03 /* DefaultHeader.h */,
 			);
 			name = DefaultFile;
+			sourceTree = "<group>";
+		};
+		52B13B221D77C73300CAA665 /* purchase */ = {
+			isa = PBXGroup;
+			children = (
+				52B13B261D77C7AE00CAA665 /* IAPManager.mm */,
+				52B13B271D77C7AE00CAA665 /* IAPManager.h */,
+			);
+			name = purchase;
 			sourceTree = "<group>";
 		};
 		9FB840E18B0F8082A4A0AB3A /* mac-libs */ = {
@@ -483,13 +477,11 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				52F752371D66A04B00CCAA4F /* ThirdSceneOfHelp.cpp in Sources */,
+				52B13B281D77C7AE00CAA665 /* IAPManager.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				52F7523A1D66F31900CCAA4F /* CreateNailPolishScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				52C34F4A1D6D4EF600B05352 /* PaintingNailsScene.cpp in Sources */,
-				52FB1BF01D646BF2006ABA97 /* FirstSceneOfHelp.cpp in Sources */,
-				521D8F571D65B044001A7B52 /* SecondSceneOfHelp.cpp in Sources */,
 				520DFA581D644A410078CC9F /* MainScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,6 @@ public:
     
 private:
     void onClick_play(Ref* p);
-    void onClick_help(Ref* p);
 };
 
 #endif /* MainScene_hpp */

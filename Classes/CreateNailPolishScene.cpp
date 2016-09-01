@@ -11,6 +11,7 @@
 #include "DefaultHeader.h"
 #include "cocostudio/CocoStudio.h"
 #include "PaintingNailsScene.hpp"
+#include <stdlib.h>
 
 USING_NS_CC;
 using namespace ui;
@@ -30,7 +31,6 @@ bool CreateNailPolishScene::init() {
     //初始化数据
     choices = {0, 0, 0, 0};
     canSelectedMixButton = false;
-    numberOfBottle = BOTTLENUMBER;
     colors.bottle1 = UD->getStringForKey("b1Color", "0");
     colors.bottle2 = UD->getStringForKey("b2Color", "0");
     colors.bottle3 = UD->getStringForKey("b3Color", "0");
@@ -91,7 +91,7 @@ bool CreateNailPolishScene::init() {
     mixBtn->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickMixButton, this));
     mixBtn->setEnabled(false);
     //创建schedule
-    schedule(schedule_selector(CreateNailPolishScene::updateCustom), 1.0f);
+    schedule(schedule_selector(CreateNailPolishScene::updateCustom));
     //保存界面
     auto saveNotice = (Layout *)(node->getChildByName("saveNotice"));
     saveNotice->setVisible(false);
@@ -102,31 +102,37 @@ bool CreateNailPolishScene::init() {
     yesBtn->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickYes, this));
     noBtn->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickNo, this));
     
-//    //plist 的加载方法
-//    SpriteFrameCache::getInstance()->addSpriteFramesWithFile(".plist", ".png");
-//    auto ins = SpriteFrameCache::getInstance();
-//    auto frame1 = ins->getSpriteFrameByName("isdnsdna");
-//    
-//    
-//    Vector<SpriteFrame*> xxx;           xxx.clear();
-//    
-//    //图片的加载方法
-//    
-//    const cocos2d::Rect rect(0,0,200,200);
-//    for(int i = 1; i < 10; i++){
-//        auto frame = SpriteFrame::create("1.png", rect);
-//        xxx.pushBack(frame);
-//    }
-//    
-//    //auto frame = SpriteFrame::create(<#const std::string &filename#>, );
-//    xxx.pushBack(frame1);
-//    auto animation = Animation::createWithSpriteFrames(xxx);
-//    runAction(Animate::create(animation));
     
-    //预加载  加入动画缓存
-//    AnimationCache::getInstance()->addAnimation(animation, "playani");
-//    AnimationCache::getInstance()->getAnimation("playani");
-    
+    //音效、评论和去广告按钮
+    auto rmAds = (Button *)(bg->getChildByName("rmBtn"));
+    auto layout = CSLoader::createNodeWithVisibleSize("commonViews/rmAds.csb");
+    auto view = (Layout *)(layout->getChildByName("bg"));
+    auto restoreBtn = (Button *)(view->getChildByName("restoreB"));
+    auto removeBtn = (Button *)(view->getChildByName("removeBtn"));
+#define ADSTAG 11
+    view->setVisible(false);
+    this->addChild(view, 10, ADSTAG);
+    rmAds->addClickEventListener([view](Ref *p){
+        //创建动画
+        view->setScale(0.1);
+        view->setVisible(true);
+        auto scaleB = EaseInOut::create(ScaleBy::create(1, 10), 10);
+        view->runAction(scaleB);
+    });
+    restoreBtn->addClickEventListener([view](Ref *p){
+        //恢复购买
+        auto scaleS = Sequence::create(EaseIn::create(ScaleBy::create(1, 0.1), 10), CallFunc::create([view](){
+            view->setVisible(false);
+        }), NULL);
+        view->runAction(scaleS);
+    });
+    removeBtn->addClickEventListener([view](Ref *p){
+        //购买商品
+        auto scaleS = Sequence::create(EaseIn::create(ScaleBy::create(1, 0.1), 10), CallFunc::create([view](){
+            view->setVisible(false);
+        }), NULL);
+        view->runAction(scaleS);
+    });
     
     return true;
 }
@@ -181,21 +187,18 @@ void CreateNailPolishScene::onClickColor(Button *btn, Vec2 movePosition) {
         case 1:
         {
             this->showLeftAndTopButtonClickedAnimationsWithSpriteAndPositionAndButtton(sprite, movePosition, btn);
-            this->chechStateOfMixButton();
         }
             break;
             
         case 2:
         {
             this->showRightButtonClickedAnimationsWithSpriteAndPositionAndButton(sprite, movePosition, btn);
-            this->chechStateOfMixButton();
         }
             break;
             
         case 3:
         {
             this->showLeftAndTopButtonClickedAnimationsWithSpriteAndPositionAndButtton(sprite, movePosition, btn);
-            this->chechStateOfMixButton();
         }
             break;
         default:
@@ -229,7 +232,7 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     ccBezierConfig bzr;
     bzr.controlPoint_1 = Vec2(firstPstn.x, firstPstn.y+200);
     bzr.controlPoint_2 = Vec2(movePosition.x-(movePosition.x-firstPstn.x)/2, movePosition.y+sprite->getContentSize().height/2);
-    bzr.endPosition = Vec2(movePosition.x-(isLeftButton?100:-(sprite->getContentSize().height)/2), movePosition.y);
+    bzr.endPosition = Vec2(movePosition.x-(isLeftButton?65:-(sprite->getContentSize().height)/2), movePosition.y+20);
     auto bzl =BezierTo::create(1, bzr);
     auto moveB = MoveTo::create(0.5, firstPstn);
     //移动过程中变小
@@ -244,8 +247,49 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     auto rotate = RotateBy::create(0.3, deltaAngle);
     auto rotateB = RotateBy::create(0.5, -deltaAngle);
     auto spawn2 = Spawn::create(moveB, rotateB, scaleBWhenMoveB, NULL);
+    //倒水动画
+    auto efects = (Sprite *)(this->getChildByName("bg")->getChildByName("pBg")->getChildByName("efects"));
+    TargetedAction *efectsMove;
+    auto catche = SpriteFrameCache::getInstance();
+    auto fadeIn = FadeIn::create(0.1);
+    auto fadeOut = FadeOut::create(0.1);
+    if (isLeftButton) {
+        //创建精灵帧
+        switch (btn->getTag()) {
+            case lYellow:
+                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/yellowDrop.png"));
+                break;
+            case lBlack:
+                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blackDrop.png"));
+                break;
+            case lBlue:
+                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blueDrop.png"));
+                break;
+            case lPink:
+                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/pinkDrop.png"));
+                break;
+            case lWhite:
+                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/whiteDrop.png"));
+                break;
+            default:
+                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blackDrop.png"));
+                break;
+        }
+        //滴水效果
+        auto moveDown = EaseBackIn::create(MoveBy::create(0.3, Vec2(0, -80)));
+        auto moveBack = MoveBy::create(0.1, Vec2(0, 80));
+        efectsMove = TargetedAction::create(efects, Sequence::create(fadeIn, moveDown, fadeOut, moveBack, fadeIn->clone(), moveDown->clone(), fadeOut->clone(), moveBack->clone(), NULL));
+    }else {
+        efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/dumpedSpecialEffect.png"));
+        //创建效果
+        auto flipY = FlipY::create(true);
+        auto flipBack = FlipY::create(true);
+        auto moveDown = MoveBy::create(0.3, Vec2(0, -30));
+        auto moveBack = MoveBy::create(0.3, Vec2(0, 30));
+        efectsMove = TargetedAction::create(efects, Sequence::create(flipY, fadeIn, moveDown, moveBack, moveDown->clone(), moveBack->clone(), fadeOut, flipBack, NULL));
+    }
     
-    auto sqnc = Sequence::create(scaleS, spawn1, shake1, shake2, shake2, shake1, shake1, shake2, moveAndScaleS, rotate, DelayTime::create(1), spawn2, CallFuncN::create(CC_CALLBACK_0(CreateNailPolishScene::clearSprite, this, sprite, btn)), NULL);
+    auto sqnc = Sequence::create(scaleS, spawn1, shake1, shake2, shake2, shake1, shake1, shake2, moveAndScaleS, rotate, efectsMove, spawn2, CallFuncN::create(CC_CALLBACK_0(CreateNailPolishScene::clearSprite, this, sprite, btn)), NULL);
     sprite->runAction(sqnc);
 }
 
@@ -256,14 +300,14 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     auto moveUpHight = sprite->getContentSize().height/3;
     auto plug = (Sprite* )(btn->getChildByName("plug"));
     plug->setVisible(true);
-    auto scaleS = ScaleBy::create(0.1, 1, 0.5);     //缩小
-    auto scaleB = ScaleBy::create(0.3, 1, 2);       //变回
+    auto scaleS = ScaleBy::create(0.1, 1, 0.4);     //缩小
+    auto scaleB = ScaleBy::create(0.3, 1, 2.5);       //变回
     auto pMove1 = MoveBy::create(0.3, Vec2(0, moveUpHight));    //塞子升高
     auto plugAction = TargetedAction::create(plug, pMove1);
     auto potAction = TargetedAction::create(sprite, scaleB);
     auto spawn1 = Spawn::create(plugAction, potAction, NULL);
     Vec2 plugM2;
-    if (btn->getTag() == 21 ||btn->getTag() == 2) {
+    if (btn->getTag() == 23 || btn->getTag() == 21) {
         plugM2 = Vec2(-sprite->getContentSize().width, -moveUpHight*1.5);
     } else {
         plugM2 = Vec2(sprite->getContentSize().width, -moveUpHight*1.5);
@@ -289,11 +333,10 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     auto moveB = MoveTo::create(0.5, firstPstn);
     auto rotate = RotateBy::create(0.5, -90);
     auto rotateB = RotateBy::create(0.5, 90);
-    auto spawn2 = Spawn::create(scaleSFast, moveB, rotateB, scaleBWhenMoveB, NULL);
+    auto spawn2 = Spawn::create(moveB, rotateB, scaleBWhenMoveB, NULL);
     auto spawn3 = Spawn::create(plugActionB, spriteMove, scaleSmlWhenMove, NULL);
     //创建精灵帧动画
     auto spriteFrameCatche = SpriteFrameCache::getInstance();
-    spriteFrameCatche->addSpriteFramesWithFile("rightFrameAction.plist", "rightFrameAction.png");
     std::string fNm1, fNm2, fNm3, fNm4;
     switch (btn->getTag()) {
         case rSlash:
@@ -355,21 +398,35 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     auto spriteAnimate = Animate::create(animation);
     auto frameAndRoleB = Spawn::create(spriteAnimate, scaleBFast, NULL);
     
-    auto sqnc = Sequence::create(scaleS, spawn1, plugAction2, plugActionF, spawn3, rotate, frameAndRoleB, spawn2, CallFuncN::create(CC_CALLBACK_0(CreateNailPolishScene::clearSprite, this, sprite, btn)), NULL);
+    auto sqnc = Sequence::create(scaleS, spawn1, plugAction2, plugActionF, spawn3, rotate, frameAndRoleB, scaleSFast, spawn2, CallFuncN::create(CC_CALLBACK_0(CreateNailPolishScene::clearSprite, this, sprite, btn)), NULL);
     sprite->runAction(sqnc);
 }
 
 #pragma mark 点击合成按钮
 void CreateNailPolishScene::onClickMixButton() {
-    //判断瓶子是否装满
-    if (this->isBottleFull()) {
-        //通知瓶子装满
-        this->showBottleFullNotice();
-        return;
+    //合成指甲油
+    std::string str;
+    //用户选择花纹和颜色
+    int first = choices.lFirstC;
+    int second = choices.lSecondC;
+    int third = choices.rChoice;
+    //判断
+    if (second == 0) {
+        //使用单色
+        str = StringUtils::format("commonViews/%d.png", (first-10));
+    } else {
+        //使用颜色和底纹
+        str = StringUtils::format("commonViews/%d%d%d.png", (first-10), (second-10), (third-20));
     }
+    //设置指甲油瓶子
+    auto saveNotice =(Layout *)(this->getChildByName("saveNotice"));
+    auto resultPot = (Sprite *)(saveNotice->getChildByName("bottle"));
+    resultPot->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(str));
     //获取罐子
     auto bg = (Sprite*)(this->getChildByName("bg"));
     auto pot = (Sprite *)(bg->getChildByName("pBg")->getChildByName("Pot"));
+    auto mixSuccess = (Sprite *)(pot->getChildByName("mixSuccess"));
+    mixSuccess->setScale(0.1);
     //创建动画
     auto bLayout = Layout::create();
     bLayout->setContentSize(SCREAN_SIZE);
@@ -377,35 +434,35 @@ void CreateNailPolishScene::onClickMixButton() {
     bLayout->setTouchEnabled(true);
 #define bLayoutTag 4
     this->addChild(bLayout, 4, bLayoutTag);
-    auto saveNotice =(Layout *)(this->getChildByName("saveNotice"));
     auto scaleS = ScaleBy::create(0.1, 0.1);
     auto show = Show::create();
     auto scale = ScaleBy::create(0.3, 10);
     //罐子动画
-    auto potScaleS = TargetedAction::create(pot, ScaleBy::create(0.1, 1, 0.5));
-    auto potScaleB = TargetedAction::create(pot, ScaleBy::create(0.2, 1, 2));
-    saveNotice->runAction(Sequence::create(potScaleS, potScaleB, scaleS, show, scale, NULL));
+    auto potShake1 = TargetedAction::create(pot, RotateBy::create(0.15, 10));
+    auto potShake2 = TargetedAction::create(pot, RotateBy::create(0.15, -10));
+    auto potScaleS = TargetedAction::create(pot, ScaleBy::create(0.1, 0.5));
+    auto potScaleB = EaseBackInOut::create(TargetedAction::create(pot, ScaleBy::create(0.3, 2)));
+    auto mixScaleB = EaseInOut::create(TargetedAction::create(mixSuccess, ScaleBy::create(0.5, 10)), 10);
+    auto mixFadeOut = TargetedAction::create(mixSuccess, FadeOut::create(1));
+    auto mixFadeIn = TargetedAction::create(mixSuccess, FadeIn::create(0.1));
+    saveNotice->runAction(Sequence::create(potShake1, potShake2, potShake1->clone(), potShake2->clone(), potScaleS, potScaleB, mixFadeIn, mixScaleB, scaleS, show, scale, mixFadeOut, NULL));
 }
 
 //判断瓶子是否装满
 bool CreateNailPolishScene::isBottleFull() {
     bool result = false;
-    int number = BOTTLENUMBER;
-    if (number == 5) {
+    if (numberOfBottle == 5) {
         result = true;
     }
+    
     return result;
-}
-
-//提示瓶子全部装满
-void CreateNailPolishScene::showBottleFullNotice() {
-#pragma mark 通知装满瓶子
 }
 
 //回调函数
 void CreateNailPolishScene::clearSprite(Sprite* s, Button* btn) {
     this->removeChild(s);
     btn->setOpacity(255);
+    this->chechStateOfMixButton();
     this->showCenterBottleWithTag(btn->getTag());
 }
 
@@ -429,20 +486,37 @@ void CreateNailPolishScene::showNotice() {
     }
     //提示
     if (noticeAreaL == true) {
-        log("左边没有选择");
+        //获取右边的notice节点
+        for (int i = lYellow; i<=lWhite; i++) {
+            auto notice = (Sprite *)(this->getChildByName("bg")->getChildByTag(i)->getChildByName("notice"));
+            this->showNoticeAnimationBySprite(notice);
+        }
     }
     if (noticeAreaR == true) {
-        log("右边没有选择");
+        for (int i = rSlash; i<=rHeart; i++) {
+            auto notice = (Sprite *)(this->getChildByName("bg")->getChildByTag(i)->getChildByName("notice"));
+            this->showNoticeAnimationBySprite(notice);
+        }
     }
     if (noticeAreaT == true) {
-        log("上方没有选择");
+         auto notice = (Sprite *)(this->getChildByName("bg")->getChildByTag(tSpecial)->getChildByName("notice"));
+        this->showNoticeAnimationBySprite(notice);
     }
     if ((noticeAreaL == false && noticeAreaR == false) || specailCondition == true){
-        log("可以点击确定按钮");
         canSelectedMixButton = true;
     } else {
         canSelectedMixButton = false;
     }
+}
+
+//通知的动画
+void CreateNailPolishScene::showNoticeAnimationBySprite(Sprite *sprite) {
+    auto fadeIn = FadeIn::create(0.1);
+    auto moveUp = MoveBy::create(0.3, Vec2(0, -30));
+    auto moveDown = MoveBy::create(0.3, Vec2(0, 30));
+    auto fadeOut = FadeOut::create(0.1);
+    auto sqnc = Sequence::create(fadeIn, moveUp, moveDown, moveUp->clone(), moveDown->clone(), fadeOut, NULL);
+    sprite->runAction(sqnc);
 }
 
 //创建精灵
@@ -506,9 +580,83 @@ void CreateNailPolishScene::onClickYes() {
     //得到数据
 #pragma mark 通过用户选择保存数据
     std::string str;
+    //用户选择花纹和颜色
+    int first = choices.lFirstC;
+    int second = choices.lSecondC;
+    int third = choices.rChoice;
+    //闪光效果
+    int blink;
+    if (choices.tChoice == 0) {
+        blink = 0;
+    } else {
+        blink = 1;
+    }
     //判断
-    //保存
+    if (second == 0) {
+        //使用单色
+        str = StringUtils::format("commonViews/%d.png%d", (first-10), blink);
+    } else {
+        //使用颜色和底纹
+        str = StringUtils::format("commonViews/%d%d%d.png%d", (first-10), (second-10), (third-20), blink);
+    }
     
+    //获取之前数据
+    if (colors.bottle1 == "0") {
+        colors.bottle1 = str;
+        UD->setStringForKey("b1Color", str);
+    } else if (colors.bottle2 == "0"){
+        colors.bottle2 = str;
+        UD->setStringForKey("b2Color", str);
+    } else if (colors.bottle3 == "0"){
+        colors.bottle3 = str;
+        UD->setStringForKey("b3Color", str);
+    } else if (colors.bottle4 == "0"){
+        colors.bottle4 = str;
+        UD->setStringForKey("b4Color", str);
+    } else if (colors.bottle5 == "0"){
+        colors.bottle5 = str;
+        UD->setStringForKey("b5Color", str);
+    } else {
+        //覆盖
+        switch (UD->getIntegerForKey("oldestStore", 1)) {
+            case 1:
+            {
+                colors.bottle1 = str;
+                UD->setStringForKey("b1Color", str);
+                UD->setIntegerForKey("oldestStore", 2);
+            }
+                break;
+            case 2:
+            {
+                colors.bottle1 = str;
+                UD->setStringForKey("b2Color", str);
+                UD->setIntegerForKey("oldestStore", 3);
+            }
+                break;
+            case 3:
+            {
+                colors.bottle1 = str;
+                UD->setStringForKey("b3Color", str);
+                UD->setIntegerForKey("oldestStore", 4);
+            }
+                break;
+            case 4:
+            {
+                colors.bottle1 = str;
+                UD->setStringForKey("b4Color", str);
+                UD->setIntegerForKey("oldestStore", 5);
+            }
+                break;
+            default:
+            {
+                colors.bottle1 = str;
+                UD->setStringForKey("b5Color", str);
+                UD->setIntegerForKey("oldestStore", 1);
+            }
+                break;
+        }
+    }
+    UD->setIntegerForKey("numberOfBottle", numberOfBottle);
     
     //隐藏界面
     this->removeChildByTag(bLayoutTag);
@@ -553,7 +701,8 @@ void CreateNailPolishScene::onClickNo() {
 //点击涂指甲界面
 void CreateNailPolishScene::onClickNeilBtn() {
     auto paintScene = PaintingNailsScene::createScene();
-    Director::getInstance()->pushScene(paintScene);
+    auto transition = TransitionFade::create(1.0, paintScene);
+    Director::getInstance()->replaceScene(transition);
 }
 
 #pragma mark 显示中间瓶子

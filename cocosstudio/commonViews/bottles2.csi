@@ -1,0 +1,25 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="bottles2" Type="Plist" ID="c743b2da-49c1-49e9-af07-6639e88d2ccd" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="commonViews/2.png" />
+      <FilePathData Path="commonViews/211.png" />
+      <FilePathData Path="commonViews/212.png" />
+      <FilePathData Path="commonViews/213.png" />
+      <FilePathData Path="commonViews/214.png" />
+      <FilePathData Path="commonViews/231.png" />
+      <FilePathData Path="commonViews/232.png" />
+      <FilePathData Path="commonViews/233.png" />
+      <FilePathData Path="commonViews/234.png" />
+      <FilePathData Path="commonViews/241.png" />
+      <FilePathData Path="commonViews/242.png" />
+      <FilePathData Path="commonViews/243.png" />
+      <FilePathData Path="commonViews/244.png" />
+      <FilePathData Path="commonViews/251.png" />
+      <FilePathData Path="commonViews/252.png" />
+      <FilePathData Path="commonViews/253.png" />
+      <FilePathData Path="commonViews/254.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

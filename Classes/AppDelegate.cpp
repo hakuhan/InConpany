@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "MainScene.hpp"
+#include "DefaultHeader.h"
 
 USING_NS_CC;
 
@@ -43,10 +44,25 @@ bool AppDelegate::applicationDidFinishLaunching() {
     FileUtils::getInstance()->addSearchPath("res/firstSceneView");
     // create a scene. it's an autorelease object
     auto scene = MainScene::createScene();
-
+    auto spriteFrameCatche = SpriteFrameCache::getInstance();
+    spriteFrameCatche->addSpriteFramesWithFile("left.plist", "left.png");
+    spriteFrameCatche->addSpriteFramesWithFile("rightFrameAction.plist", "rightFrameAction.png");
+    spriteFrameCatche->addSpriteFramesWithFile("efectsImage.plist", "efectsImage.png");
+    spriteFrameCatche->addSpriteFramesWithFile("commonViews/bottles1.plist", "commonViews/bottles1.png");
+    spriteFrameCatche->addSpriteFramesWithFile("commonViews/bottles2.plist", "commonViews/bottles2.png");
+    spriteFrameCatche->addSpriteFramesWithFile("commonViews/bottles3.plist", "commonViews/bottles3.png");
+    spriteFrameCatche->addSpriteFramesWithFile("commonViews/bottles4.plist", "commonViews/bottles4.png");
+    spriteFrameCatche->addSpriteFramesWithFile("commonViews/bottles5.plist", "commonViews/bottles5.png");
     // run
     director->runWithScene(scene);
-
+    
+    bool isAddExists = UD->getBoolForKey(ISADDEXITS, true);
+    if (isAddExists) {
+        //TODO
+        //开启广告
+        
+    }
+    
     return true;
 }
 

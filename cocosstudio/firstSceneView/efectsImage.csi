@@ -1,0 +1,14 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="efectsImage" Type="Plist" ID="b633d611-bbaa-49f1-85bd-198a2568d7ed" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="True" AllowAnySize="False" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="firstSceneView/blackDrop.png" />
+      <FilePathData Path="firstSceneView/blueDrop.png" />
+      <FilePathData Path="firstSceneView/dumpedSpecialEffect.png" />
+      <FilePathData Path="firstSceneView/pinkDrop.png" />
+      <FilePathData Path="firstSceneView/yellowDrop.png" />
+      <FilePathData Path="firstSceneView/whiteDrop.png" />
+    </ImageFiles>
+    <MaxSize Width="256" Height="128" />
+  </Content>
+</PlistInfoProjectFile>
