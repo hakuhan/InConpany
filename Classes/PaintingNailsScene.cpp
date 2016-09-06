@@ -10,6 +10,8 @@
 #include "ui/CocosGUI.h"
 #include "DefaultHeader.h"
 #include "cocostudio/CocoStudio.h"
+#include "Audio.hpp"
+#include "CommonView.hpp"
 
 USING_NS_CC;
 using namespace ui;
@@ -34,6 +36,10 @@ bool PaintingNailsScene::init() {
     colors.bottle4 = UD->getStringForKey("b4Color", "0");
     colors.bottle5 = UD->getStringForKey("b5Color", "0");
     isCleanBtnClicked = false;
+    //加载资源
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("SecondSceneView/neils_1.plist", "SecondSceneView/neils_1.png");
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("SecondSceneView/neils_2.plist", "SecondSceneView/neils_2.png");
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("SecondSceneView/neils_3.plist", "SecondSceneView/neils_3.png");
     
     //设置界面
     auto node = CSLoader::createNodeWithVisibleSize("game/PaintingNails.csb");
@@ -44,9 +50,12 @@ bool PaintingNailsScene::init() {
 #pragma mark 设置脚趾坐标
         auto finger = (Sprite *)(bg->getChildByName("footBg")->getChildByName("foot")->getChildByName(StringUtils::format("%d", i+11)));
         neils.insert(i, finger);
-        log("(%f, %f)", finger->getPositionX(), finger->getPositionY());
+        if (i<5) {
+            names[i] = "";
+        } else {
+//            finger->setFlippedX(true);
+        }
     }
-    
     
     
     //根据数据设置瓶子
@@ -55,8 +64,10 @@ bool PaintingNailsScene::init() {
         //设置第一个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle1"));
         int strLen = (int)(colors.bottle1.length());
-        std::string s = colors.bottle1.substr(0, strLen-1);
+        names[0] = colors.bottle1;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle1.substr(0, strLen-1)));
+        Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
+        brush->setTag(10);
         this->setBrushWithBottle(bottle);
     }
     
@@ -64,7 +75,10 @@ bool PaintingNailsScene::init() {
         //设置第二个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle2"));
         int strLen = (int)(colors.bottle2.length());
+        names[1] = colors.bottle2;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle2.substr(0, strLen-1)));
+        Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
+        brush->setTag(11);
         this->setBrushWithBottle(bottle);
     }
     
@@ -72,7 +86,10 @@ bool PaintingNailsScene::init() {
         //设置第三个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle3"));
         int strLen = (int)(colors.bottle3.length());
+        names[2] = colors.bottle3;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle3.substr(0, strLen-1)));
+        Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
+        brush->setTag(12);
         this->setBrushWithBottle(bottle);
     }
     
@@ -80,7 +97,10 @@ bool PaintingNailsScene::init() {
         //设置第四个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle4"));
         int strLen = (int)(colors.bottle4.length());
+        names[3] = colors.bottle4;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle4.substr(0, strLen-1)));
+        Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
+        brush->setTag(13);
         this->setBrushWithBottle(bottle);
     }
     
@@ -88,7 +108,10 @@ bool PaintingNailsScene::init() {
         //设置第五个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle5"));
         int strLen = (int)(colors.bottle5.length());
+        names[4] = colors.bottle5;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle5.substr(0, strLen-1)));
+        Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
+        brush->setTag(14);
         this->setBrushWithBottle(bottle);
     }
     
@@ -114,6 +137,39 @@ bool PaintingNailsScene::init() {
     //重置指甲按钮
     auto resetBtn = (Button *)(bg->getChildByName("resetBtn"));
     resetBtn->addClickEventListener(CC_CALLBACK_0(PaintingNailsScene::onClickResetBtn, this));
+    //声音开关
+    auto soundBtn = (Button *)(bg->getChildByName("soundBtn"));
+    soundBtn->addClickEventListener([](Ref *p){
+        //检查有没有开启声音
+        if (ISSOUNDOPEN) {
+            SETSOUND(false);
+        } else {
+            SETSOUND(true);
+        }
+        Audio::getInstance()->playBgm();
+        //设置开关状态
+    });
+    auto commentBtn = (Button *)(bg->getChildByName("scoreBtn"));
+    commentBtn->addClickEventListener([](Ref *p){
+        //评论
+    });
+    auto removeAddBtn = (Button *)(bg->getChildByName("rmBtn"));
+    removeAddBtn->addClickEventListener([=](Ref *){
+        //去广告
+        auto view = CommonView::getInstance()->getCommentView();
+#define ADSTAG 11
+        this->addChild(view);
+        view->setScale(0.1);
+        auto scaleB = EaseInOut::create(ScaleBy::create(1, 10), 10);
+        view->runAction(scaleB);
+    });
+    //国际化
+    if (Application::getInstance()->getCurrentLanguage() == LanguageType::CHINESE) {
+        soundBtn->setTitleText("声音");
+        resetBtn->setTitleText("重置");
+        commentBtn->setTitleText("评论");
+        removeAddBtn->setTitleText("去广告");
+    }
     
     return true;
 }
@@ -127,6 +183,7 @@ void PaintingNailsScene::updateBottle() {
         //设置第一个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle1"));
         bottle->setTexture("SecondSceneView/emptyB.png");
+        names[0] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
         brush->setVisible(false);
     }
@@ -135,6 +192,7 @@ void PaintingNailsScene::updateBottle() {
         //设置第二个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle2"));
         bottle->setTexture("SecondSceneView/emptyB.png");
+        names[1] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
         brush->setVisible(false);
     }
@@ -143,6 +201,7 @@ void PaintingNailsScene::updateBottle() {
         //设置第三个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle3"));
         bottle->setTexture("SecondSceneView/emptyB.png");
+        names[2] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
         brush->setVisible(false);
     }
@@ -151,6 +210,7 @@ void PaintingNailsScene::updateBottle() {
         //设置第四个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle4"));
         bottle->setTexture("SecondSceneView/emptyB.png");
+        names[3] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
         brush->setVisible(false);
     }
@@ -159,6 +219,7 @@ void PaintingNailsScene::updateBottle() {
         //设置第五个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottle5"));
         bottle->setTexture("SecondSceneView/emptyB.png");
+        names[4] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
         brush->setVisible(false);
     }
@@ -198,10 +259,57 @@ void PaintingNailsScene::setBrushWithBottle(Sprite *bottle) {
         //判断
         auto foot = this->getChildByName("bg")->getChildByName("footBg")->getChildByName("foot");
         Point location =foot->convertToNodeSpace(target->getParent()->convertToWorldSpace(target->getPosition()));
+        //获取瓶子名字
+        std::string potColor = names[target->getTag()-10];
         for (int i = 0; i<10; i++) {
+            //判断是否拖上指甲
             if (neils.at(i)->getBoundingBox().containsPoint(location)) {
-                log("涂上第%d个指甲", i);
-                //清理当前指甲
+                //获取指甲名字
+                std::string spriteName;
+                if (i<5) {
+                    //前五个
+                    spriteName = StringUtils::format("SecondSceneView/%s-%d.png",potColor.substr(12, potColor.length()-17).c_str(),i+11);
+                } /*else if (potColor.substr(12, potColor.length()-16) == "") {
+                    
+                
+                } */else {
+                    spriteName = StringUtils::format("SecondSceneView/%s-%d.png",potColor.substr(12, potColor.length()-17).c_str(),i+6);
+                }
+                //涂上颜色
+                if (neils.at(i)->getSpriteFrame() != SpriteFrameCache::getInstance()->getSpriteFrameByName(spriteName)) {
+                    //清除闪光
+                    if (neils.at(i)->getChildByTag(11) != NULL) {
+                        neils.at(i)->removeChildByTag(11);
+                    }
+                    neils.at(i)->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(spriteName));
+                    auto blink = StringUtils::format("%s", potColor.substr(potColor.length()-1, 1).c_str());
+                    Sprite *blinks;
+                    if (blink == "1") {
+                        //添加闪光
+                        if (i<5) {
+                            blinks = Sprite::createWithSpriteFrameName(StringUtils::format("SecondSceneView/%d-s.png", i+1));
+                        } else {
+                            blinks = Sprite::createWithSpriteFrameName(StringUtils::format("SecondSceneView/%d-s.png", i-4));
+                        }
+                    } else {
+                        blinks = Sprite::create();
+                    }
+                    blinks->setTag(11);
+                    neils.at(i)->addChild(blinks);
+                    blinks->setPosition(Vec2(neils.at(i)->getContentSize().width/2, neils.at(i)->getContentSize().height/2));
+                    //动画
+                    Vector<SpriteFrame *> frames;
+                    frames.pushBack(SpriteFrameCache::getInstance()->getSpriteFrameByName("SecondSceneView/effect1.png"));
+                    frames.pushBack(SpriteFrameCache::getInstance()->getSpriteFrameByName("SecondSceneView/effect2.png"));
+                    auto animation = Animation::createWithSpriteFrames(frames, 0.3, 1);
+                    animation->setRestoreOriginalFrame(true);
+                    auto animate = Animate::create(animation);
+                    auto animateWithSound = Spawn::create(animate, CallFunc::create([=](){
+                        //音效
+                        Audio::getInstance()->playEffect(POP);
+                    }), NULL);
+                    blinks->runAction(animateWithSound);
+                }
             }
         }
     };
@@ -273,6 +381,8 @@ void PaintingNailsScene::onClickCrossBtnWithTag(int tag) {
 //点击清理按钮
 void PaintingNailsScene::onClickCleanBtn() {
 #pragma mark 清理刷子的实现
+    //音效
+    Audio::getInstance()->playEffect(POP);
     if (isCleanBtnClicked) {
         return;
     }
@@ -283,11 +393,14 @@ void PaintingNailsScene::onClickCleanBtn() {
     Vec2 positionOfConttonBall = conttonBall->getPosition();
     
     auto scaleS = ScaleBy::create(0.2, 0.5);
-    auto scaleB = ScaleBy::create(0.3, 2);
+    auto scaleB = EaseBackInOut::create(ScaleBy::create(0.3, 2));
     auto moveDown = MoveBy::create(0.2, Vec2(0, -conttonBall->getContentSize().height/3));
     auto moveUp = MoveBy::create(0.3, Vec2(0, conttonBall->getContentSize().height));
     auto spawn1 = Spawn::create(scaleS, moveDown, NULL);
-    auto spawn2 = Spawn::create(scaleB, moveUp, NULL);
+    auto spawn2 = Spawn::create(scaleB, CallFunc::create([](){
+        //音效
+        Audio::getInstance()->playEffect(MOVE);
+    }), moveUp, NULL);
     conttonBall->runAction(Sequence::create(spawn1, DelayTime::create(0.3), spawn2, NULL));
     
     //设置触摸事件
@@ -318,13 +431,29 @@ void PaintingNailsScene::onClickCleanBtn() {
         //判断
         auto foot = this->getChildByName("bg")->getChildByName("footBg")->getChildByName("foot");
         Point location =foot->convertToNodeSpace(target->getPosition());
+        //清除指甲
         for (int i = 0; i<10; i++) {
             if (neils.at(i)->getBoundingBox().containsPoint(location)) {
-                log("包含第%d个指甲", i);
-                //清理当前指甲
+                //判断是否已经涂上
+                SpriteFrame *originalSprite;
+                if (i <= 4) {
+                    originalSprite = SpriteFrameCache::getInstance()->getSpriteFrameByName(StringUtils::format("SecondSceneView/L%d.png",i+1));
+                } else {
+                    originalSprite = SpriteFrameCache::getInstance()->getSpriteFrameByName(StringUtils::format("SecondSceneView/L%d.png",i-4));
+                }
+                if (neils.at(i)->getSpriteFrame() != originalSprite) {
+                    neils.at(i)->setSpriteFrame(originalSprite);
+                    //清除闪光
+                    auto t = neils.at(i)->getChildByTag(11);
+                    if (t != NULL) {
+                        
+                        t->removeFromParent();
+                    }
+                    //音效
+                    Audio::getInstance()->playEffect(POP);
+                }
             }
         }
-        //判断
     };
     
     listener1->onTouchEnded = [positionOfConttonBall, this, listener1](Touch *touch, Event *event){
@@ -342,5 +471,16 @@ void PaintingNailsScene::onClickCleanBtn() {
 void PaintingNailsScene::onClickResetBtn() {
 #pragma mark 重置按钮的实现
     //清空所有指甲上的指甲油
-    log("重置指甲");
+    for (int i = 1; i <= 10; i++) {
+        SpriteFrame *originalSprite;
+        if (i <= 5) {
+            originalSprite = SpriteFrameCache::getInstance()->getSpriteFrameByName(StringUtils::format("SecondSceneView/L%d.png",i));
+        } else {
+            originalSprite = SpriteFrameCache::getInstance()->getSpriteFrameByName(StringUtils::format("SecondSceneView/L%d.png",i-5));
+        }
+        neils.at(i-1)->setSpriteFrame(originalSprite);
+        if (neils.at(i-1)->getChildByTag(11) != NULL) {
+            neils.at(i-1)->removeChildByTag(11);
+        }
+    }
 }

@@ -15,114 +15,114 @@
                   <AbstractNodeData Name="foot" ActionTag="1794792558" Tag="92" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="58.0000" RightMargin="58.0000" TopMargin="-6.0195" BottomMargin="0.0195" ctype="SpriteObjectData">
                     <Size X="987.0000" Y="677.0000" />
                     <Children>
-                      <AbstractNodeData Name="11" ActionTag="1884156674" Tag="95" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="324.7107" RightMargin="569.2893" TopMargin="17.0230" BottomMargin="559.9770" ctype="SpriteObjectData">
-                        <Size X="93.0000" Y="100.0000" />
+                      <AbstractNodeData Name="11" ActionTag="1884156674" Tag="95" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="322.7302" RightMargin="570.2698" TopMargin="16.2938" BottomMargin="558.7062" ctype="SpriteObjectData">
+                        <Size X="94.0000" Y="102.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="371.2107" Y="609.9770" />
+                        <Position X="369.7302" Y="609.7062" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.3761" Y="0.9010" />
-                        <PreSize X="0.0942" Y="0.1477" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-11.png" Plist="" />
+                        <PrePosition X="0.3746" Y="0.9006" />
+                        <PreSize X="0.0952" Y="0.1507" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L1.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="12" ActionTag="715757657" Tag="96" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="229.9055" RightMargin="671.0945" TopMargin="24.5173" BottomMargin="559.4827" ctype="SpriteObjectData">
-                        <Size X="86.0000" Y="93.0000" />
+                      <AbstractNodeData Name="12" ActionTag="715757657" Tag="96" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="234.5302" RightMargin="679.4698" TopMargin="32.3142" BottomMargin="567.6858" ctype="SpriteObjectData">
+                        <Size X="73.0000" Y="77.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="272.9055" Y="605.9827" />
+                        <Position X="271.0302" Y="606.1858" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.2765" Y="0.8951" />
-                        <PreSize X="0.0871" Y="0.1374" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-12.png" Plist="" />
+                        <PrePosition X="0.2746" Y="0.8954" />
+                        <PreSize X="0.0740" Y="0.1137" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L2.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="13" ActionTag="1718224993" Tag="97" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="168.6311" RightMargin="750.3689" TopMargin="56.9268" BottomMargin="560.0732" ctype="SpriteObjectData">
-                        <Size X="68.0000" Y="60.0000" />
+                      <AbstractNodeData Name="13" ActionTag="1718224993" Tag="97" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="173.8545" RightMargin="759.1455" TopMargin="57.6560" BottomMargin="561.3440" ctype="SpriteObjectData">
+                        <Size X="54.0000" Y="58.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="202.6311" Y="590.0732" />
+                        <Position X="200.8545" Y="590.3440" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.2053" Y="0.8716" />
-                        <PreSize X="0.0689" Y="0.0886" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-13.png" Plist="" />
+                        <PrePosition X="0.2035" Y="0.8720" />
+                        <PreSize X="0.0547" Y="0.0857" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L3.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="14" ActionTag="1668875403" Tag="98" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="104.2060" RightMargin="818.7940" TopMargin="98.5835" BottomMargin="524.4165" ctype="SpriteObjectData">
-                        <Size X="64.0000" Y="54.0000" />
+                      <AbstractNodeData Name="14" ActionTag="1668875403" Tag="98" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="102.4424" RightMargin="822.5576" TopMargin="99.1251" BottomMargin="523.8749" ctype="SpriteObjectData">
+                        <Size X="62.0000" Y="54.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="136.2060" Y="551.4165" />
+                        <Position X="133.4424" Y="550.8749" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.1380" Y="0.8145" />
-                        <PreSize X="0.0648" Y="0.0798" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-14.png" Plist="" />
+                        <PrePosition X="0.1352" Y="0.8137" />
+                        <PreSize X="0.0628" Y="0.0798" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L4.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="15" ActionTag="-137906152" Tag="99" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="41.7744" RightMargin="888.2256" TopMargin="190.1041" BottomMargin="442.8959" ctype="SpriteObjectData">
-                        <Size X="57.0000" Y="44.0000" />
+                      <AbstractNodeData Name="15" ActionTag="-137906152" Tag="99" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="47.2159" RightMargin="884.7841" TopMargin="182.7917" BottomMargin="437.2083" ctype="SpriteObjectData">
+                        <Size X="55.0000" Y="57.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="70.2744" Y="464.8959" />
+                        <Position X="74.7159" Y="465.7083" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.0712" Y="0.6867" />
-                        <PreSize X="0.0578" Y="0.0650" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-15.png" Plist="" />
+                        <PrePosition X="0.0757" Y="0.6879" />
+                        <PreSize X="0.0557" Y="0.0842" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L5.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="16" ActionTag="-2009509807" Tag="100" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="575.6268" RightMargin="306.3732" TopMargin="14.7155" BottomMargin="554.2845" ctype="SpriteObjectData">
-                        <Size X="105.0000" Y="108.0000" />
+                      <AbstractNodeData Name="16" ActionTag="-2009509807" Tag="100" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="583.5943" RightMargin="309.4057" TopMargin="17.3770" BottomMargin="557.6230" FlipX="True" ctype="SpriteObjectData">
+                        <Size X="94.0000" Y="102.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="628.1268" Y="608.2845" />
+                        <Position X="630.5943" Y="608.6230" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.6364" Y="0.8985" />
-                        <PreSize X="0.1064" Y="0.1595" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-21.png" Plist="" />
+                        <PrePosition X="0.6389" Y="0.8990" />
+                        <PreSize X="0.0952" Y="0.1507" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L1.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="17" ActionTag="-654047694" Tag="101" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="683.3061" RightMargin="228.6939" TopMargin="22.8876" BottomMargin="566.1124" ctype="SpriteObjectData">
-                        <Size X="75.0000" Y="88.0000" />
+                      <AbstractNodeData Name="17" ActionTag="-654047694" Tag="101" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="688.7476" RightMargin="225.2524" TopMargin="35.4961" BottomMargin="564.5039" FlipX="True" ctype="SpriteObjectData">
+                        <Size X="73.0000" Y="77.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="720.8061" Y="610.1124" />
+                        <Position X="725.2476" Y="603.0039" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.7303" Y="0.9012" />
-                        <PreSize X="0.0760" Y="0.1300" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-22.png" Plist="" />
+                        <PrePosition X="0.7348" Y="0.8907" />
+                        <PreSize X="0.0740" Y="0.1137" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L2.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="18" ActionTag="296549151" Tag="102" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="761.0415" RightMargin="159.9585" TopMargin="50.4268" BottomMargin="553.5732" ctype="SpriteObjectData">
-                        <Size X="66.0000" Y="73.0000" />
+                      <AbstractNodeData Name="18" ActionTag="296549151" Tag="102" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="766.9428" RightMargin="166.0572" TopMargin="60.3640" BottomMargin="558.6360" FlipX="True" ctype="SpriteObjectData">
+                        <Size X="54.0000" Y="58.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="794.0415" Y="590.0732" />
+                        <Position X="793.9428" Y="587.6360" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.8045" Y="0.8716" />
-                        <PreSize X="0.0669" Y="0.1078" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-23.png" Plist="" />
+                        <PrePosition X="0.8044" Y="0.8680" />
+                        <PreSize X="0.0547" Y="0.0857" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L3.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="19" ActionTag="315674529" Tag="103" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="834.3821" RightMargin="87.6179" TopMargin="96.2915" BottomMargin="516.7085" ctype="SpriteObjectData">
-                        <Size X="65.0000" Y="64.0000" />
+                      <AbstractNodeData Name="19" ActionTag="315674529" Tag="103" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="830.7497" RightMargin="94.2503" TopMargin="101.7654" BottomMargin="521.2346" FlipX="True" ctype="SpriteObjectData">
+                        <Size X="62.0000" Y="54.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="866.8821" Y="548.7085" />
+                        <Position X="861.7497" Y="548.2346" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.8783" Y="0.8105" />
-                        <PreSize X="0.0659" Y="0.0945" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-24.png" Plist="" />
+                        <PrePosition X="0.8731" Y="0.8098" />
+                        <PreSize X="0.0628" Y="0.0798" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L4.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="20" ActionTag="-195005250" Tag="104" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="898.6476" RightMargin="40.3524" TopMargin="180.0103" BottomMargin="431.9897" ctype="SpriteObjectData">
-                        <Size X="48.0000" Y="65.0000" />
+                      <AbstractNodeData Name="20" ActionTag="-195005250" Tag="104" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="896.5294" RightMargin="35.4706" TopMargin="188.4785" BottomMargin="431.5215" FlipX="True" ctype="SpriteObjectData">
+                        <Size X="55.0000" Y="57.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="922.6476" Y="464.4897" />
+                        <Position X="924.0294" Y="460.0215" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.9348" Y="0.6861" />
-                        <PreSize X="0.0486" Y="0.0960" />
-                        <FileData Type="Normal" Path="SecondSceneView/2-25.png" Plist="" />
+                        <PrePosition X="0.9362" Y="0.6795" />
+                        <PreSize X="0.0557" Y="0.0842" />
+                        <FileData Type="MarkedSubImage" Path="SecondSceneView/L5.png" Plist="SecondSceneView/neils_3.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                     </Children>
@@ -288,7 +288,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="resetBtn" ActionTag="-493021997" Tag="112" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1506.9200" RightMargin="111.0800" TopMargin="985.6240" BottomMargin="252.3760" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="272" Scale9Height="180" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="resetBtn" ActionTag="-493021997" Tag="112" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1506.9200" RightMargin="111.0800" TopMargin="985.6240" BottomMargin="252.3760" TouchEnable="True" FontSize="72" ButtonText="Reset" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="272" Scale9Height="180" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="302.0000" Y="202.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1657.9200" Y="353.3760" />
@@ -296,7 +296,8 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.8635" Y="0.2454" />
                 <PreSize X="0.1573" Y="0.1403" />
-                <TextColor A="255" R="65" G="65" B="70" />
+                <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
+                <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="SecondSceneView/reset.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
@@ -304,13 +305,13 @@
               <AbstractNodeData Name="bottle1" ActionTag="585736564" Tag="45" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="148.9320" RightMargin="1600.0680" TopMargin="507.5521" BottomMargin="728.4479" ctype="SpriteObjectData">
                 <Size X="171.0000" Y="204.0000" />
                 <Children>
-                  <AbstractNodeData Name="brush" ActionTag="-1994330717" VisibleForFrame="False" Tag="113" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-1.6570" RightMargin="-11.3430" TopMargin="-163.5772" BottomMargin="83.5772" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="brush" ActionTag="-1994330717" VisibleForFrame="False" Tag="113" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-6.6160" RightMargin="-6.3840" TopMargin="-146.2168" BottomMargin="66.2168" ctype="SpriteObjectData">
                     <Size X="184.0000" Y="284.0000" />
                     <AnchorPoint ScaleX="0.2932" ScaleY="0.1367" />
-                    <Position X="52.2918" Y="122.4000" />
+                    <Position X="47.3328" Y="105.0396" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3058" Y="0.6000" />
+                    <PrePosition X="0.2768" Y="0.5149" />
                     <PreSize X="1.0760" Y="1.3922" />
                     <FileData Type="Normal" Path="SecondSceneView/brush.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
@@ -328,13 +329,13 @@
               <AbstractNodeData Name="bottle2" ActionTag="-783952990" Tag="46" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="510.6600" RightMargin="1238.3401" TopMargin="304.5120" BottomMargin="931.4880" ctype="SpriteObjectData">
                 <Size X="171.0000" Y="204.0000" />
                 <Children>
-                  <AbstractNodeData Name="brush" ActionTag="-358686370" VisibleForFrame="False" Tag="114" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-2.0529" RightMargin="-10.9471" TopMargin="-159.8284" BottomMargin="79.8284" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="brush" ActionTag="-358686370" VisibleForFrame="False" Tag="114" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="0.4266" RightMargin="-13.4266" TopMargin="-139.9996" BottomMargin="59.9996" ctype="SpriteObjectData">
                     <Size X="184.0000" Y="284.0000" />
                     <AnchorPoint ScaleX="0.3105" ScaleY="0.1499" />
-                    <Position X="55.0791" Y="122.4000" />
+                    <Position X="57.5586" Y="102.5712" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3221" Y="0.6000" />
+                    <PrePosition X="0.3366" Y="0.5028" />
                     <PreSize X="1.0760" Y="1.3922" />
                     <FileData Type="Normal" Path="SecondSceneView/brush.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
@@ -376,13 +377,13 @@
               <AbstractNodeData Name="bottle4" ActionTag="1078449816" Tag="48" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1224.7080" RightMargin="524.2920" TopMargin="253.9680" BottomMargin="982.0320" ctype="SpriteObjectData">
                 <Size X="171.0000" Y="204.0000" />
                 <Children>
-                  <AbstractNodeData Name="brush" ActionTag="-556180447" VisibleForFrame="False" Tag="116" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-0.9852" RightMargin="-12.0148" TopMargin="-169.9956" BottomMargin="89.9956" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="brush" ActionTag="-556180447" VisibleForFrame="False" Tag="116" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.4943" RightMargin="-14.4943" TopMargin="-135.2748" BottomMargin="55.2748" ctype="SpriteObjectData">
                     <Size X="184.0000" Y="284.0000" />
                     <AnchorPoint ScaleX="0.2652" ScaleY="0.1141" />
-                    <Position X="47.8116" Y="122.4000" />
+                    <Position X="50.2911" Y="87.6792" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.2796" Y="0.6000" />
+                    <PrePosition X="0.2941" Y="0.4298" />
                     <PreSize X="1.0760" Y="1.3922" />
                     <FileData Type="Normal" Path="SecondSceneView/brush.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
@@ -400,13 +401,13 @@
               <AbstractNodeData Name="bottle5" ActionTag="-1281265090" Tag="49" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1585.2839" RightMargin="163.7161" TopMargin="455.8560" BottomMargin="780.1440" ctype="SpriteObjectData">
                 <Size X="171.0000" Y="204.0000" />
                 <Children>
-                  <AbstractNodeData Name="brush" ActionTag="-675169005" VisibleForFrame="False" Tag="117" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-1.5654" RightMargin="-11.4346" TopMargin="-169.4844" BottomMargin="89.4844" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="brush" ActionTag="-675169005" VisibleForFrame="False" Tag="117" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-1.5654" RightMargin="-11.4346" TopMargin="-137.2524" BottomMargin="57.2524" ctype="SpriteObjectData">
                     <Size X="184.0000" Y="284.0000" />
                     <AnchorPoint ScaleX="0.2901" ScaleY="0.1159" />
-                    <Position X="51.8130" Y="122.4000" />
+                    <Position X="51.8130" Y="90.1680" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3030" Y="0.6000" />
+                    <PrePosition X="0.3030" Y="0.4420" />
                     <PreSize X="1.0760" Y="1.3922" />
                     <FileData Type="Normal" Path="SecondSceneView/brush.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
@@ -429,22 +430,22 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.8500" Y="1.0000" />
                 <PreSize X="0.0656" Y="0.0590" />
-                <FontResource Type="Default" Path="" Plist="" />
-                <TextColor A="255" R="65" G="65" B="70" />
+                <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
+                <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="scoreBtn" ActionTag="-632230951" Tag="127" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1698.0000" RightMargin="96.0000" BottomMargin="1355.0000" TouchEnable="True" FontSize="24" ButtonText="comment" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="scoreBtn" ActionTag="-632230951" Tag="127" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1696.2720" RightMargin="97.7280" TopMargin="-3.6001" BottomMargin="1358.6001" TouchEnable="True" FontSize="28" ButtonText="Comment" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="126.0000" Y="85.0000" />
                 <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
-                <Position X="1824.0000" Y="1440.0000" />
+                <Position X="1822.2720" Y="1443.6001" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9500" Y="1.0000" />
+                <PrePosition X="0.9491" Y="1.0025" />
                 <PreSize X="0.0656" Y="0.0590" />
-                <FontResource Type="Default" Path="" Plist="" />
-                <TextColor A="255" R="65" G="65" B="70" />
+                <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
+                <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
@@ -460,16 +461,16 @@
                 <FileData Type="Normal" Path="SecondSceneView/cotton.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="rmBtn" ActionTag="80611189" Tag="96" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1681.5120" RightMargin="112.4880" TopMargin="124.2521" BottomMargin="1230.7479" TouchEnable="True" FontSize="20" ButtonText="Remove Ads" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="126.0000" Y="85.0000" />
+              <AbstractNodeData Name="rmBtn" ActionTag="80611189" Tag="96" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1664.1545" RightMargin="95.1306" TopMargin="161.7906" BottomMargin="1169.7906" TouchEnable="True" FontSize="24" ButtonText="Remove Ads" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="160.7148" Y="108.4187" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1744.5120" Y="1273.2479" />
+                <Position X="1744.5120" Y="1224.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9086" Y="0.8842" />
-                <PreSize X="0.0656" Y="0.0590" />
-                <FontResource Type="Default" Path="" Plist="" />
-                <TextColor A="255" R="65" G="65" B="70" />
+                <PrePosition X="0.9086" Y="0.8500" />
+                <PreSize X="0.0837" Y="0.0753" />
+                <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
+                <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />

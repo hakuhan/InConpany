@@ -12,6 +12,8 @@
 #include "cocostudio/CocoStudio.h"
 #include "PaintingNailsScene.hpp"
 #include <stdlib.h>
+#include "Audio.hpp"
+#include "CommonView.hpp"
 
 USING_NS_CC;
 using namespace ui;
@@ -105,40 +107,57 @@ bool CreateNailPolishScene::init() {
     
     //音效、评论和去广告按钮
     auto rmAds = (Button *)(bg->getChildByName("rmBtn"));
-    auto layout = CSLoader::createNodeWithVisibleSize("commonViews/rmAds.csb");
-    auto view = (Layout *)(layout->getChildByName("bg"));
-    auto restoreBtn = (Button *)(view->getChildByName("restoreB"));
-    auto removeBtn = (Button *)(view->getChildByName("removeBtn"));
-#define ADSTAG 11
-    view->setVisible(false);
-    this->addChild(view, 10, ADSTAG);
-    rmAds->addClickEventListener([view](Ref *p){
+    
+    rmAds->addClickEventListener([=](Ref *p){
         //创建动画
+        auto view = CommonView::getInstance()->getCommentView();
+#define ADSTAG 11
+        this->addChild(view);
         view->setScale(0.1);
-        view->setVisible(true);
         auto scaleB = EaseInOut::create(ScaleBy::create(1, 10), 10);
         view->runAction(scaleB);
     });
-    restoreBtn->addClickEventListener([view](Ref *p){
-        //恢复购买
-        auto scaleS = Sequence::create(EaseIn::create(ScaleBy::create(1, 0.1), 10), CallFunc::create([view](){
-            view->setVisible(false);
-        }), NULL);
-        view->runAction(scaleS);
+    //声音开关
+    auto soundBtn = (Button *)(bg->getChildByName("soundBtn"));
+    soundBtn->addClickEventListener([](Ref *p){
+        //检查有没有开启声音
+        if (ISSOUNDOPEN) {
+            SETSOUND(false);
+        } else {
+            SETSOUND(true);
+        }
+        Audio::getInstance()->playBgm();
+        //设置开关状态
     });
-    removeBtn->addClickEventListener([view](Ref *p){
-        //购买商品
-        auto scaleS = Sequence::create(EaseIn::create(ScaleBy::create(1, 0.1), 10), CallFunc::create([view](){
-            view->setVisible(false);
-        }), NULL);
-        view->runAction(scaleS);
+    //评论
+    auto commentBtn = (Button *)(bg->getChildByName("scoreBtn"));
+    commentBtn->addClickEventListener([](Ref *){
+        //评论
     });
+    //提示版
+    auto color_title = (Text *)(bg->getChildByName("color_title")->getChildByName("title"));
+    auto shape_title = (Text *)(bg->getChildByName("potion_title")->getChildByName("title"));
+    //提示
+    auto saveNtc = (Text *)(saveNotice->getChildByName("info"));
+    //国际化
+    if (Application::getInstance()->getCurrentLanguage() == LanguageType::CHINESE) {
+        soundBtn->setTitleText("声音");
+        commentBtn->setTitleText("评论");
+        rmAds->setTitleText("去广告");
+        mixBtn->setTitleText("混合");
+        color_title->setString("颜色");
+        shape_title->setString("形状");
+        saveNtc->setString("要保存这个指甲油吗？");
+        yesBtn->setTitleText("是");
+        noBtn->setTitleText("不");
+    }
     
     return true;
 }
 
 void CreateNailPolishScene::updateCustom(float dt) {
     //检查是否能够点击确定按钮
+    this->chechStateOfMixButton();
     //获取按钮
     auto bg = this->getChildByName("bg");
     auto btn = (Button *)(bg->getChildByName("MixBtn"));
@@ -213,6 +232,8 @@ void CreateNailPolishScene::onClickColor(Button *btn, Vec2 movePosition) {
 
 #pragma mark 创建左边和上边的动画
 void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPositionAndButtton(Sprite *sprite, Vec2 movePosition, Button *btn) {
+    //音效
+    Audio::getInstance()->playEffect(C_LEFT);
     //判断按钮位置
     bool isLeftButton = false;
     //获取最开始位置
@@ -237,7 +258,10 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     auto moveB = MoveTo::create(0.5, firstPstn);
     //移动过程中变小
     auto scaleSmlWhenMove = TargetedAction::create(sprite, ScaleBy::create(1, 0.5));
-    auto moveAndScaleS = Spawn::create(bzl, scaleSmlWhenMove, NULL);
+    auto moveAndScaleS = Spawn::create(bzl, scaleSmlWhenMove, CallFunc::create([](){
+        //播放音效
+        Audio::getInstance()->playEffect(MOVE);
+    }), NULL);
     //变回以前大小
     auto scaleBWhenMoveB = TargetedAction::create(sprite, ScaleBy::create(0.5, 2));
     auto deltaAngle = 90;
@@ -246,7 +270,10 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     }
     auto rotate = RotateBy::create(0.3, deltaAngle);
     auto rotateB = RotateBy::create(0.5, -deltaAngle);
-    auto spawn2 = Spawn::create(moveB, rotateB, scaleBWhenMoveB, NULL);
+    auto spawn2 = Spawn::create(moveB, rotateB, scaleBWhenMoveB, CallFunc::create([](){
+        //播放音效
+        Audio::getInstance()->playEffect(MOVE);
+    }), NULL);
     //倒水动画
     auto efects = (Sprite *)(this->getChildByName("bg")->getChildByName("pBg")->getChildByName("efects"));
     TargetedAction *efectsMove;
@@ -289,12 +316,19 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
         efectsMove = TargetedAction::create(efects, Sequence::create(flipY, fadeIn, moveDown, moveBack, moveDown->clone(), moveBack->clone(), fadeOut, flipBack, NULL));
     }
     
-    auto sqnc = Sequence::create(scaleS, spawn1, shake1, shake2, shake2, shake1, shake1, shake2, moveAndScaleS, rotate, efectsMove, spawn2, CallFuncN::create(CC_CALLBACK_0(CreateNailPolishScene::clearSprite, this, sprite, btn)), NULL);
+    auto effectWithAudio = Spawn::create(efectsMove, CallFunc::create([](){
+        //播放音效
+        Audio::getInstance()->playEffect(DUMP);
+    }), NULL);
+    
+    auto sqnc = Sequence::create(scaleS, spawn1, shake1, shake2, shake2, shake1, shake1, shake2, moveAndScaleS, rotate, effectWithAudio, spawn2, CallFuncN::create(CC_CALLBACK_0(CreateNailPolishScene::clearSprite, this, sprite, btn)), NULL);
     sprite->runAction(sqnc);
 }
 
 #pragma mark 创建右边的动画
 void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositionAndButton(Sprite* sprite, Vec2 movePosition, Button *btn) {
+    //音效
+    Audio::getInstance()->playEffect(C_RIGHT);
     //缩小、放大并弹出塞子、移动、倾倒、返回
     Vec2 firstPstn = sprite->getPosition();
     auto moveUpHight = sprite->getContentSize().height/3;
@@ -333,8 +367,14 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     auto moveB = MoveTo::create(0.5, firstPstn);
     auto rotate = RotateBy::create(0.5, -90);
     auto rotateB = RotateBy::create(0.5, 90);
-    auto spawn2 = Spawn::create(moveB, rotateB, scaleBWhenMoveB, NULL);
-    auto spawn3 = Spawn::create(plugActionB, spriteMove, scaleSmlWhenMove, NULL);
+    auto spawn2 = Spawn::create(moveB, rotateB, scaleBWhenMoveB, CallFunc::create([](){
+        //播放音效
+        Audio::getInstance()->playEffect(MOVE);
+    }), NULL);
+    auto spawn3 = Spawn::create(plugActionB, spriteMove, CallFunc::create([](){
+        //播放音效
+        Audio::getInstance()->playEffect(MOVE);
+    }), scaleSmlWhenMove, NULL);
     //创建精灵帧动画
     auto spriteFrameCatche = SpriteFrameCache::getInstance();
     std::string fNm1, fNm2, fNm3, fNm4;
@@ -396,7 +436,10 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     auto animation = Animation::createWithSpriteFrames(array, 0.3, 1);
     animation->setRestoreOriginalFrame(true);
     auto spriteAnimate = Animate::create(animation);
-    auto frameAndRoleB = Spawn::create(spriteAnimate, scaleBFast, NULL);
+    auto frameAndRoleB = Spawn::create(spriteAnimate,CallFunc::create([](){
+        //播放音效
+        Audio::getInstance()->playEffect(DUMP);
+    }), scaleBFast, NULL);
     
     auto sqnc = Sequence::create(scaleS, spawn1, plugAction2, plugActionF, spawn3, rotate, frameAndRoleB, scaleSFast, spawn2, CallFuncN::create(CC_CALLBACK_0(CreateNailPolishScene::clearSprite, this, sprite, btn)), NULL);
     sprite->runAction(sqnc);
@@ -404,6 +447,8 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
 
 #pragma mark 点击合成按钮
 void CreateNailPolishScene::onClickMixButton() {
+    //音效
+    Audio::getInstance()->playEffect(C_LEFT);
     //合成指甲油
     std::string str;
     //用户选择花纹和颜色
@@ -442,7 +487,10 @@ void CreateNailPolishScene::onClickMixButton() {
     auto potShake2 = TargetedAction::create(pot, RotateBy::create(0.15, -10));
     auto potScaleS = TargetedAction::create(pot, ScaleBy::create(0.1, 0.5));
     auto potScaleB = EaseBackInOut::create(TargetedAction::create(pot, ScaleBy::create(0.3, 2)));
-    auto mixScaleB = EaseInOut::create(TargetedAction::create(mixSuccess, ScaleBy::create(0.5, 10)), 10);
+    auto mixScaleB = Spawn::create(EaseInOut::create(TargetedAction::create(mixSuccess, ScaleBy::create(0.5, 10)), 10), CallFunc::create([](){
+        //播放音效
+        Audio::getInstance()->playEffect(POP);
+    }), NULL);
     auto mixFadeOut = TargetedAction::create(mixSuccess, FadeOut::create(1));
     auto mixFadeIn = TargetedAction::create(mixSuccess, FadeIn::create(0.1));
     saveNotice->runAction(Sequence::create(potShake1, potShake2, potShake1->clone(), potShake2->clone(), potScaleS, potScaleB, mixFadeIn, mixScaleB, scaleS, show, scale, mixFadeOut, NULL));

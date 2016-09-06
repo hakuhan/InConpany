@@ -27,6 +27,7 @@ private:
     bottleColors colors;
     bool isCleanBtnClicked; //判断清理按钮是否点击
     Vector<Sprite *> neils;
+    std::string names[5];
     
     void onClickPolishBtn();
     void onClickCrossBtnWithTag(int tag);

@@ -14,7 +14,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="1.0000" Y="1.0000" />
-            <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="text_Panel" ActionTag="-55800558" Tag="33" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="96.0000" RightMargin="1248.0000" TopMargin="432.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="575.9999" Y="1008.0000" />
@@ -50,7 +50,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0500" Y="0.9500" />
             <PreSize X="0.1021" Y="0.0806" />
-            <FileData Type="Normal" Path="btn-share.png" Plist="" />
+            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="nextBtn" ActionTag="224094434" Tag="40" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1628.0000" RightMargin="96.0000" TopMargin="1252.0000" BottomMargin="72.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="94" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -62,7 +62,7 @@
             <PrePosition X="0.9500" Y="0.0500" />
             <PreSize X="0.1021" Y="0.0806" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <NormalFileData Type="Normal" Path="btn-share.png" Plist="" />
+            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -98,7 +98,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.9500" Y="0.6000" />
             <PreSize X="0.5000" Y="0.4444" />
-            <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
+            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
         </Children>

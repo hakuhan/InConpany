@@ -14,6 +14,8 @@
 #define TITLE_POSITION Vec2(30, SCREAN_SIZE.height-30)
 #define UD UserDefault::getInstance()
 #define ISADDEXITS "isAddExists"
+#define ISSOUNDOPEN UD->getBoolForKey("isSoundOpen", true)
+#define SETSOUND(key) UD->setBoolForKey("isSoundOpen", key)
 
 struct XXX{
     int a;
@@ -39,25 +41,6 @@ struct selectedTag{
     int lSecondC;
     int rChoice;
     int tChoice;
-    
-    
-    //    enum leftP{
-    //        lPurple=11,
-    //        lWhite=12,
-    //        lRed=13,
-    //        lBlack=14,
-    //        lYellow=15
-    //    };
-    //    enum rightP{
-    //        rYellow = 21,
-    //        rPurple = 22,
-    //        rBlue = 23,
-    //        rGreen = 24
-    //    };
-    //    enum topP{
-    //        tBlue = 31,
-    //        tGreen = 32
-    //    };
 };
 
 //5个瓶子所装的颜料
@@ -69,5 +52,12 @@ struct bottleColors {
     std::string bottle5;
 };
 
+const std::string BGM = "tAudio/music.mp3";
+const std::string C_LEFT = "tAudio/combo_1.mp3";
+const std::string C_RIGHT = "tAudio/combo_2.mp3";
+const std::string MOVE = "tAudio/select.mp3";
+const std::string DUMP = "tAudio/readygo.mp3";
+const std::string CLEAN = "tAudio/clean.mp3";
+const std::string POP = "tAudio/pop.mp3";
 
 #endif /* DefaultHeader_h */

@@ -17,7 +17,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0490" Y="0.9430" />
                 <PreSize X="0.1021" Y="0.0806" />
-                <FileData Type="Normal" Path="btn-sound-on.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="Panel_1" ActionTag="-1424111333" Tag="28" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="96.0000" RightMargin="1248.0000" TopMargin="432.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -57,7 +57,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="0.2042" Y="0.1813" />
-                    <FileData Type="Normal" Path="btn-share.png" Plist="" />
+                    <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pot1" ActionTag="-108692492" Tag="44" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="94.0000" RightMargin="670.0000" TopMargin="390.0000" BottomMargin="134.0000" ctype="SpriteObjectData">
@@ -68,7 +68,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.2000" Y="0.3000" />
                     <PreSize X="0.2042" Y="0.1813" />
-                    <FileData Type="Normal" Path="btn-share.png" Plist="" />
+                    <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                 </Children>
@@ -78,7 +78,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.9500" Y="0.6000" />
                 <PreSize X="0.5000" Y="0.4444" />
-                <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="Button_1" ActionTag="838326257" Tag="31" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1627.9700" RightMargin="96.0000" TopMargin="1251.9399" BottomMargin="72.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="94" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -90,7 +90,7 @@
                 <PrePosition X="0.9500" Y="0.0500" />
                 <PreSize X="0.1021" Y="0.0806" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="btn-music-off.png" Plist="" />
+                <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -102,7 +102,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.1603" />
                 <PreSize X="0.1021" Y="0.0806" />
-                <FileData Type="Normal" Path="btn-music-off.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="rightFoot" ActionTag="24022450" Tag="34" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="412.0800" RightMargin="1311.9200" TopMargin="1440.0000" BottomMargin="-116.0000" ctype="SpriteObjectData">
@@ -113,7 +113,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.2657" />
                 <PreSize X="0.1021" Y="0.0806" />
-                <FileData Type="Normal" Path="btn-music-off.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="Panel_2" ActionTag="-2049291392" Tag="35" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1142.4060" RightMargin="96.0000" TopMargin="72.0000" BottomMargin="1168.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -138,7 +138,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.7502" Y="0.4673" />
                     <PreSize X="0.2876" Y="0.5800" />
-                    <FileData Type="Normal" Path="btn-sound-on.png" Plist="" />
+                    <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="potHat" ActionTag="419775096" Tag="45" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="413.1955" RightMargin="72.3985" TopMargin="2.0000" BottomMargin="82.0000" ctype="SpriteObjectData">
@@ -149,7 +149,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.7500" Y="0.7000" />
                     <PreSize X="0.2876" Y="0.5800" />
-                    <FileData Type="Normal" Path="btn-share.png" Plist="" />
+                    <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="cloud" ActionTag="-2042286882" Tag="43" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="529.6799" RightMargin="-44.0859" TopMargin="99.2200" BottomMargin="-15.2200" ctype="SpriteObjectData">
@@ -160,7 +160,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.9209" Y="0.2139" />
                     <PreSize X="0.2876" Y="0.5800" />
-                    <FileData Type="Normal" Path="btn-sound-on.png" Plist="" />
+                    <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                 </Children>
@@ -183,7 +183,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5560" Y="0.5060" />
                 <PreSize X="0.1021" Y="0.0806" />
-                <FileData Type="Normal" Path="btn-share.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="Button_2" ActionTag="1119070741" Tag="47" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1628.0000" RightMargin="96.0000" TopMargin="1252.0000" BottomMargin="72.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="94" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -195,7 +195,7 @@
                 <PrePosition X="0.9500" Y="0.0500" />
                 <PreSize X="0.1021" Y="0.0806" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="btn-share.png" Plist="" />
+                <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

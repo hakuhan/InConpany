@@ -63,7 +63,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.9500" Y="0.7567" />
                 <PreSize X="0.5000" Y="0.4444" />
-                <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="Panel_B" ActionTag="928175506" Tag="46" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="864.0000" RightMargin="96.0000" TopMargin="597.7121" BottomMargin="202.2879" ctype="SpriteObjectData">
@@ -133,7 +133,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.9500" Y="0.3627" />
                 <PreSize X="0.5000" Y="0.4444" />
-                <FileData Type="Normal" Path="HelloWorld.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="dscrbP" ActionTag="-933301310" Tag="81" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="192.0000" RightMargin="1152.0000" TopMargin="576.0001" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
@@ -181,7 +181,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0500" Y="0.9500" />
                 <PreSize X="0.1021" Y="0.0806" />
-                <FileData Type="Normal" Path="btn-share.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="next_button" ActionTag="-678463574" Tag="27" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1641.7435" RightMargin="192.0000" TopMargin="1302.2991" BottomMargin="72.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="94" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -193,7 +193,7 @@
                 <PrePosition X="0.9000" Y="0.0500" />
                 <PreSize X="0.0449" Y="0.0456" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="btn-share.png" Plist="" />
+                <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
