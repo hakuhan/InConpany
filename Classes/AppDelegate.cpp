@@ -56,8 +56,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // run
     director->runWithScene(scene);
     
-    bool isAddExists = UD->getBoolForKey(ISADDEXITS, true);
-    if (isAddExists) {
+    bool isPurchase = UD->getBoolForKey(ISPURCHASE.c_str(), false);
+    if (isPurchase != true) {
         //TODO
         //开启广告
         

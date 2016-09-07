@@ -9,7 +9,7 @@
           <AbstractNodeData Name="bg" ActionTag="1901137949" Tag="51" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="2.4960" RightMargin="-2.4960" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="633" RightEage="633" TopEage="475" BottomEage="475" Scale9OriginX="633" Scale9OriginY="475" Scale9Width="654" Scale9Height="490" ctype="PanelObjectData">
             <Size X="1920.0000" Y="1440.0000" />
             <Children>
-              <AbstractNodeData Name="color_title" ActionTag="-2141752427" Tag="65" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="188.1960" RightMargin="1392.8040" TopMargin="531.3720" BottomMargin="743.6280" ctype="SpriteObjectData">
+              <AbstractNodeData Name="color_title" ActionTag="-2141752427" Tag="65" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="169.3046" RightMargin="1411.6953" TopMargin="430.6196" BottomMargin="844.3804" ctype="SpriteObjectData">
                 <Size X="339.0000" Y="165.0000" />
                 <Children>
                   <AbstractNodeData Name="title" ActionTag="-145946790" Tag="115" IconVisible="False" LeftMargin="77.8838" RightMargin="107.7502" TopMargin="66.1836" BottomMargin="43.2766" IsCustomSize="True" FontSize="48" LabelText="Colour" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -26,15 +26,96 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="357.6960" Y="826.1280" />
+                <Position X="338.8046" Y="926.8804" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1863" Y="0.5737" />
+                <PrePosition X="0.1765" Y="0.6437" />
                 <PreSize X="0.1766" Y="0.1146" />
                 <FileData Type="Normal" Path="firstSceneView/floralBoard.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="yellowBottle" ActionTag="200857325" Tag="38" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="109.0240" RightMargin="1578.9761" TopMargin="811.7800" BottomMargin="345.2200" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="blueBottle" ActionTag="855703958" CallBackName="onClickColor" Tag="40" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-4.2925" RightMargin="1692.2925" TopMargin="1004.2275" BottomMargin="152.7725" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="232.0000" Y="283.0000" />
+                <Children>
+                  <AbstractNodeData Name="notice" ActionTag="6203732" Alpha="0" Tag="117" IconVisible="False" LeftMargin="76.9630" RightMargin="79.0370" TopMargin="-87.0914" BottomMargin="287.0914" ctype="SpriteObjectData">
+                    <Size X="76.0000" Y="83.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="114.9630" Y="328.5914" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4955" Y="1.1611" />
+                    <PreSize X="0.3276" Y="0.2933" />
+                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" />
+                <Position X="111.7075" Y="152.7725" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.0582" Y="0.1061" />
+                <PreSize X="0.1208" Y="0.1965" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <PressedFileData Type="Normal" Path="firstSceneView/bluePolishC1.png" Plist="" />
+                <NormalFileData Type="Normal" Path="firstSceneView/bluePolish1.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="pinkBottle" ActionTag="44591219" Tag="41" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="241.0436" RightMargin="1446.9563" TopMargin="1027.3760" BottomMargin="129.6241" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="232.0000" Y="283.0000" />
+                <Children>
+                  <AbstractNodeData Name="notice" ActionTag="-1381905795" Alpha="0" Tag="118" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="71.5272" RightMargin="84.4728" TopMargin="-63.7155" BottomMargin="263.7155" ctype="SpriteObjectData">
+                    <Size X="76.0000" Y="83.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="109.5272" Y="305.2155" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4721" Y="1.0785" />
+                    <PreSize X="0.3276" Y="0.2933" />
+                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" />
+                <Position X="357.0436" Y="129.6241" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.1860" Y="0.0900" />
+                <PreSize X="0.1208" Y="0.1965" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <PressedFileData Type="Normal" Path="firstSceneView/pinkPolishC.png" Plist="" />
+                <NormalFileData Type="Normal" Path="firstSceneView/pinkPolish.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="whiteBottle" ActionTag="1230414554" Tag="42" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="477.0886" RightMargin="1210.9114" TopMargin="997.9303" BottomMargin="159.0697" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="232.0000" Y="283.0000" />
+                <Children>
+                  <AbstractNodeData Name="notice" ActionTag="-711416499" Alpha="0" Tag="119" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="76.9792" RightMargin="79.0208" TopMargin="-62.6684" BottomMargin="262.6684" ctype="SpriteObjectData">
+                    <Size X="76.0000" Y="83.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="114.9792" Y="304.1684" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4956" Y="1.0748" />
+                    <PreSize X="0.3276" Y="0.2933" />
+                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" />
+                <Position X="593.0886" Y="159.0697" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.3089" Y="0.1105" />
+                <PreSize X="0.1208" Y="0.1965" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <PressedFileData Type="Normal" Path="firstSceneView/whitePolishC1.png" Plist="" />
+                <NormalFileData Type="Normal" Path="firstSceneView/whitePolish1.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="yellowBottle" ActionTag="200857325" Tag="38" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="105.8765" RightMargin="1582.1235" TopMargin="679.5436" BottomMargin="477.4564" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="232.0000" Y="283.0000" />
                 <Children>
                   <AbstractNodeData Name="notice" ActionTag="1889657650" Alpha="0" Tag="115" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="74.4040" RightMargin="81.5960" TopMargin="-69.9981" BottomMargin="269.9981" ctype="SpriteObjectData">
@@ -50,10 +131,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="225.0240" Y="486.7200" />
+                <Position X="221.8765" Y="618.9564" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1172" Y="0.3380" />
+                <PrePosition X="0.1156" Y="0.4298" />
                 <PreSize X="0.1208" Y="0.1965" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <PressedFileData Type="Normal" Path="firstSceneView/yellowPolishC1.png" Plist="" />
@@ -61,7 +142,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="blackBottle" ActionTag="570600946" CallBackName="onClickColor" Tag="39" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="343.4560" RightMargin="1344.5439" TopMargin="812.3560" BottomMargin="344.6440" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="blackBottle" ActionTag="570600946" CallBackName="onClickColor" Tag="39" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="349.7534" RightMargin="1338.2466" TopMargin="676.9705" BottomMargin="480.0295" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="232.0000" Y="283.0000" />
                 <Children>
                   <AbstractNodeData Name="notice" ActionTag="950541034" Alpha="0" Tag="116" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="74.8912" RightMargin="81.1088" TopMargin="-72.0357" BottomMargin="272.0357" ctype="SpriteObjectData">
@@ -77,10 +158,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="459.4560" Y="486.1440" />
+                <Position X="465.7534" Y="621.5295" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2393" Y="0.3376" />
+                <PrePosition X="0.2426" Y="0.4316" />
                 <PreSize X="0.1208" Y="0.1965" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <PressedFileData Type="Normal" Path="firstSceneView/blackPolishC1.png" Plist="" />
@@ -88,88 +169,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="blueBottle" ActionTag="855703958" CallBackName="onClickColor" Tag="40" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="5.1520" RightMargin="1682.8480" TopMargin="1094.3080" BottomMargin="62.6920" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="232.0000" Y="283.0000" />
-                <Children>
-                  <AbstractNodeData Name="notice" ActionTag="6203732" Alpha="0" Tag="117" IconVisible="False" LeftMargin="76.9630" RightMargin="79.0370" TopMargin="-87.0914" BottomMargin="287.0914" ctype="SpriteObjectData">
-                    <Size X="76.0000" Y="83.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="114.9630" Y="328.5914" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4955" Y="1.1611" />
-                    <PreSize X="0.3276" Y="0.2933" />
-                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="121.1520" Y="204.1920" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0631" Y="0.1418" />
-                <PreSize X="0.1208" Y="0.1965" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="firstSceneView/bluePolishC1.png" Plist="" />
-                <NormalFileData Type="Normal" Path="firstSceneView/bluePolish1.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="pinkBottle" ActionTag="44591219" Tag="41" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="244.1920" RightMargin="1443.8080" TopMargin="1133.6200" BottomMargin="23.3800" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="232.0000" Y="283.0000" />
-                <Children>
-                  <AbstractNodeData Name="notice" ActionTag="-1381905795" Alpha="0" Tag="118" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="71.5272" RightMargin="84.4728" TopMargin="-63.7155" BottomMargin="263.7155" ctype="SpriteObjectData">
-                    <Size X="76.0000" Y="83.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="109.5272" Y="305.2155" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4721" Y="1.0785" />
-                    <PreSize X="0.3276" Y="0.2933" />
-                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="360.1920" Y="164.8800" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1876" Y="0.1145" />
-                <PreSize X="0.1208" Y="0.1965" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="firstSceneView/pinkPolishC.png" Plist="" />
-                <NormalFileData Type="Normal" Path="firstSceneView/pinkPolish.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="whiteBottle" ActionTag="1230414554" Tag="42" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="477.0880" RightMargin="1210.9120" TopMargin="1106.5480" BottomMargin="50.4520" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="202" Scale9Height="261" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="232.0000" Y="283.0000" />
-                <Children>
-                  <AbstractNodeData Name="notice" ActionTag="-711416499" Alpha="0" Tag="119" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="76.9792" RightMargin="79.0208" TopMargin="-62.6684" BottomMargin="262.6684" ctype="SpriteObjectData">
-                    <Size X="76.0000" Y="83.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="114.9792" Y="304.1684" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4956" Y="1.0748" />
-                    <PreSize X="0.3276" Y="0.2933" />
-                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="593.0880" Y="191.9520" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3089" Y="0.1333" />
-                <PreSize X="0.1208" Y="0.1965" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="firstSceneView/whitePolishC1.png" Plist="" />
-                <NormalFileData Type="Normal" Path="firstSceneView/whitePolish1.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="potion_title" ActionTag="-291586797" Tag="66" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1517.7959" RightMargin="63.2041" TopMargin="619.0681" BottomMargin="655.9319" ctype="SpriteObjectData">
+              <AbstractNodeData Name="potion_title" ActionTag="-291586797" Tag="66" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1581.0000" TopMargin="480.5329" BottomMargin="794.4671" ctype="SpriteObjectData">
                 <Size X="339.0000" Y="165.0000" />
                 <Children>
                   <AbstractNodeData Name="title" ActionTag="-417623548" Tag="116" IconVisible="False" LeftMargin="81.6980" RightMargin="115.4062" TopMargin="68.4383" BottomMargin="38.6051" IsCustomSize="True" FontSize="48" LabelText="Shape" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -185,54 +185,92 @@
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1687.2959" Y="738.4319" />
+                <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
+                <Position X="1920.0000" Y="876.9671" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8788" Y="0.5128" />
+                <PrePosition X="1.0000" Y="0.6090" />
                 <PreSize X="0.1766" Y="0.1146" />
                 <FileData Type="Normal" Path="firstSceneView/floralBoard.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="slashBottle" ActionTag="-1852925707" Tag="43" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1285.3521" RightMargin="428.6479" TopMargin="825.7760" BottomMargin="306.2240" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="176" Scale9Height="286" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="206.0000" Y="308.0000" />
+              <AbstractNodeData Name="shapBottle" ActionTag="706963916" Tag="45" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1406.6855" RightMargin="307.2944" TopMargin="1002.3560" BottomMargin="129.6241" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="176" Scale9Height="286" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="206.0200" Y="308.0200" />
                 <Children>
-                  <AbstractNodeData Name="plug" ActionTag="1431146354" VisibleForFrame="False" Tag="76" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="58.7864" RightMargin="65.2136" TopMargin="0.6608" BottomMargin="202.3392" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="plug" ActionTag="-480204373" VisibleForFrame="False" Tag="78" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="55.5616" RightMargin="68.4584" TopMargin="3.8676" BottomMargin="199.1523" ctype="SpriteObjectData">
                     <Size X="82.0000" Y="105.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="99.7864" Y="254.8392" />
+                    <Position X="96.5616" Y="251.6523" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4844" Y="0.8274" />
-                    <PreSize X="0.3981" Y="0.3409" />
+                    <PrePosition X="0.4687" Y="0.8170" />
+                    <PreSize X="0.3980" Y="0.3409" />
                     <FileData Type="Normal" Path="firstSceneView/plug.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="notice" ActionTag="1795394691" Alpha="0" Tag="111" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="58.6346" RightMargin="71.3654" TopMargin="-71.3144" BottomMargin="296.3144" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="notice" ActionTag="674286768" Alpha="0" Tag="113" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="53.9673" RightMargin="76.0527" TopMargin="-72.2712" BottomMargin="297.2912" ctype="SpriteObjectData">
                     <Size X="76.0000" Y="83.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="96.6346" Y="337.8144" />
+                    <Position X="91.9673" Y="338.7912" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4691" Y="1.0968" />
+                    <PrePosition X="0.4464" Y="1.0999" />
                     <PreSize X="0.3689" Y="0.2695" />
                     <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1388.3521" Y="460.2240" />
+                <AnchorPoint ScaleX="0.5000" />
+                <Position X="1509.6956" Y="129.6241" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7231" Y="0.3196" />
+                <PrePosition X="0.7863" Y="0.0900" />
                 <PreSize X="0.1073" Y="0.2139" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="firstSceneView/slashbottleC.png" Plist="" />
-                <NormalFileData Type="Normal" Path="firstSceneView/slashBottle.png" Plist="" />
+                <PressedFileData Type="Normal" Path="firstSceneView/shapBottleC.png" Plist="" />
+                <NormalFileData Type="Normal" Path="firstSceneView/shapBottle.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="flowerBottle" ActionTag="1674185932" Tag="44" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1572.9680" RightMargin="141.0320" TopMargin="807.0560" BottomMargin="324.9440" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="176" Scale9Height="286" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="heartBottle" ActionTag="376861825" Tag="46" RotationSkewX="-0.6784" RotationSkewY="-0.6802" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1683.4944" RightMargin="30.4856" TopMargin="1002.3561" BottomMargin="129.6240" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="176" Scale9Height="286" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="206.0200" Y="308.0200" />
+                <Children>
+                  <AbstractNodeData Name="plug" ActionTag="-762242074" VisibleForFrame="False" Tag="79" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="56.5505" RightMargin="67.4695" TopMargin="0.6026" BottomMargin="202.4173" ctype="SpriteObjectData">
+                    <Size X="82.0000" Y="105.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="97.5505" Y="254.9173" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4735" Y="0.8276" />
+                    <PreSize X="0.3980" Y="0.3409" />
+                    <FileData Type="Normal" Path="firstSceneView/plug.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="notice" ActionTag="-812727305" Alpha="0" Tag="114" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="53.5553" RightMargin="76.4647" TopMargin="-83.5447" BottomMargin="308.5647" ctype="SpriteObjectData">
+                    <Size X="76.0000" Y="83.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="91.5553" Y="350.0647" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4444" Y="1.1365" />
+                    <PreSize X="0.3689" Y="0.2695" />
+                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" />
+                <Position X="1786.5044" Y="129.6240" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.9305" Y="0.0900" />
+                <PreSize X="0.1073" Y="0.2139" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <PressedFileData Type="Normal" Path="firstSceneView/heartBottleC.png" Plist="" />
+                <NormalFileData Type="Normal" Path="firstSceneView/heartBottle.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="flowerBottle" ActionTag="1674185932" Tag="44" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1541.4817" RightMargin="172.5183" TopMargin="684.2632" BottomMargin="447.7368" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="176" Scale9Height="286" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="206.0000" Y="308.0000" />
                 <Children>
                   <AbstractNodeData Name="plug" ActionTag="1747811562" VisibleForFrame="False" Tag="77" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="58.7658" RightMargin="65.2342" TopMargin="0.6608" BottomMargin="202.3392" ctype="SpriteObjectData">
@@ -259,10 +297,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1675.9680" Y="478.9440" />
+                <Position X="1644.4817" Y="601.7368" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8729" Y="0.3326" />
+                <PrePosition X="0.8565" Y="0.4179" />
                 <PreSize X="0.1073" Y="0.2139" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <PressedFileData Type="Normal" Path="firstSceneView/flowerBottleC.png" Plist="" />
@@ -270,119 +308,83 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="shapBottle" ActionTag="706963916" Tag="45" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1422.4299" RightMargin="291.5500" TopMargin="1128.8414" BottomMargin="3.1386" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="176" Scale9Height="286" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="206.0200" Y="308.0200" />
+              <AbstractNodeData Name="slashBottle" ActionTag="-1852925707" Tag="43" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1285.3503" RightMargin="428.6497" TopMargin="662.0521" BottomMargin="469.9479" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="176" Scale9Height="286" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="206.0000" Y="308.0000" />
                 <Children>
-                  <AbstractNodeData Name="plug" ActionTag="-480204373" VisibleForFrame="False" Tag="78" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="55.5616" RightMargin="68.4584" TopMargin="3.8676" BottomMargin="199.1523" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="plug" ActionTag="1431146354" VisibleForFrame="False" Tag="76" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="58.7864" RightMargin="65.2136" TopMargin="0.6608" BottomMargin="202.3392" ctype="SpriteObjectData">
                     <Size X="82.0000" Y="105.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="96.5616" Y="251.6523" />
+                    <Position X="99.7864" Y="254.8392" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4687" Y="0.8170" />
-                    <PreSize X="0.3980" Y="0.3409" />
+                    <PrePosition X="0.4844" Y="0.8274" />
+                    <PreSize X="0.3981" Y="0.3409" />
                     <FileData Type="Normal" Path="firstSceneView/plug.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="notice" ActionTag="674286768" Alpha="0" Tag="113" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="53.9673" RightMargin="76.0527" TopMargin="-72.2712" BottomMargin="297.2912" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="notice" ActionTag="1795394691" Alpha="0" Tag="111" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="58.6346" RightMargin="71.3654" TopMargin="-71.3144" BottomMargin="296.3144" ctype="SpriteObjectData">
                     <Size X="76.0000" Y="83.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="91.9673" Y="338.7912" />
+                    <Position X="96.6346" Y="337.8144" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4464" Y="1.0999" />
+                    <PrePosition X="0.4691" Y="1.0968" />
                     <PreSize X="0.3689" Y="0.2695" />
                     <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1525.4399" Y="157.1486" />
+                <Position X="1388.3503" Y="623.9479" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7945" Y="0.1091" />
+                <PrePosition X="0.7231" Y="0.4333" />
                 <PreSize X="0.1073" Y="0.2139" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="firstSceneView/shapBottleC.png" Plist="" />
-                <NormalFileData Type="Normal" Path="firstSceneView/shapBottle.png" Plist="" />
+                <PressedFileData Type="Normal" Path="firstSceneView/slashbottleC.png" Plist="" />
+                <NormalFileData Type="Normal" Path="firstSceneView/slashBottle.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="heartBottle" ActionTag="376861825" Tag="46" RotationSkewX="-0.6784" RotationSkewY="-0.6794" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1703.7100" RightMargin="10.2700" TopMargin="1131.9800" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="176" Scale9Height="286" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="206.0200" Y="308.0200" />
-                <Children>
-                  <AbstractNodeData Name="plug" ActionTag="-762242074" VisibleForFrame="False" Tag="79" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="56.5505" RightMargin="67.4695" TopMargin="0.6026" BottomMargin="202.4173" ctype="SpriteObjectData">
-                    <Size X="82.0000" Y="105.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="97.5505" Y="254.9173" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4735" Y="0.8276" />
-                    <PreSize X="0.3980" Y="0.3409" />
-                    <FileData Type="Normal" Path="firstSceneView/plug.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="notice" ActionTag="-812727305" Alpha="0" Tag="114" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="53.5553" RightMargin="76.4647" TopMargin="-83.5447" BottomMargin="308.5647" ctype="SpriteObjectData">
-                    <Size X="76.0000" Y="83.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="91.5553" Y="350.0647" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4444" Y="1.1365" />
-                    <PreSize X="0.3689" Y="0.2695" />
-                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1806.7200" Y="154.0100" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9410" Y="0.1070" />
-                <PreSize X="0.1073" Y="0.2139" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="firstSceneView/heartBottleC.png" Plist="" />
-                <NormalFileData Type="Normal" Path="firstSceneView/heartBottle.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="effectPanel" ActionTag="-147528967" Tag="42" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1476.2679" RightMargin="178.7321" TopMargin="347.5840" BottomMargin="848.4160" ctype="SpriteObjectData">
+              <AbstractNodeData Name="effectPanel" ActionTag="-147528967" Tag="42" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1262.1687" RightMargin="392.8313" TopMargin="353.8810" BottomMargin="842.1190" ctype="SpriteObjectData">
                 <Size X="265.0000" Y="244.0000" />
+                <Children>
+                  <AbstractNodeData Name="specialBottle" ActionTag="973771900" Tag="47" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="29.1985" RightMargin="47.8015" TopMargin="-156.5256" BottomMargin="154.5256" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="158" Scale9Height="224" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="188.0000" Y="246.0000" />
+                    <Children>
+                      <AbstractNodeData Name="notice" ActionTag="-1380700379" Alpha="0" Tag="120" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="56.0000" RightMargin="56.0000" TopMargin="-70.8970" BottomMargin="233.8970" ctype="SpriteObjectData">
+                        <Size X="76.0000" Y="83.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="94.0000" Y="275.3970" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5000" Y="1.1195" />
+                        <PreSize X="0.4043" Y="0.3374" />
+                        <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
+                        <BlendFunc Src="1" Dst="771" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="123.1985" Y="277.5256" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4649" Y="1.1374" />
+                    <PreSize X="0.7094" Y="1.0082" />
+                    <TextColor A="255" R="65" G="65" B="70" />
+                    <PressedFileData Type="Normal" Path="firstSceneView/specialBottleC.png" Plist="" />
+                    <NormalFileData Type="MarkedSubImage" Path="firstSceneView/specialBottle.png" Plist="firstSceneView/left.plist" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1608.7679" Y="970.4160" />
+                <Position X="1394.6687" Y="964.1190" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8379" Y="0.6739" />
+                <PrePosition X="0.7264" Y="0.6695" />
                 <PreSize X="0.1380" Y="0.1694" />
                 <FileData Type="Normal" Path="firstSceneView/effectPanel.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="specialBottle" ActionTag="973771900" Tag="47" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1504.3999" RightMargin="227.6001" TopMargin="137.9280" BottomMargin="1056.0720" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="158" Scale9Height="224" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="188.0000" Y="246.0000" />
-                <Children>
-                  <AbstractNodeData Name="notice" ActionTag="-1380700379" Alpha="0" Tag="120" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="56.0000" RightMargin="56.0000" TopMargin="-70.8970" BottomMargin="233.8970" ctype="SpriteObjectData">
-                    <Size X="76.0000" Y="83.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="94.0000" Y="275.3970" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5000" Y="1.1195" />
-                    <PreSize X="0.4043" Y="0.3374" />
-                    <FileData Type="Normal" Path="firstSceneView/noticeMarker.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1598.3999" Y="1179.0720" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8325" Y="0.8188" />
-                <PreSize X="0.0979" Y="0.1708" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="firstSceneView/specialBottleC.png" Plist="" />
-                <NormalFileData Type="MarkedSubImage" Path="firstSceneView/specialBottle.png" Plist="firstSceneView/left.plist" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
               <AbstractNodeData Name="pBg" ActionTag="1601082778" Tag="60" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="716.3880" RightMargin="720.6121" TopMargin="218.9160" BottomMargin="978.0840" ctype="SpriteObjectData">
                 <Size X="483.0000" Y="243.0000" />
@@ -442,21 +444,6 @@
                 <PreSize X="0.2516" Y="0.1688" />
                 <FileData Type="Normal" Path="firstSceneView/topPanel.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="MixBtn" ActionTag="-1208333231" Tag="52" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="771.0000" RightMargin="771.0000" TopMargin="1198.4000" BottomMargin="57.6000" TouchEnable="True" FontSize="72" ButtonText="Mix" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="348" Scale9Height="162" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="378.0000" Y="184.0000" />
-                <AnchorPoint ScaleX="0.5000" />
-                <Position X="960.0000" Y="57.6000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.0400" />
-                <PreSize X="0.1969" Y="0.1278" />
-                <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
-                <TextColor A="255" R="176" G="73" B="35" />
-                <DisabledFileData Type="Normal" Path="firstSceneView/mixButtonU.png" Plist="" />
-                <NormalFileData Type="Normal" Path="firstSceneView/mixButton.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
               <AbstractNodeData Name="centerBg" ActionTag="-1986534336" Tag="53" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="568.5000" RightMargin="568.5000" TopMargin="533.9000" BottomMargin="361.1000" ctype="SpriteObjectData">
                 <Size X="783.0000" Y="545.0000" />
@@ -581,42 +568,57 @@
                 <FileData Type="Normal" Path="firstSceneView/centerPanel.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="soundBtn" ActionTag="1789303778" Tag="124" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1506.0000" RightMargin="288.0000" BottomMargin="1355.0000" TouchEnable="True" FontSize="36" ButtonText="Sound" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="126.0000" Y="85.0000" />
-                <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
-                <Position X="1632.0000" Y="1440.0000" />
+              <AbstractNodeData Name="MixBtn" ActionTag="-1208333231" Tag="52" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="767.8506" RightMargin="774.1494" TopMargin="1119.6890" BottomMargin="136.3111" TouchEnable="True" FontSize="72" ButtonText="Mix" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="348" Scale9Height="162" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="378.0000" Y="184.0000" />
+                <AnchorPoint ScaleX="0.5000" />
+                <Position X="956.8506" Y="136.3111" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8500" Y="1.0000" />
-                <PreSize X="0.0656" Y="0.0590" />
+                <PrePosition X="0.4984" Y="0.0947" />
+                <PreSize X="0.1969" Y="0.1278" />
+                <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
+                <TextColor A="255" R="176" G="73" B="35" />
+                <DisabledFileData Type="Normal" Path="firstSceneView/mixButtonU.png" Plist="" />
+                <NormalFileData Type="Normal" Path="firstSceneView/mixButton.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="soundBtn" ActionTag="1789303778" Tag="124" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1122.9381" RightMargin="568.7321" TopMargin="-1.0737" BottomMargin="1311.6694" TouchEnable="True" FontSize="36" ButtonText="Sound" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="228.3298" Y="129.4042" />
+                <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
+                <Position X="1351.2679" Y="1441.0737" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.7038" Y="1.0007" />
+                <PreSize X="0.1189" Y="0.0899" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="scoreBtn" ActionTag="-1357651655" Tag="125" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1698.0000" RightMargin="96.0000" BottomMargin="1355.0000" TouchEnable="True" FontSize="28" ButtonText="Comment" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="126.0000" Y="85.0000" />
+              <AbstractNodeData Name="scoreBtn" ActionTag="-1357651655" Tag="125" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1412.5988" RightMargin="283.1207" TopMargin="3.6633" BottomMargin="1306.6761" TouchEnable="True" FontSize="36" ButtonText="Comment" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="224.2805" Y="129.6605" />
                 <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
-                <Position X="1824.0000" Y="1440.0000" />
+                <Position X="1636.8793" Y="1436.3367" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9500" Y="1.0000" />
-                <PreSize X="0.0656" Y="0.0590" />
+                <PrePosition X="0.8525" Y="0.9975" />
+                <PreSize X="0.1168" Y="0.0900" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="rmBtn" ActionTag="-900975005" Tag="102" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1678.3458" RightMargin="85.8978" TopMargin="163.4631" BottomMargin="1171.4631" TouchEnable="True" FontSize="24" ButtonText="Remove Ads" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="155.7563" Y="105.0737" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1756.2240" Y="1224.0000" />
+              <AbstractNodeData Name="rmBtn" ActionTag="-900975005" Tag="102" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1671.1748" RightMargin="3.0712" TopMargin="2.3899" BottomMargin="1318.6136" TouchEnable="True" FontSize="24" ButtonText="Remove Ads" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="245.7540" Y="118.9964" />
+                <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
+                <Position X="1916.9288" Y="1437.6101" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9147" Y="0.8500" />
-                <PreSize X="0.0811" Y="0.0730" />
+                <PrePosition X="0.9984" Y="0.9983" />
+                <PreSize X="0.1280" Y="0.0826" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
@@ -662,31 +664,31 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="saveNotice" ActionTag="2016136188" Tag="124" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="480.0000" RightMargin="480.0000" TopMargin="370.9441" BottomMargin="349.0560" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="321" RightEage="321" TopEage="189" BottomEage="189" Scale9OriginX="321" Scale9OriginY="189" Scale9Width="331" Scale9Height="197" ctype="PanelObjectData">
+          <AbstractNodeData Name="saveNotice" ActionTag="2016136188" Tag="124" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="480.0000" RightMargin="480.0000" TopMargin="360.0000" BottomMargin="360.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="321" RightEage="321" TopEage="189" BottomEage="189" Scale9OriginX="321" Scale9OriginY="189" Scale9Width="331" Scale9Height="197" ctype="PanelObjectData">
             <Size X="960.0000" Y="720.0000" />
             <Children>
-              <AbstractNodeData Name="yesBtn" ActionTag="-1573602254" Tag="43" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="207.8160" RightMargin="626.1840" TopMargin="353.5000" BottomMargin="281.5000" TouchEnable="True" FontSize="36" ButtonText="YES" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="126.0000" Y="85.0000" />
+              <AbstractNodeData Name="yesBtn" ActionTag="-1573602254" Tag="43" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="158.8881" RightMargin="577.2558" TopMargin="336.4496" BottomMargin="264.4500" TouchEnable="True" FontSize="72" ButtonText="YES" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="223.8561" Y="119.1003" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="270.8160" Y="324.0000" />
+                <Position X="270.8161" Y="324.0002" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.2821" Y="0.4500" />
-                <PreSize X="0.1312" Y="0.1181" />
+                <PreSize X="0.2332" Y="0.1654" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="noBtn" ActionTag="-1001661725" Tag="44" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="633.3840" RightMargin="200.6160" TopMargin="351.5560" BottomMargin="283.4440" TouchEnable="True" FontSize="36" ButtonText="NO" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="126.0000" Y="85.0000" />
+              <AbstractNodeData Name="noBtn" ActionTag="-1001661725" Tag="44" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="579.2787" RightMargin="146.5095" TopMargin="334.5051" BottomMargin="266.3946" TouchEnable="True" FontSize="72" ButtonText="NO" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="234.2118" Y="119.1003" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="696.3840" Y="325.9440" />
+                <Position X="696.3846" Y="325.9448" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.7254" Y="0.4527" />
-                <PreSize X="0.1312" Y="0.1181" />
+                <PreSize X="0.2440" Y="0.1654" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
@@ -718,10 +720,10 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="960.0000" Y="709.0560" />
+            <Position X="960.0000" Y="720.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.4924" />
+            <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.5000" Y="0.5000" />
             <FileData Type="Normal" Path="firstSceneView/savePanel.png" Plist="" />
             <SingleColor A="255" R="150" G="200" B="255" />

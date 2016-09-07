@@ -12,6 +12,7 @@
 #include "CreateNailPolishScene.hpp"
 #include "cocostudio/CocoStudio.h"
 #include "Audio.hpp"
+#include "IOSShareManager.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -32,6 +33,7 @@ bool MainScene::init() {
     //音乐
     Audio::getInstance()->playBgm(BGM);
     SETSOUND(true);
+    SETEFFECT(true);
     //背景
     auto bg = (Layout *)(node->getChildByName("bg"));
     this->addChild(bg);
@@ -44,10 +46,10 @@ bool MainScene::init() {
     auto leftFoot = bg->getChildByName("leftFoot");
     auto rightFoot = bg->getChildByName("rightFoot");
     //移动
-    auto leftMoveUp = MoveBy::create(1, Point(0, 100));
-    auto leftMoveDown = MoveBy::create(1, Point(0, -100));
-    auto rightMoveDown = MoveBy::create(1, Point(0, -100));
-    auto rightMoveUp = MoveBy::create(1, Point(0, 100));
+    auto leftMoveUp = MoveBy::create(1, Vec2(0, 100));
+    auto leftMoveDown = MoveBy::create(1, Vec2(0, -100));
+    auto rightMoveDown = MoveBy::create(1, Vec2(0, -100));
+    auto rightMoveUp = MoveBy::create(1, Vec2(0, 100));
     //组合
     auto rightAction = RepeatForever::create(Sequence::create(DelayTime::create(1), rightMoveUp, DelayTime::create(1), rightMoveDown, rightMoveDown, DelayTime::create(1),rightMoveUp,NULL));
     auto leftAction = RepeatForever::create(Sequence::create(DelayTime::create(1), leftMoveDown, DelayTime::create(1), leftMoveUp, leftMoveUp, DelayTime::create(1),leftMoveDown, NULL));
@@ -69,15 +71,18 @@ bool MainScene::init() {
     auto commentBtn = (Button *)(bg->getChildByName("scoreBtn"));
     commentBtn->addClickEventListener([](Ref *p){
         //跳转评论
+        Application::getInstance()->openURL("http://www.baidu.com");
     });
     //分享按钮
     auto shareBtn = (Button *)(bg->getChildByName("shareBtn"));
     shareBtn->addClickEventListener([](Ref *){
         //分享
+        [[IOSShareManager getInstance] share];
     });
     auto moreGame = (Button *)(bg->getChildByName("moreGame"));
     moreGame->addClickEventListener([](Ref *p){
         //更多游戏
+        Application::getInstance()->openURL("http://www.baidu.com");
     });
     //国际化
     if (Application::getInstance()->getCurrentLanguage() == LanguageType::CHINESE) {

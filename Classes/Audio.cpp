@@ -56,7 +56,7 @@ void Audio::playBgm(std::string path) {
 }
 
 void Audio::playEffect(std::string path) {
-    if (ISSOUNDOPEN) {
+    if (ISEFFECTOPEN) {
         SimpleAudioEngine::getInstance()->playEffect(path.c_str());
     } else {
         SimpleAudioEngine::getInstance()->stopAllEffects();

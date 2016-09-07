@@ -13,9 +13,10 @@
 #define SCREAN_SIZE Director::getInstance()->getVisibleSize()
 #define TITLE_POSITION Vec2(30, SCREAN_SIZE.height-30)
 #define UD UserDefault::getInstance()
-#define ISADDEXITS "isAddExists"
 #define ISSOUNDOPEN UD->getBoolForKey("isSoundOpen", true)
+#define ISEFFECTOPEN UD->getBoolForKey("isEffectOpen", true)
 #define SETSOUND(key) UD->setBoolForKey("isSoundOpen", key)
+#define SETEFFECT(key) UD->setBoolForKey("isEffectOpen", key)
 
 struct XXX{
     int a;
@@ -52,12 +53,18 @@ struct bottleColors {
     std::string bottle5;
 };
 
-const std::string BGM = "tAudio/music.mp3";
-const std::string C_LEFT = "tAudio/combo_1.mp3";
-const std::string C_RIGHT = "tAudio/combo_2.mp3";
-const std::string MOVE = "tAudio/select.mp3";
-const std::string DUMP = "tAudio/readygo.mp3";
-const std::string CLEAN = "tAudio/clean.mp3";
-const std::string POP = "tAudio/pop.mp3";
+const std::string BGM = "tAudio/bgm.mp3";
+const std::string C_LEFT = "tAudio/click.mp3";
+const std::string C_RIGHT = "tAudio/click.mp3";
+const std::string C_MIX = "tAudio/clickMix.mp3";
+const std::string MOVE = "tAudio/Move.mp3";
+const std::string DUMP = "tAudio/dump.mp3";
+const std::string CLEANBTN = "tAudio/cleanBtn.mp3";
+const std::string CLEANNEIL = "tAudio/cleanNeils.mp3";
+const std::string MIXPROCESS = "tAudio/making.mp3";
+const std::string MIXRESULT = "tAudio/result.mp3";
+const std::string SMEAR = "tAudio/neils.mp3";
+
+const std::string ISPURCHASE = "isPurchase";
 
 #endif /* DefaultHeader_h */

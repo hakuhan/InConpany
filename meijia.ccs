@@ -98,6 +98,7 @@
           <Image Name="loadiingBar1.png" />
           <Image Name="loadingBar2.png" />
           <Project Name="rmAds.csd" Type="Layer" />
+          <Image Name="title.png" />
         </Folder>
         <Folder Name="firstSceneView">
           <Image Name="bg.png" />

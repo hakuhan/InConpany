@@ -7,6 +7,7 @@
 //
 
 #include "CommonView.hpp"
+#include "IAPManager.h"
 using namespace ui;
 
 CommonView* CommonView::getInstance() {
@@ -50,6 +51,10 @@ Layout* CommonView::getCommentView() {
     });
     restoreBtn->addClickEventListener([black_lay](Ref *p){
         //恢复购买
+        IAPManager *manager = [IAPManager getInstance];
+        [manager restorePurchases];
+        
+        //界面消失
         auto scaleS = Sequence::create(EaseIn::create(ScaleBy::create(1, 0.1), 10), CallFunc::create([black_lay](){
             black_lay->removeFromParent();
         }), NULL);
@@ -57,6 +62,11 @@ Layout* CommonView::getCommentView() {
     });
     removeBtn->addClickEventListener([black_lay](Ref *p){
         //购买商品
+        int produceIndex = 0;   //商品
+        IAPManager *manager = [IAPManager getInstance];
+        [manager purchaseProduct:produceIndex];
+        
+        //界面消失
         auto scaleS = Sequence::create(EaseIn::create(ScaleBy::create(1, 0.1), 10), CallFunc::create([black_lay](){
             black_lay->removeFromParent();
         }), NULL);

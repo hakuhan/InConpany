@@ -21,28 +21,28 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="restoreB" ActionTag="1264932690" Tag="100" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="266.6832" RightMargin="951.3168" TopMargin="499.0679" BottomMargin="207.9321" TouchEnable="True" FontSize="36" ButtonText="restore" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="126.0000" Y="85.0000" />
+              <AbstractNodeData Name="restoreB" ActionTag="1264932690" Tag="100" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="164.6832" RightMargin="849.3168" TopMargin="447.0679" BottomMargin="155.9321" TouchEnable="True" FontSize="72" ButtonText="restore" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="330.0000" Y="189.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="329.6832" Y="250.4321" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.2453" Y="0.3162" />
-                <PreSize X="0.0938" Y="0.1073" />
+                <PreSize X="0.2455" Y="0.2386" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="removeBtn" ActionTag="9796776" Tag="101" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="876.7248" RightMargin="341.2752" TopMargin="499.0679" BottomMargin="207.9321" TouchEnable="True" FontSize="36" ButtonText="remove" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="96" Scale9Height="63" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="126.0000" Y="85.0000" />
+              <AbstractNodeData Name="removeBtn" ActionTag="9796776" Tag="101" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="774.7248" RightMargin="239.2751" TopMargin="447.0679" BottomMargin="155.9321" TouchEnable="True" FontSize="72" ButtonText="remove" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="330.0000" Y="189.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="939.7248" Y="250.4321" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6992" Y="0.3162" />
-                <PreSize X="0.0938" Y="0.1073" />
+                <PreSize X="0.2455" Y="0.2386" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />

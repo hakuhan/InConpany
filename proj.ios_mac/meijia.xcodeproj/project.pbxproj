@@ -44,16 +44,17 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
-		520DFA581D644A410078CC9F /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 520DFA561D644A410078CC9F /* MainScene.cpp */; settings = {ASSET_TAGS = (); }; };
-		521A0F081D791B5C00ED1501 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 521A0F061D791B5C00ED1501 /* Audio.cpp */; settings = {ASSET_TAGS = (); }; };
+		520DFA581D644A410078CC9F /* MainScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 520DFA561D644A410078CC9F /* MainScene.mm */; };
+		521A0F081D791B5C00ED1501 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 521A0F061D791B5C00ED1501 /* Audio.cpp */; };
 		521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6219F0C34300D177D7 /* Default-667h@2x.png */; };
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
-		52B13B281D77C7AE00CAA665 /* IAPManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B13B261D77C7AE00CAA665 /* IAPManager.mm */; settings = {ASSET_TAGS = (); }; };
+		52B13B281D77C7AE00CAA665 /* IAPManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52B13B261D77C7AE00CAA665 /* IAPManager.mm */; };
 		52B13B2A1D77CC6A00CAA665 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B13B291D77CC6A00CAA665 /* StoreKit.framework */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
-		52BBC7381D7D7D5B001D5ADD /* CommonView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52BBC7361D7D7D5B001D5ADD /* CommonView.cpp */; settings = {ASSET_TAGS = (); }; };
-		52C34F4A1D6D4EF600B05352 /* PaintingNailsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C34F481D6D4EF600B05352 /* PaintingNailsScene.cpp */; settings = {ASSET_TAGS = (); }; };
-		52F7523A1D66F31900CCAA4F /* CreateNailPolishScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F752381D66F31900CCAA4F /* CreateNailPolishScene.cpp */; settings = {ASSET_TAGS = (); }; };
+		52BBC7381D7D7D5B001D5ADD /* CommonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52BBC7361D7D7D5B001D5ADD /* CommonView.mm */; };
+		52C34F4A1D6D4EF600B05352 /* PaintingNailsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C34F481D6D4EF600B05352 /* PaintingNailsScene.cpp */; };
+		52F7523A1D66F31900CCAA4F /* CreateNailPolishScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F752381D66F31900CCAA4F /* CreateNailPolishScene.cpp */; };
+		52FD19D61D7EA10C00372164 /* IOSShareManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52FD19D51D7EA10C00372164 /* IOSShareManager.mm */; };
 		67264650BD08F5A9E8B7ED1D /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D65417CAF89D7ADE4119FEC /* libcocos2d iOS.a */; };
 		6CC743B7AEC6C4A1F5FEC304 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 01F741B993AED8B544209AD5 /* res */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
@@ -110,7 +111,7 @@
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		51554DA9A2FA70F46AF9E679 /* libcocos2d Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d Mac.a"; path = "/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac/libcocos2d Mac.a"; sourceTree = "<absolute>"; };
-		520DFA561D644A410078CC9F /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainScene.cpp; sourceTree = "<group>"; };
+		520DFA561D644A410078CC9F /* MainScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainScene.mm; sourceTree = "<group>"; };
 		520DFA571D644A410078CC9F /* MainScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainScene.hpp; sourceTree = "<group>"; };
 		521A0F061D791B5C00ED1501 /* Audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Audio.cpp; sourceTree = "<group>"; };
 		521A0F071D791B5C00ED1501 /* Audio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Audio.hpp; sourceTree = "<group>"; };
@@ -121,12 +122,14 @@
 		52B13B271D77C7AE00CAA665 /* IAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPManager.h; sourceTree = "<group>"; };
 		52B13B291D77CC6A00CAA665 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		52BBC7361D7D7D5B001D5ADD /* CommonView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommonView.cpp; sourceTree = "<group>"; };
+		52BBC7361D7D7D5B001D5ADD /* CommonView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CommonView.mm; sourceTree = "<group>"; };
 		52BBC7371D7D7D5B001D5ADD /* CommonView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommonView.hpp; sourceTree = "<group>"; };
 		52C34F481D6D4EF600B05352 /* PaintingNailsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PaintingNailsScene.cpp; sourceTree = "<group>"; };
 		52C34F491D6D4EF600B05352 /* PaintingNailsScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PaintingNailsScene.hpp; sourceTree = "<group>"; };
 		52F752381D66F31900CCAA4F /* CreateNailPolishScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreateNailPolishScene.cpp; sourceTree = "<group>"; };
 		52F752391D66F31900CCAA4F /* CreateNailPolishScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CreateNailPolishScene.hpp; sourceTree = "<group>"; };
+		52FD19D41D7EA10C00372164 /* IOSShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSShareManager.h; sourceTree = "<group>"; };
+		52FD19D51D7EA10C00372164 /* IOSShareManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IOSShareManager.mm; sourceTree = "<group>"; };
 		5D65417CAF89D7ADE4119FEC /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -324,7 +327,7 @@
 		520DFA501D64488F0078CC9F /* mainScene */ = {
 			isa = PBXGroup;
 			children = (
-				520DFA561D644A410078CC9F /* MainScene.cpp */,
+				520DFA561D644A410078CC9F /* MainScene.mm */,
 				520DFA571D644A410078CC9F /* MainScene.hpp */,
 			);
 			name = mainScene;
@@ -337,7 +340,7 @@
 				52F752391D66F31900CCAA4F /* CreateNailPolishScene.hpp */,
 				52C34F481D6D4EF600B05352 /* PaintingNailsScene.cpp */,
 				52C34F491D6D4EF600B05352 /* PaintingNailsScene.hpp */,
-				52BBC7361D7D7D5B001D5ADD /* CommonView.cpp */,
+				52BBC7361D7D7D5B001D5ADD /* CommonView.mm */,
 				52BBC7371D7D7D5B001D5ADD /* CommonView.hpp */,
 			);
 			name = gameScene;
@@ -363,6 +366,8 @@
 		52B13B221D77C73300CAA665 /* purchase */ = {
 			isa = PBXGroup;
 			children = (
+				52FD19D41D7EA10C00372164 /* IOSShareManager.h */,
+				52FD19D51D7EA10C00372164 /* IOSShareManager.mm */,
 				52B13B261D77C7AE00CAA665 /* IAPManager.mm */,
 				52B13B271D77C7AE00CAA665 /* IAPManager.h */,
 			);
@@ -429,6 +434,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 4Q98J2YP44;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "meijia" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -502,8 +512,9 @@
 				52F7523A1D66F31900CCAA4F /* CreateNailPolishScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				52C34F4A1D6D4EF600B05352 /* PaintingNailsScene.cpp in Sources */,
-				520DFA581D644A410078CC9F /* MainScene.cpp in Sources */,
-				52BBC7381D7D7D5B001D5ADD /* CommonView.cpp in Sources */,
+				520DFA581D644A410078CC9F /* MainScene.mm in Sources */,
+				52BBC7381D7D7D5B001D5ADD /* CommonView.mm in Sources */,
+				52FD19D61D7EA10C00372164 /* IOSShareManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +535,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -549,6 +561,8 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2dx.meijia110;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -561,6 +575,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -584,6 +599,8 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2dx.meijia110;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";

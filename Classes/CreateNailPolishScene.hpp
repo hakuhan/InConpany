@@ -25,7 +25,7 @@ public:
     
 private:
     selectedTag choices;  //标记选择
-    
+    Button *rmAds;        //广告按钮
     bool canSelectedMixButton;  //是否能够点击确定按钮
     int numberOfBottle;     //记录瓶子的个数
     bottleColors colors;    //5个瓶子颜色

@@ -25,6 +25,7 @@ public:
     
 private:
     bottleColors colors;
+    Button *removeAddBtn;   //去广告按钮
     bool isCleanBtnClicked; //判断清理按钮是否点击
     Vector<Sprite *> neils;
     std::string names[5];
@@ -35,6 +36,7 @@ private:
     void onClickResetBtn();
     void setBrushWithBottle(Sprite* bottle);
     void updateBottle();
+    void updateCustom(float dt);    //自定义更监测刷新
 };
 
 #endif /* PaintingNailsScene_hpp */

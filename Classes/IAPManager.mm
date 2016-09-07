@@ -1,5 +1,8 @@
 
 #import "IAPManager.h"
+#include "cocos2d.h"
+#include "DefaultHeader.h"
+using namespace cocos2d;
 
 @implementation IAPManager
 @synthesize products,productIdentifiers;
@@ -20,12 +23,6 @@
     {
         [products setObject:product forKey:product.productIdentifier];
     }
-    
-    //这个过程是异步的
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//     2                                          selector:@selector(execute:)
-//     3                                              name:@"NOTIFICATION_NAME"
-//     4                                            object:nil]
     
 }
 -(void)requestDidFinish:(SKRequest *)request{
@@ -188,9 +185,9 @@ static IAPManager * Iap;
 -(void)loadProducts{
 
     //所有产品ID
+#pragma mark 商品id
     self.productIdentifiers =@[
-                          @"com.bandou.guaji_buy0",
-                          @"com.bandou.guaji_buy1"];
+                          @"com.bandou.guaji_buy0"];
 
     
     //定义要获取的产品标识集合
@@ -292,8 +289,17 @@ static IAPManager * Iap;
 -(void) purchaseSucceed:(NSString *)productIdentifier{
     NSUInteger index=[productIdentifiers indexOfObject:productIdentifier];
     //关闭广告
-    
+    UserDefault::getInstance()->setBoolForKey(ISPURCHASE.c_str(), true);
     //设置界面
+    NSString *aTitle = @"Remove Success";
+    NSString *contant = @"Restart game affter no advertising";
+    if (Application::getInstance()->getCurrentLanguage() == LanguageType::CHINESE) {
+        aTitle = @"广告去除成功";
+        contant = @"重启游戏后没有广告";
+    }
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:aTitle message:contant preferredStyle:UIAlertControllerStyleActionSheet];
+    UIViewController *appRootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    [appRootVC presentViewController:alert animated:YES completion:nil];
     
     //购买第 index 号商品 成功
 //    ReadXml::getInstance()->purchaseSucceed((int)index);

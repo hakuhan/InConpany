@@ -84,7 +84,7 @@ bool CreateNailPolishScene::init() {
     rBlueB->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickColor, this, rBlueB, potPosition));
     rGreenB->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickColor, this, rGreenB, potPosition));
     //获取上方按钮
-    auto tBlueB = (Button *)(bg->getChildByName("specialBottle"));
+    auto tBlueB = (Button *)(bg->getChildByName("effectPanel")->getChildByName("specialBottle"));
     tBlueB->setTag(tSpecial);
     //点击事件
     tBlueB->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickColor, this, tBlueB, potPosition));
@@ -106,7 +106,7 @@ bool CreateNailPolishScene::init() {
     
     
     //音效、评论和去广告按钮
-    auto rmAds = (Button *)(bg->getChildByName("rmBtn"));
+    rmAds = (Button *)(bg->getChildByName("rmBtn"));
     
     rmAds->addClickEventListener([=](Ref *p){
         //创建动画
@@ -133,6 +133,7 @@ bool CreateNailPolishScene::init() {
     auto commentBtn = (Button *)(bg->getChildByName("scoreBtn"));
     commentBtn->addClickEventListener([](Ref *){
         //评论
+        Application::getInstance()->openURL("http://www.baidu.com");
     });
     //提示版
     auto color_title = (Text *)(bg->getChildByName("color_title")->getChildByName("title"));
@@ -162,6 +163,9 @@ void CreateNailPolishScene::updateCustom(float dt) {
     auto bg = this->getChildByName("bg");
     auto btn = (Button *)(bg->getChildByName("MixBtn"));
     btn->setEnabled(canSelectedMixButton);
+    //判断是否购买
+    bool isPurchase = UserDefault::getInstance()->getBoolForKey(ISPURCHASE.c_str(), false);
+    rmAds->setVisible(isPurchase?false:true);
 }
 
 //点击事件
@@ -197,7 +201,7 @@ void CreateNailPolishScene::onClickColor(Button *btn, Vec2 movePosition) {
         }
     }
     //创建动画
-    auto sprite = createSpriteWithTagAndPosition(tag, btn->getPosition());
+    auto sprite = createSpriteWithTagAndPosition(tag, btn->convertToWorldSpace(btn->getContentSize()/2));
     this->addChild(sprite);
     btn->setCascadeOpacityEnabled(false);
     btn->setOpacity(0);
@@ -236,11 +240,17 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     Audio::getInstance()->playEffect(C_LEFT);
     //判断按钮位置
     bool isLeftButton = false;
-    //获取最开始位置
-    Vec2 firstPstn = sprite->getPosition();
+    
     
     if (btn->getTag()>10 &&btn->getTag()<16) {
         isLeftButton = true;
+    }
+    //获取最开始位置
+    Vec2 firstPstn;
+    if (isLeftButton) {
+        firstPstn = sprite->getPosition();
+    } else {
+        firstPstn = sprite->convertToWorldSpace(sprite->getContentSize()/2);
     }
     //创建动画:缩小、放大并上升、摇晃、移动、倾倒、返回
     auto scaleS = ScaleBy::create(0.1, 1, 0.5);
@@ -303,14 +313,14 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
                 break;
         }
         //滴水效果
-        auto moveDown = EaseBackIn::create(MoveBy::create(0.3, Vec2(0, -80)));
-        auto moveBack = MoveBy::create(0.1, Vec2(0, 80));
+        auto moveDown = EaseBackIn::create(MoveBy::create(0.3, Vec2(0, -60)));
+        auto moveBack = MoveBy::create(0.1, Vec2(0, 60));
         efectsMove = TargetedAction::create(efects, Sequence::create(fadeIn, moveDown, fadeOut, moveBack, fadeIn->clone(), moveDown->clone(), fadeOut->clone(), moveBack->clone(), NULL));
     }else {
         efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/dumpedSpecialEffect.png"));
         //创建效果
         auto flipY = FlipY::create(true);
-        auto flipBack = FlipY::create(true);
+        auto flipBack = FlipY::create(false);
         auto moveDown = MoveBy::create(0.3, Vec2(0, -30));
         auto moveBack = MoveBy::create(0.3, Vec2(0, 30));
         efectsMove = TargetedAction::create(efects, Sequence::create(flipY, fadeIn, moveDown, moveBack, moveDown->clone(), moveBack->clone(), fadeOut, flipBack, NULL));
@@ -355,7 +365,7 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     ccBezierConfig bzr;
     bzr.controlPoint_1 = Vec2(firstPstn.x, firstPstn.y+400);
     bzr.controlPoint_2 = Vec2(movePosition.x-(movePosition.x-firstPstn.x)/2, movePosition.y);
-    bzr.endPosition = Vec2(movePosition.x+50, movePosition.y);
+    bzr.endPosition = Vec2(movePosition.x+60, movePosition.y+20);
     auto move = BezierTo::create(1, bzr);
     auto spriteMove = TargetedAction::create(sprite, move);
     //移动过程中变小
@@ -489,11 +499,13 @@ void CreateNailPolishScene::onClickMixButton() {
     auto potScaleB = EaseBackInOut::create(TargetedAction::create(pot, ScaleBy::create(0.3, 2)));
     auto mixScaleB = Spawn::create(EaseInOut::create(TargetedAction::create(mixSuccess, ScaleBy::create(0.5, 10)), 10), CallFunc::create([](){
         //播放音效
-        Audio::getInstance()->playEffect(POP);
+        Audio::getInstance()->playEffect(MIXRESULT);
     }), NULL);
     auto mixFadeOut = TargetedAction::create(mixSuccess, FadeOut::create(1));
     auto mixFadeIn = TargetedAction::create(mixSuccess, FadeIn::create(0.1));
-    saveNotice->runAction(Sequence::create(potShake1, potShake2, potShake1->clone(), potShake2->clone(), potScaleS, potScaleB, mixFadeIn, mixScaleB, scaleS, show, scale, mixFadeOut, NULL));
+    saveNotice->runAction(Sequence::create(potShake1, CallFunc::create([](){
+        Audio::getInstance()->playEffect(MIXPROCESS);
+    }), potShake2, potShake1->clone(), potShake2->clone(), potScaleS, potScaleB, mixFadeIn, mixScaleB, scaleS, show, scale, mixFadeOut, NULL));
 }
 
 //判断瓶子是否装满
@@ -547,7 +559,7 @@ void CreateNailPolishScene::showNotice() {
         }
     }
     if (noticeAreaT == true) {
-         auto notice = (Sprite *)(this->getChildByName("bg")->getChildByTag(tSpecial)->getChildByName("notice"));
+        auto notice = (Sprite *)(this->getChildByName("bg")->getChildByName("effectPanel")->getChildByName("specialBottle")->getChildByName("notice"));
         this->showNoticeAnimationBySprite(notice);
     }
     if ((noticeAreaL == false && noticeAreaR == false) || specailCondition == true){
