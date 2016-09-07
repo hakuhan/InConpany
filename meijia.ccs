@@ -89,12 +89,16 @@
           <Image Name="542.png" />
           <Image Name="543.png" />
           <Image Name="544.png" />
+          <Image Name="bgmBtn.png" />
+          <Image Name="bgmBtn_u.png" />
           <PlistInfo Name="bottles1.csi" Type="Plist" />
           <PlistInfo Name="bottles2.csi" Type="Plist" />
           <PlistInfo Name="bottles3.csi" Type="Plist" />
           <PlistInfo Name="bottles4.csi" Type="Plist" />
           <PlistInfo Name="bottles5.csi" Type="Plist" />
           <Image Name="button.png" />
+          <Image Name="effectBtn.png" />
+          <Image Name="effectBtn_u.png" />
           <Image Name="loadiingBar1.png" />
           <Image Name="loadingBar2.png" />
           <Project Name="rmAds.csd" Type="Layer" />

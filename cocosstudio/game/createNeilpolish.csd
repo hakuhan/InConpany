@@ -568,13 +568,13 @@
                 <FileData Type="Normal" Path="firstSceneView/centerPanel.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="MixBtn" ActionTag="-1208333231" Tag="52" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="767.8506" RightMargin="774.1494" TopMargin="1119.6890" BottomMargin="136.3111" TouchEnable="True" FontSize="72" ButtonText="Mix" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="348" Scale9Height="162" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="MixBtn" ActionTag="-1208333231" Tag="52" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="774.1483" RightMargin="767.8518" TopMargin="1157.4708" BottomMargin="98.5291" TouchEnable="True" FontSize="72" ButtonText="Mix" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="348" Scale9Height="162" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="378.0000" Y="184.0000" />
                 <AnchorPoint ScaleX="0.5000" />
-                <Position X="956.8506" Y="136.3111" />
+                <Position X="963.1483" Y="98.5291" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4984" Y="0.0947" />
+                <PrePosition X="0.5016" Y="0.0684" />
                 <PreSize X="0.1969" Y="0.1278" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
@@ -583,17 +583,18 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="soundBtn" ActionTag="1789303778" Tag="124" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1122.9381" RightMargin="568.7321" TopMargin="-1.0737" BottomMargin="1311.6694" TouchEnable="True" FontSize="36" ButtonText="Sound" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="228.3298" Y="129.4042" />
+              <AbstractNodeData Name="soundBtn" ActionTag="1789303778" Tag="124" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1021.2679" RightMargin="568.7321" TopMargin="-1.0737" BottomMargin="1252.0737" TouchEnable="True" FontSize="36" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="330.0000" Y="189.0000" />
                 <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
                 <Position X="1351.2679" Y="1441.0737" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.7038" Y="1.0007" />
-                <PreSize X="0.1189" Y="0.0899" />
+                <PreSize X="0.1719" Y="0.1312" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
-                <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
+                <PressedFileData Type="Normal" Path="commonViews/bgmBtn_u.png" Plist="" />
+                <NormalFileData Type="Normal" Path="commonViews/bgmBtn.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -622,6 +623,20 @@
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="effectBtn" ActionTag="1468784252" Tag="117" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="512.6096" RightMargin="1077.3904" TopMargin="0.0002" BottomMargin="1250.9998" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="330.0000" Y="189.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
+                <Position X="677.6096" Y="1439.9998" />
+                <Scale ScaleX="0.5000" ScaleY="0.5000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.3529" Y="1.0000" />
+                <PreSize X="0.1719" Y="0.1312" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <PressedFileData Type="Normal" Path="commonViews/effectBtn_u.png" Plist="" />
+                <NormalFileData Type="Normal" Path="commonViews/effectBtn.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

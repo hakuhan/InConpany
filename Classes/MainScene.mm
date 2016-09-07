@@ -57,12 +57,14 @@ bool MainScene::init() {
     rightFoot->runAction(rightAction);
     
     auto soundBtn = (Button *)(bg->getChildByName("soundBtn"));
-    soundBtn->addClickEventListener([](Ref *p){
+    soundBtn->addClickEventListener([=](Ref *p){
         //检查有没有开启声音
         if (ISSOUNDOPEN) {
             SETSOUND(false);
+            soundBtn->loadTextures(SOUNDBTN_U.c_str(), SOUNDBTN.c_str());
         } else {
             SETSOUND(true);
+            soundBtn->loadTextures(SOUNDBTN.c_str(), SOUNDBTN_U.c_str());
         }
         Audio::getInstance()->playBgm();
         //设置开关状态

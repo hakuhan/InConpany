@@ -19,14 +19,18 @@ Audio* Audio::audio = NULL;
 
 bool Audio::init() {
     //初始化声音
-    SimpleAudioEngine::getInstance()->preloadBackgroundMusic("tAudio/music.mp3");
-    SimpleAudioEngine::getInstance()->preloadEffect("tAudio/combo_1.mp3");
-    SimpleAudioEngine::getInstance()->preloadEffect("tAudio/combo_2.mp3");
-    SimpleAudioEngine::getInstance()->preloadEffect("tAudio/pop.mp3");
-    SimpleAudioEngine::getInstance()->preloadEffect("tAudio/select.mp3");
-    SimpleAudioEngine::getInstance()->preloadEffect("tAudio/readygo.mp3");
-    SimpleAudioEngine::getInstance()->preloadEffect("tAudio/clear.mp3");
+    SimpleAudioEngine::getInstance()->preloadBackgroundMusic(BGM.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(C_LEFT.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(C_RIGHT.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(C_MIX.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(MOVE.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(DUMP.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(CLEANNEIL.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(CLEANBTN.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(MIXPROCESS.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(SMEAR.c_str());
     
+    SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.5);
     return true;
 }
 

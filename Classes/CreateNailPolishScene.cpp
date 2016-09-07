@@ -119,15 +119,26 @@ bool CreateNailPolishScene::init() {
     });
     //声音开关
     auto soundBtn = (Button *)(bg->getChildByName("soundBtn"));
-    soundBtn->addClickEventListener([](Ref *p){
-        //检查有没有开启声音
+    soundBtn->addClickEventListener([=](Ref *p){
         if (ISSOUNDOPEN) {
             SETSOUND(false);
+            soundBtn->loadTextures(SOUNDBTN_U.c_str(), SOUNDBTN.c_str());
         } else {
             SETSOUND(true);
+            soundBtn->loadTextures(SOUNDBTN.c_str(), SOUNDBTN_U.c_str());
         }
         Audio::getInstance()->playBgm();
         //设置开关状态
+    });
+    auto effectBtn = (Button *)(bg->getChildByName("effectBtn"));
+    effectBtn->addClickEventListener([=](Ref *){
+        if (ISEFFECTOPEN) {
+            SETEFFECT(false);
+            effectBtn->loadTextures(EFFECTBTN_U.c_str(), EFFECTBTN.c_str());
+        } else {
+            SETEFFECT(true);
+            effectBtn->loadTextures(EFFECTBTN.c_str(), EFFECTBTN_U.c_str());
+        }
     });
     //评论
     auto commentBtn = (Button *)(bg->getChildByName("scoreBtn"));

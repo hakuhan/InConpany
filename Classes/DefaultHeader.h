@@ -65,6 +65,11 @@ const std::string MIXPROCESS = "tAudio/making.mp3";
 const std::string MIXRESULT = "tAudio/result.mp3";
 const std::string SMEAR = "tAudio/neils.mp3";
 
+const std::string SOUNDBTN = "commonViews/bgmBtn.png";
+const std::string SOUNDBTN_U = "commonViews/bgmBtn_u.png";
+const std::string EFFECTBTN = "commonViews/effectBtn.png";
+const std::string EFFECTBTN_U = "commonViews/effectBtn_u.png";
+
 const std::string ISPURCHASE = "isPurchase";
 
 #endif /* DefaultHeader_h */

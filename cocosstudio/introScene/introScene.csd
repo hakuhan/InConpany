@@ -23,17 +23,18 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="soundBtn" ActionTag="761332582" Tag="88" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1169.9529" RightMargin="568.2205" TopMargin="157.9681" BottomMargin="1160.6761" TouchEnable="True" FontSize="36" ButtonText="Sound" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="181.8267" Y="121.3557" />
+              <AbstractNodeData Name="soundBtn" ActionTag="761332582" Tag="88" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1050.4211" RightMargin="539.5789" TopMargin="168.7883" BottomMargin="1082.2117" TouchEnable="True" FontSize="36" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="330.0000" Y="189.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
-                <Position X="1260.8662" Y="1282.0319" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <Position X="1215.4211" Y="1271.2117" />
+                <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.6567" Y="0.8903" />
-                <PreSize X="0.0947" Y="0.0843" />
+                <PrePosition X="0.6330" Y="0.8828" />
+                <PreSize X="0.1719" Y="0.1312" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
-                <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
+                <PressedFileData Type="Normal" Path="commonViews/bgmBtn_u.png" Plist="" />
+                <NormalFileData Type="Normal" Path="commonViews/bgmBtn.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
