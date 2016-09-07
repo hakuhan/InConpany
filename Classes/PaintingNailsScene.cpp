@@ -63,6 +63,8 @@ bool PaintingNailsScene::init() {
     if (colors.bottle1 != "0") {
         //设置第一个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom1")->getChildByName("bottle1"));
+        auto crossBtn = bg->getChildByName("bottom1")->getChildByName("b1Btn");
+        crossBtn->setVisible(true);
         int strLen = (int)(colors.bottle1.length());
         names[0] = colors.bottle1;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle1.substr(0, strLen-1)));
@@ -74,6 +76,8 @@ bool PaintingNailsScene::init() {
     if (colors.bottle2 != "0") {
         //设置第二个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom2")->getChildByName("bottle2"));
+        auto crossBtn = bg->getChildByName("bottom2")->getChildByName("b2Btn");
+        crossBtn->setVisible(true);
         int strLen = (int)(colors.bottle2.length());
         names[1] = colors.bottle2;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle2.substr(0, strLen-1)));
@@ -85,6 +89,8 @@ bool PaintingNailsScene::init() {
     if (colors.bottle3 != "0") {
         //设置第三个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom3")->getChildByName("bottle3"));
+        auto crossBtn = bg->getChildByName("bottom3")->getChildByName("b3Btn");
+        crossBtn->setVisible(true);
         int strLen = (int)(colors.bottle3.length());
         names[2] = colors.bottle3;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle3.substr(0, strLen-1)));
@@ -96,6 +102,8 @@ bool PaintingNailsScene::init() {
     if (colors.bottle4 != "0") {
         //设置第四个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom4")->getChildByName("bottle4"));
+        auto crossBtn = bg->getChildByName("bottom4")->getChildByName("b4Btn");
+        crossBtn->setVisible(true);
         int strLen = (int)(colors.bottle4.length());
         names[3] = colors.bottle4;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle4.substr(0, strLen-1)));
@@ -107,6 +115,8 @@ bool PaintingNailsScene::init() {
     if (colors.bottle5 != "0") {
         //设置第五个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom5")->getChildByName("bottle5"));
+        auto crossBtn = bg->getChildByName("bottom5")->getChildByName("b5Btn");
+        crossBtn->setVisible(true);
         int strLen = (int)(colors.bottle5.length());
         names[4] = colors.bottle5;
         bottle->setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(colors.bottle5.substr(0, strLen-1)));
@@ -201,6 +211,8 @@ void PaintingNailsScene::updateBottle() {
     if (colors.bottle1 == "0") {
         //设置第一个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom1")->getChildByName("bottle1"));
+        auto crossBtn = bg->getChildByName("bottom1")->getChildByName("b1Btn");
+        crossBtn->setVisible(false);
         bottle->setTexture("SecondSceneView/emptyB.png");
         names[0] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
@@ -210,6 +222,8 @@ void PaintingNailsScene::updateBottle() {
     if (colors.bottle2 == "0") {
         //设置第二个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom2")->getChildByName("bottle2"));
+        auto crossBtn = bg->getChildByName("bottom2")->getChildByName("b2Btn");
+        crossBtn->setVisible(false);
         bottle->setTexture("SecondSceneView/emptyB.png");
         names[1] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
@@ -219,6 +233,8 @@ void PaintingNailsScene::updateBottle() {
     if (colors.bottle3 == "0") {
         //设置第三个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom3")->getChildByName("bottle3"));
+        auto crossBtn = bg->getChildByName("bottom3")->getChildByName("b3Btn");
+        crossBtn->setVisible(false);
         bottle->setTexture("SecondSceneView/emptyB.png");
         names[2] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
@@ -228,6 +244,8 @@ void PaintingNailsScene::updateBottle() {
     if (colors.bottle4 == "0") {
         //设置第四个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom4")->getChildByName("bottle4"));
+        auto crossBtn = bg->getChildByName("bottom4")->getChildByName("b4Btn");
+        crossBtn->setVisible(false);
         bottle->setTexture("SecondSceneView/emptyB.png");
         names[3] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
@@ -237,6 +255,8 @@ void PaintingNailsScene::updateBottle() {
     if (colors.bottle5 == "0") {
         //设置第五个瓶子
         bottle = (Sprite *)(bg->getChildByName("bottom4")->getChildByName("bottle4"));
+        auto crossBtn = bg->getChildByName("bottom5")->getChildByName("b5Btn");
+        crossBtn->setVisible(false);
         bottle->setTexture("SecondSceneView/emptyB.png");
         names[4] = "";
         Sprite* brush = (Sprite* )(bottle->getChildByName("brush"));
