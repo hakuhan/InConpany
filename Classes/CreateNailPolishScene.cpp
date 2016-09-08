@@ -119,6 +119,7 @@ bool CreateNailPolishScene::init() {
     });
     //声音开关
     auto soundBtn = (Button *)(bg->getChildByName("soundBtn"));
+    soundBtn->loadTextures(ISSOUNDOPEN?SOUNDBTN.c_str():SOUNDBTN_U.c_str(), ISSOUNDOPEN?SOUNDBTN_U.c_str():SOUNDBTN.c_str());
     soundBtn->addClickEventListener([=](Ref *p){
         if (ISSOUNDOPEN) {
             SETSOUND(false);
@@ -131,6 +132,7 @@ bool CreateNailPolishScene::init() {
         //设置开关状态
     });
     auto effectBtn = (Button *)(bg->getChildByName("effectBtn"));
+    effectBtn->loadTextures(ISEFFECTOPEN?EFFECTBTN.c_str():EFFECTBTN_U.c_str(), ISEFFECTOPEN?EFFECTBTN_U.c_str():EFFECTBTN.c_str());
     effectBtn->addClickEventListener([=](Ref *){
         if (ISEFFECTOPEN) {
             SETEFFECT(false);
@@ -153,7 +155,6 @@ bool CreateNailPolishScene::init() {
     auto saveNtc = (Text *)(saveNotice->getChildByName("info"));
     //国际化
     if (Application::getInstance()->getCurrentLanguage() == LanguageType::CHINESE) {
-        soundBtn->setTitleText("声音");
         commentBtn->setTitleText("评论");
         rmAds->setTitleText("去广告");
         mixBtn->setTitleText("混合");

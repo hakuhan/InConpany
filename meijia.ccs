@@ -103,6 +103,7 @@
           <Image Name="loadingBar2.png" />
           <Project Name="rmAds.csd" Type="Layer" />
           <Image Name="title.png" />
+          <Image Name="title2.png" />
         </Folder>
         <Folder Name="firstSceneView">
           <Image Name="bg.png" />

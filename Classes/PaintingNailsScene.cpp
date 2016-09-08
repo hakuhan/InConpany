@@ -149,6 +149,7 @@ bool PaintingNailsScene::init() {
     resetBtn->addClickEventListener(CC_CALLBACK_0(PaintingNailsScene::onClickResetBtn, this));
     //声音开关
     auto soundBtn = (Button *)(bg->getChildByName("soundBtn"));
+    soundBtn->loadTextures(ISSOUNDOPEN?SOUNDBTN.c_str():SOUNDBTN_U.c_str(), ISSOUNDOPEN?SOUNDBTN_U.c_str():SOUNDBTN.c_str());
     soundBtn->addClickEventListener([=](Ref *p){
         if (ISSOUNDOPEN) {
             SETSOUND(false);
@@ -161,6 +162,7 @@ bool PaintingNailsScene::init() {
         //设置开关状态
     });
     auto effectBtn = (Button *)(bg->getChildByName("effectBtn"));
+    effectBtn->loadTextures(ISEFFECTOPEN?EFFECTBTN.c_str():EFFECTBTN_U.c_str(), ISEFFECTOPEN?EFFECTBTN_U.c_str():EFFECTBTN.c_str());
     effectBtn->addClickEventListener([=](Ref *){
         if (ISEFFECTOPEN) {
             SETEFFECT(false);
@@ -187,7 +189,6 @@ bool PaintingNailsScene::init() {
     });
     //国际化
     if (Application::getInstance()->getCurrentLanguage() == LanguageType::CHINESE) {
-        soundBtn->setTitleText("声音");
         resetBtn->setTitleText("重置");
         commentBtn->setTitleText("评论");
         removeAddBtn->setTitleText("去广告");
@@ -254,7 +255,7 @@ void PaintingNailsScene::updateBottle() {
     
     if (colors.bottle5 == "0") {
         //设置第五个瓶子
-        bottle = (Sprite *)(bg->getChildByName("bottom4")->getChildByName("bottle4"));
+        bottle = (Sprite *)(bg->getChildByName("bottom5")->getChildByName("bottle5"));
         auto crossBtn = bg->getChildByName("bottom5")->getChildByName("b5Btn");
         crossBtn->setVisible(false);
         bottle->setTexture("SecondSceneView/emptyB.png");

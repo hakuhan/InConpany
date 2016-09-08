@@ -38,7 +38,7 @@ bool MainScene::init() {
     auto bg = (Layout *)(node->getChildByName("bg"));
     this->addChild(bg);
     //标题
-    auto title = (Text *)bg->getChildByName("title");
+    auto title = (Sprite *)bg->getChildByName("title_1");
     //play按钮
     auto playBtn = (Button *)(bg->getChildByName("startBtn"));
     playBtn->addClickEventListener(CC_CALLBACK_1(MainScene::onClick_play, this));
@@ -57,6 +57,7 @@ bool MainScene::init() {
     rightFoot->runAction(rightAction);
     
     auto soundBtn = (Button *)(bg->getChildByName("soundBtn"));
+    soundBtn->loadTextures(ISSOUNDOPEN?SOUNDBTN.c_str():SOUNDBTN_U.c_str(), ISSOUNDOPEN?SOUNDBTN_U.c_str():SOUNDBTN.c_str());
     soundBtn->addClickEventListener([=](Ref *p){
         //检查有没有开启声音
         if (ISSOUNDOPEN) {
@@ -88,9 +89,8 @@ bool MainScene::init() {
     });
     //国际化
     if (Application::getInstance()->getCurrentLanguage() == LanguageType::CHINESE) {
-        title->setString("美甲");
+        title->setTexture("commonViews/title.png");
         playBtn->setTitleText("开始");
-        soundBtn->setTitleText("声音");
         commentBtn->setTitleText("评论");
         shareBtn->setTitleText("分享");
         moreGame->setTitleText("更多");

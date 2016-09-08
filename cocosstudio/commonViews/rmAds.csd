@@ -14,7 +14,7 @@
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="672.0000" Y="624.0960" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="176" G="73" B="35" />
+                <CColor A="255" R="255" G="0" B="89" />
                 <PrePosition X="0.5000" Y="0.7880" />
                 <PreSize X="0.6320" Y="0.2300" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
@@ -30,7 +30,7 @@
                 <PrePosition X="0.2453" Y="0.3162" />
                 <PreSize X="0.2455" Y="0.2386" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
-                <TextColor A="255" R="176" G="73" B="35" />
+                <TextColor A="255" R="255" G="0" B="89" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
@@ -44,7 +44,7 @@
                 <PrePosition X="0.6992" Y="0.3162" />
                 <PreSize X="0.2455" Y="0.2386" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
-                <TextColor A="255" R="176" G="73" B="35" />
+                <TextColor A="255" R="255" G="0" B="89" />
                 <NormalFileData Type="Normal" Path="commonViews/button.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
