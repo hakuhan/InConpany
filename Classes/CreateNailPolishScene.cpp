@@ -250,6 +250,14 @@ void CreateNailPolishScene::onClickColor(Button *btn, Vec2 movePosition) {
 void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPositionAndButtton(Sprite *sprite, Vec2 movePosition, Button *btn) {
     //音效
     Audio::getInstance()->playEffect(C_LEFT);
+    //创建屏蔽点击事件层
+    auto layout = Layout::create();
+#define LAYOUTTAG 11
+    layout->setTag(LAYOUTTAG);
+    layout->setContentSize(Size(SCREAN_SIZE.width, SCREAN_SIZE.height));
+    layout->setAnchorPoint(Vec2(0, 0));
+    layout->setTouchEnabled(true);
+    this->addChild(layout);
     //判断按钮位置
     bool isLeftButton = false;
     
@@ -351,6 +359,13 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
 void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositionAndButton(Sprite* sprite, Vec2 movePosition, Button *btn) {
     //音效
     Audio::getInstance()->playEffect(C_RIGHT);
+    //设置不可点击层
+    auto layout = Layout::create();
+    layout->setTag(LAYOUTTAG);
+    layout->setContentSize(Size(SCREAN_SIZE.width, SCREAN_SIZE.height));
+    layout->setAnchorPoint(Vec2(0, 0));
+    layout->setTouchEnabled(true);
+    this->addChild(layout);
     //缩小、放大并弹出塞子、移动、倾倒、返回
     Vec2 firstPstn = sprite->getPosition();
     auto moveUpHight = sprite->getContentSize().height/3;
@@ -532,6 +547,7 @@ bool CreateNailPolishScene::isBottleFull() {
 
 //回调函数
 void CreateNailPolishScene::clearSprite(Sprite* s, Button* btn) {
+    this->removeChildByTag(LAYOUTTAG);
     this->removeChild(s);
     btn->setOpacity(255);
     this->chechStateOfMixButton();

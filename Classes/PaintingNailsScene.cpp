@@ -315,17 +315,21 @@ void PaintingNailsScene::setBrushWithBottle(Sprite *bottle) {
             if (neils.at(i)->getBoundingBox().containsPoint(location)) {
                 //获取指甲名字
                 std::string spriteName;
+                std::string nativeName;
                 if (i<5) {
                     //前五个
                     spriteName = StringUtils::format("SecondSceneView/%s-%d.png",potColor.substr(12, potColor.length()-17).c_str(),i+11);
+                    nativeName = StringUtils::format("SecondSceneView/L%d.png",i+1);
                 } /*else if (potColor.substr(12, potColor.length()-16) == "") {
                     
                 
                 } */else {
                     spriteName = StringUtils::format("SecondSceneView/%s-%d.png",potColor.substr(12, potColor.length()-17).c_str(),i+6);
+                    nativeName = StringUtils::format("SecondSceneView/L%d.png",i-4);
                 }
                 //涂上颜色
-                if (neils.at(i)->getSpriteFrame() != SpriteFrameCache::getInstance()->getSpriteFrameByName(spriteName)) {
+                
+                if (neils.at(i)->getSpriteFrame() == SpriteFrameCache::getInstance()->getSpriteFrameByName(nativeName)) {
                     //清除闪光
                     if (neils.at(i)->getChildByTag(11) != NULL) {
                         neils.at(i)->removeChildByTag(11);
