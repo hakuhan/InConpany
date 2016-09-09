@@ -59,6 +59,7 @@ const std::string C_RIGHT = "tAudio/click.mp3";
 const std::string C_MIX = "tAudio/clickMix.mp3";
 const std::string MOVE = "tAudio/Move.mp3";
 const std::string DUMP = "tAudio/dump.mp3";
+const std::string DUMPL = "tAudio/DumpL.mp3";
 const std::string CLEANBTN = "tAudio/cleanBtn.mp3";
 const std::string CLEANNEIL = "tAudio/cleanNeils.mp3";
 const std::string MIXPROCESS = "tAudio/making.mp3";

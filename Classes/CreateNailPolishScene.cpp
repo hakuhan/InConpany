@@ -365,7 +365,7 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     auto effectWithAudio = Spawn::create(efectsMove, CallFunc::create([=](){
         //播放音效
         if (isLeftButton) {
-            Audio::getInstance()->playEffect(DUMP);
+            Audio::getInstance()->playEffect(DUMPL);
         } else {
             Audio::getInstance()->playEffect(BLING);
         }
