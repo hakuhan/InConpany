@@ -29,6 +29,7 @@ bool Audio::init() {
     SimpleAudioEngine::getInstance()->preloadEffect(CLEANBTN.c_str());
     SimpleAudioEngine::getInstance()->preloadEffect(MIXPROCESS.c_str());
     SimpleAudioEngine::getInstance()->preloadEffect(SMEAR.c_str());
+    SimpleAudioEngine::getInstance()->preloadEffect(BLING.c_str());
     
     SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.5);
     return true;

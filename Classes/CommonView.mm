@@ -40,7 +40,8 @@ Layout* CommonView::getCommentView() {
     view->setTouchEnabled(true);
     auto black_lay = Layout::create();
     black_lay->setContentSize(SCREAN_SIZE);
-    black_lay->setPosition(Vec2(0,0));
+    black_lay->setAnchorPoint(Vec2(0.5, 0.5));
+    black_lay->setPosition(Vec2(SCREAN_SIZE.width/2, SCREAN_SIZE.height/2));
     black_lay->setTouchEnabled(true);
     black_lay->addChild(view);
     black_lay->addClickEventListener([=](Ref* p){

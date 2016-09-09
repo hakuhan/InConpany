@@ -4,10 +4,54 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>firstSceneView/dumpFlowerA1.png</key>
+			<key>firstSceneView/flowerD.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,0},{159,223}}</string>
+				<string>{{1,1},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/flowerD1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,226},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/flowerD2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,451},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/heartD.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,676},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/heartD1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{162,1},{159,223}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -15,10 +59,10 @@
 				<key>sourceSize</key>
 				<string>{159,223}</string>
 			</dict>
-			<key>firstSceneView/dumpFlowerA2.png</key>
+			<key>firstSceneView/heartD2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{223,0},{159,223}}</string>
+				<string>{{387,1},{159,223}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -26,10 +70,10 @@
 				<key>sourceSize</key>
 				<string>{159,223}</string>
 			</dict>
-			<key>firstSceneView/dumpHeartA1.png</key>
+			<key>firstSceneView/shapD.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,159},{159,223}}</string>
+				<string>{{612,1},{159,223}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -37,10 +81,21 @@
 				<key>sourceSize</key>
 				<string>{159,223}</string>
 			</dict>
-			<key>firstSceneView/dumpHeartA2.png</key>
+			<key>firstSceneView/shapD1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{223,159},{159,223}}</string>
+				<string>{{837,1},{159,223}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{159,223}</string>
+			</dict>
+			<key>firstSceneView/shapD2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{162,162},{159,223}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -48,10 +103,10 @@
 				<key>sourceSize</key>
 				<string>{159,223}</string>
 			</dict>
-			<key>firstSceneView/dumpShapA1.png</key>
+			<key>firstSceneView/slashD.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,318},{159,223}}</string>
+				<string>{{387,162},{159,223}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -59,10 +114,10 @@
 				<key>sourceSize</key>
 				<string>{159,223}</string>
 			</dict>
-			<key>firstSceneView/dumpShapA2.png</key>
+			<key>firstSceneView/slashD1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{223,318},{159,223}}</string>
+				<string>{{612,162},{159,223}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -70,25 +125,14 @@
 				<key>sourceSize</key>
 				<string>{159,223}</string>
 			</dict>
-			<key>firstSceneView/dumpSlashA1.png</key>
+			<key>firstSceneView/slashD2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,477},{159,223}}</string>
+				<string>{{837,226},{159,223}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{159,223}</string>
-			</dict>
-			<key>firstSceneView/dumpSlashA2.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{223,477},{159,223}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{159,223}</string>
 			</dict>
@@ -102,14 +146,14 @@
 			<key>realTextureFileName</key>
 			<string>rightFrameAction.png</string>
 			<key>size</key>
-			<string>{446,636}</string>
+			<string>{997,900}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>446</integer>
+			<integer>997</integer>
 			<key>height</key>
-			<integer>636</integer>
+			<integer>900</integer>
 		</dict>
 	</dict>
 </plist>

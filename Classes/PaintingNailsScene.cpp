@@ -184,7 +184,7 @@ bool PaintingNailsScene::init() {
 #define ADSTAG 11
         this->addChild(view);
         view->setScale(0.1);
-        auto scaleB = EaseInOut::create(ScaleBy::create(1, 10), 10);
+        auto scaleB = EaseBackOut::create(ScaleBy::create(1, 10));
         view->runAction(scaleB);
     });
     //国际化

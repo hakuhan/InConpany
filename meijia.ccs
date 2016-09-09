@@ -138,14 +138,6 @@
           <Image Name="dumpedSpecialEffect.png" />
           <Image Name="dumpedWB.png" />
           <Image Name="dumpedYB.png" />
-          <Image Name="dumpFlowerA1.png" />
-          <Image Name="dumpFlowerA2.png" />
-          <Image Name="dumpHeartA1.png" />
-          <Image Name="dumpHeartA2.png" />
-          <Image Name="dumpShapA1.png" />
-          <Image Name="dumpShapA2.png" />
-          <Image Name="dumpSlashA1.png" />
-          <Image Name="dumpSlashA2.png" />
           <PlistInfo Name="efectsImage.csi" Type="Plist" />
           <Image Name="effectPanel.png" />
           <Image Name="emptyBottle.png" />
@@ -153,9 +145,15 @@
           <Image Name="flowBottleU.png" />
           <Image Name="flowerBottle.png" />
           <Image Name="flowerBottleC.png" />
+          <Image Name="flowerD.png" />
+          <Image Name="flowerD1.png" />
+          <Image Name="flowerD2.png" />
           <Image Name="heartBottle.png" />
           <Image Name="heartBottleC.png" />
           <Image Name="heartBottleU.png" />
+          <Image Name="heartD.png" />
+          <Image Name="heartD1.png" />
+          <Image Name="heartD2.png" />
           <PlistInfo Name="left.csi" Type="Plist" />
           <Image Name="mixButton.png" />
           <Image Name="mixButtonU.png" />
@@ -174,9 +172,15 @@
           <Image Name="shapBottle.png" />
           <Image Name="shapBottleC.png" />
           <Image Name="shapBottleU.png" />
+          <Image Name="shapD.png" />
+          <Image Name="shapD1.png" />
+          <Image Name="shapD2.png" />
           <Image Name="slashBottle.png" />
           <Image Name="slashbottleC.png" />
           <Image Name="slashBottleU.png" />
+          <Image Name="slashD.png" />
+          <Image Name="slashD1.png" />
+          <Image Name="slashD2.png" />
           <Image Name="soundB.png" />
           <Image Name="specialBottle.png" />
           <Image Name="specialBottleC.png" />
@@ -690,8 +694,15 @@
           <PlistInfo Name="neils_3.csi" Type="Plist" />
           <Image Name="reset.png" />
         </Folder>
+        <Image Name="dumpA1.png" />
+        <Image Name="dumpA2.png" />
+        <Image Name="dumpA3.png" />
+        <Image Name="flowerD.png" />
         <TTF Name="fonderChild.ttf" />
+        <Image Name="heartD.png" />
         <TTF Name="Lieben_Font_Light.ttf" />
+        <Image Name="shapD.png" />
+        <Image Name="slashD.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

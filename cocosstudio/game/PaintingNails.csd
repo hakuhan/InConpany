@@ -409,13 +409,13 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="soundBtn" ActionTag="-1244680004" Tag="126" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1028.7841" RightMargin="561.2159" TopMargin="5.0400" BottomMargin="1245.9600" TouchEnable="True" FontSize="36" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="soundBtn" ActionTag="-1244680004" Tag="126" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1028.7841" RightMargin="561.2159" TopMargin="14.4000" BottomMargin="1236.6000" TouchEnable="True" FontSize="36" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="330.0000" Y="189.0000" />
                 <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
-                <Position X="1358.7841" Y="1434.9600" />
-                <Scale ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="1358.7841" Y="1425.6000" />
+                <Scale ScaleX="0.6500" ScaleY="0.6500" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7077" Y="0.9965" />
+                <PrePosition X="0.7077" Y="0.9900" />
                 <PreSize X="0.1719" Y="0.1312" />
                 <FontResource Type="Normal" Path="fonderChild.ttf" Plist="" />
                 <TextColor A="255" R="176" G="73" B="35" />
@@ -478,13 +478,13 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="effectBtn" ActionTag="1085858636" Tag="118" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="511.6080" RightMargin="1078.3920" TopMargin="1.1520" BottomMargin="1249.8480" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="effectBtn" ActionTag="1085858636" Tag="118" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="511.6080" RightMargin="1078.3920" TopMargin="14.4000" BottomMargin="1236.6000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="300" Scale9Height="167" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="330.0000" Y="189.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
-                <Position X="676.6080" Y="1438.8480" />
-                <Scale ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="676.6080" Y="1425.6000" />
+                <Scale ScaleX="0.6500" ScaleY="0.6500" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3524" Y="0.9992" />
+                <PrePosition X="0.3524" Y="0.9900" />
                 <PreSize X="0.1719" Y="0.1312" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <PressedFileData Type="Normal" Path="commonViews/effectBtn_u.png" Plist="" />

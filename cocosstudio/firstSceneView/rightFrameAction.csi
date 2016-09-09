@@ -1,16 +1,20 @@
 <PlistInfoProjectFile>
   <PropertyGroup Name="rightFrameAction" Type="Plist" ID="487bfb8d-41aa-45c8-bd06-49a8f116920f" Version="3.10.0.0" />
-  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
-      <FilePathData Path="firstSceneView/dumpFlowerA1.png" />
-      <FilePathData Path="firstSceneView/dumpFlowerA2.png" />
-      <FilePathData Path="firstSceneView/dumpHeartA1.png" />
-      <FilePathData Path="firstSceneView/dumpHeartA2.png" />
-      <FilePathData Path="firstSceneView/dumpShapA1.png" />
-      <FilePathData Path="firstSceneView/dumpShapA2.png" />
-      <FilePathData Path="firstSceneView/dumpSlashA1.png" />
-      <FilePathData Path="firstSceneView/dumpSlashA2.png" />
+      <FilePathData Path="firstSceneView/flowerD.png" />
+      <FilePathData Path="firstSceneView/flowerD1.png" />
+      <FilePathData Path="firstSceneView/flowerD2.png" />
+      <FilePathData Path="firstSceneView/heartD.png" />
+      <FilePathData Path="firstSceneView/heartD1.png" />
+      <FilePathData Path="firstSceneView/heartD2.png" />
+      <FilePathData Path="firstSceneView/shapD.png" />
+      <FilePathData Path="firstSceneView/shapD1.png" />
+      <FilePathData Path="firstSceneView/shapD2.png" />
+      <FilePathData Path="firstSceneView/slashD.png" />
+      <FilePathData Path="firstSceneView/slashD1.png" />
+      <FilePathData Path="firstSceneView/slashD2.png" />
     </ImageFiles>
-    <MaxSize Width="512" Height="1024" />
+    <MaxSize Width="1024" Height="1024" />
   </Content>
 </PlistInfoProjectFile>

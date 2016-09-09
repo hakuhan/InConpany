@@ -54,15 +54,25 @@ bool CreateNailPolishScene::init() {
     this->addChild(polishBtn);
     //获取左边按钮
     auto purpleCB = (Button *)(bg->getChildByName("yellowBottle"));
+//    purpleCB->setSkewY(-6);
+//    purpleCB->setSkewX(6);
     purpleCB->setTag(lYellow);
     auto whiteCB = (Button *)(bg->getChildByName("blackBottle"));
     whiteCB->setTag(lBlack);
+//    whiteCB->setSkewY(-3);
+//    whiteCB->setSkewX(3);
     auto redCB = (Button *)(bg->getChildByName("blueBottle"));
     redCB->setTag(lBlue);
+//    redCB->setSkewY(-6);
+//    redCB->setSkewX(6);
     auto blackCB = (Button *)(bg->getChildByName("pinkBottle"));
     blackCB->setTag(lPink);
+//    blackCB->setSkewY(-4);
+//    blackCB->setSkewX(4);
     auto yellowCB = (Button *)(bg->getChildByName("whiteBottle"));
     yellowCB->setTag(lWhite);
+//    yellowCB->setSkewY(-3);
+//    yellowCB->setSkewX(3);
     //按钮事件
     purpleCB->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickColor, this, purpleCB, potPosition));
     whiteCB->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickColor, this, whiteCB, potPosition));
@@ -114,7 +124,7 @@ bool CreateNailPolishScene::init() {
 #define ADSTAG 11
         this->addChild(view);
         view->setScale(0.1);
-        auto scaleB = EaseInOut::create(ScaleBy::create(1, 10), 10);
+        auto scaleB = EaseBackOut::create(ScaleBy::create(1, 10));
         view->runAction(scaleB);
     });
     //声音开关
@@ -278,12 +288,12 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     auto moveUp = MoveBy::create(0.2, Vec2(0, sprite->getContentSize().height/3));
     auto spawn1 = Spawn::create(scaleB, moveUp, NULL);
     
-    auto shake1 = RotateBy::create(0.1, 10);
-    auto shake2 = RotateBy::create(0.1, -10);
+    auto shake1 = RotateBy::create(0.1, 15);
+    auto shake2 = RotateBy::create(0.1, -15);
     ccBezierConfig bzr;
-    bzr.controlPoint_1 = Vec2(firstPstn.x, firstPstn.y+200);
+    bzr.controlPoint_1 = Vec2(firstPstn.x, firstPstn.y+300);
     bzr.controlPoint_2 = Vec2(movePosition.x-(movePosition.x-firstPstn.x)/2, movePosition.y+sprite->getContentSize().height/2);
-    bzr.endPosition = Vec2(movePosition.x-(isLeftButton?65:-(sprite->getContentSize().height)/2), movePosition.y+20);
+    bzr.endPosition = Vec2(movePosition.x-(isLeftButton?55:-(sprite->getContentSize().height)/2), movePosition.y+20);
     auto bzl =BezierTo::create(1, bzr);
     auto moveB = MoveTo::create(0.5, firstPstn);
     //移动过程中变小
@@ -307,6 +317,7 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     //倒水动画
     auto efects = (Sprite *)(this->getChildByName("bg")->getChildByName("pBg")->getChildByName("efects"));
     TargetedAction *efectsMove;
+//    auto pstn = efects->getPosition();
     auto catche = SpriteFrameCache::getInstance();
     auto fadeIn = FadeIn::create(0.1);
     auto fadeOut = FadeOut::create(0.1);
@@ -333,12 +344,17 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
                 break;
         }
         //滴水效果
-        auto moveDown = EaseBackIn::create(MoveBy::create(0.3, Vec2(0, -60)));
-        auto moveBack = MoveBy::create(0.1, Vec2(0, 60));
-        efectsMove = TargetedAction::create(efects, Sequence::create(fadeIn, moveDown, fadeOut, moveBack, fadeIn->clone(), moveDown->clone(), fadeOut->clone(), moveBack->clone(), NULL));
+        efects->setAnchorPoint(Vec2(0.5, 1));
+        auto scaleL = ScaleBy::create(0.1, 1, 1.5);
+        auto scaleLB = ScaleTo::create(0.3, 1, 0.5);
+        auto scaleB = ScaleBy::create(0.2, 1, 2);
+        auto moveDown = EaseBackIn::create(MoveBy::create(0.3, Vec2(0, -50)));
+        auto moveBack = MoveBy::create(0.1, Vec2(0, 50));
+        efectsMove = TargetedAction::create(efects, Sequence::create(fadeIn, scaleL, scaleLB, scaleB, moveDown, fadeOut, moveBack, fadeIn->clone(), scaleL->clone(), scaleLB->clone(), scaleB->clone(), moveDown->clone(), fadeOut->clone(), moveBack->clone(), NULL));
     }else {
         efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/dumpedSpecialEffect.png"));
         //创建效果
+        efects->setAnchorPoint(Vec2(0.5, 0.5));
         auto flipY = FlipY::create(true);
         auto flipBack = FlipY::create(false);
         auto moveDown = MoveBy::create(0.3, Vec2(0, -30));
@@ -346,9 +362,14 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
         efectsMove = TargetedAction::create(efects, Sequence::create(flipY, fadeIn, moveDown, moveBack, moveDown->clone(), moveBack->clone(), fadeOut, flipBack, NULL));
     }
     
-    auto effectWithAudio = Spawn::create(efectsMove, CallFunc::create([](){
+    auto effectWithAudio = Spawn::create(efectsMove, CallFunc::create([=](){
         //播放音效
-        Audio::getInstance()->playEffect(DUMP);
+        if (isLeftButton) {
+            Audio::getInstance()->playEffect(DUMP);
+        } else {
+            Audio::getInstance()->playEffect(BLING);
+        }
+        
     }), NULL);
     
     auto sqnc = Sequence::create(scaleS, spawn1, shake1, shake2, shake2, shake1, shake1, shake2, moveAndScaleS, rotate, effectWithAudio, spawn2, CallFuncN::create(CC_CALLBACK_0(CreateNailPolishScene::clearSprite, this, sprite, btn)), NULL);
@@ -414,47 +435,52 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     }), scaleSmlWhenMove, NULL);
     //创建精灵帧动画
     auto spriteFrameCatche = SpriteFrameCache::getInstance();
-    std::string fNm1, fNm2, fNm3, fNm4;
+    std::string fNm1, fNm2, fNm3, fNm4, fNm5;
     switch (btn->getTag()) {
         case rSlash:
             {
-                fNm1 = "firstSceneView/dumpSlashA1.png";
-                fNm2 = "firstSceneView/dumpSlashA2.png";
-                fNm3 = "firstSceneView/dumpSlashA1.png";
-                fNm4 = "firstSceneView/dumpSlashA2.png";
+                fNm1 = "firstSceneView/slashD.png";
+                fNm2 = "firstSceneView/slashD1.png";
+                fNm3 = "firstSceneView/slashD2.png";
+                fNm4 = "firstSceneView/slashD1.png";
+                fNm5 = "firstSceneView/slashD2.png";
             }
             break;
         case rFlower:
             {
-                fNm1 = "firstSceneView/dumpFlowerA1.png";
-                fNm2 = "firstSceneView/dumpFlowerA2.png";
-                fNm3 = "firstSceneView/dumpFlowerA1.png";
-                fNm4 = "firstSceneView/dumpFlowerA2.png";
+                fNm1 = "firstSceneView/slashD.png";
+                fNm2 = "firstSceneView/slashD1.png";
+                fNm3 = "firstSceneView/slashD2.png";
+                fNm4 = "firstSceneView/slashD1.png";
+                fNm5 = "firstSceneView/slashD2.png";
             }
             break;
         case rShap:
             {
-                fNm1 = "firstSceneView/dumpShapA1.png";
-                fNm2 = "firstSceneView/dumpShapA2.png";
-                fNm3 = "firstSceneView/dumpShapA1.png";
-                fNm4 = "firstSceneView/dumpShapA2.png";
+                fNm1 = "firstSceneView/slashD.png";
+                fNm2 = "firstSceneView/slashD1.png";
+                fNm3 = "firstSceneView/slashD2.png";
+                fNm4 = "firstSceneView/slashD1.png";
+                fNm5 = "firstSceneView/slashD2.png";
             }
             break;
         case rHeart:
             {
-                fNm1 = "firstSceneView/dumpHeartA1.png";
-                fNm2 = "firstSceneView/dumpHeartA2.png";
-                fNm3 = "firstSceneView/dumpHeartA1.png";
-                fNm4 = "firstSceneView/dumpHeartA2.png";
+                fNm1 = "firstSceneView/slashD.png";
+                fNm2 = "firstSceneView/slashD1.png";
+                fNm3 = "firstSceneView/slashD2.png";
+                fNm4 = "firstSceneView/slashD1.png";
+                fNm5 = "firstSceneView/slashD2.png";
             }
             break;
             
         default:
         {
-            fNm1 = "firstSceneView/dumpSlashA1.png";
-            fNm2 = "firstSceneView/dumpSlashA2.png";
-            fNm3 = "firstSceneView/dumpSlashA1.png";
-            fNm4 = "firstSceneView/dumpSlashA2.png";
+            fNm1 = "firstSceneView/slashD.png";
+            fNm2 = "firstSceneView/slashD1.png";
+            fNm3 = "firstSceneView/slashD2.png";
+            fNm4 = "firstSceneView/slashD1.png";
+            fNm5 = "firstSceneView/slashD2.png";
         }
             break;
     }
@@ -464,11 +490,13 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
     auto frame2 = spriteFrameCatche->getSpriteFrameByName(fNm2);
     auto frame3 = spriteFrameCatche->getSpriteFrameByName(fNm3);
     auto frame4 = spriteFrameCatche->getSpriteFrameByName(fNm4);
+    auto frame5 = spriteFrameCatche->getSpriteFrameByName(fNm5);
     
     array.pushBack(frame1);
     array.pushBack(frame2);
     array.pushBack(frame3);
     array.pushBack(frame4);
+    array.pushBack(frame5);
     
     auto animation = Animation::createWithSpriteFrames(array, 0.3, 1);
     animation->setRestoreOriginalFrame(true);
@@ -575,7 +603,7 @@ void CreateNailPolishScene::showNotice() {
     //提示
     if (noticeAreaL == true) {
         //获取右边的notice节点
-        for (int i = lYellow; i<=lWhite; i++) {
+        for (int i = lWhite; i<=lBlue; i++) {
             auto notice = (Sprite *)(this->getChildByName("bg")->getChildByTag(i)->getChildByName("notice"));
             this->showNoticeAnimationBySprite(notice);
         }

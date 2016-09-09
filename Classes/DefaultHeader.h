@@ -64,6 +64,7 @@ const std::string CLEANNEIL = "tAudio/cleanNeils.mp3";
 const std::string MIXPROCESS = "tAudio/making.mp3";
 const std::string MIXRESULT = "tAudio/result.mp3";
 const std::string SMEAR = "tAudio/neils.mp3";
+const std::string BLING = "tAudio/Bling.mp3";
 
 const std::string SOUNDBTN = "commonViews/bgmBtn.png";
 const std::string SOUNDBTN_U = "commonViews/bgmBtn_u.png";
