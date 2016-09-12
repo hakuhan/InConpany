@@ -45,6 +45,7 @@ Layout* CommonView::getCommentView() {
     black_lay->setTouchEnabled(true);
     black_lay->addChild(view);
     black_lay->addClickEventListener([=](Ref* p){
+        black_lay->setTouchEnabled(false);
         auto scaleS = Sequence::create(EaseIn::create(ScaleBy::create(1, 0.1), 10), CallFunc::create([black_lay](){
             black_lay->removeFromParent();
         }), NULL);

@@ -33,6 +33,10 @@ bool CreateNailPolishScene::init() {
     //初始化数据
     choices = {0, 0, 0, 0};
     canSelectedMixButton = false;
+    isL1Animating = false;
+    isL2Animating = false;
+    isRAnimating = false;
+    isTAnimaitng = false;
     colors.bottle1 = UD->getStringForKey("b1Color", "0");
     colors.bottle2 = UD->getStringForKey("b2Color", "0");
     colors.bottle3 = UD->getStringForKey("b3Color", "0");
@@ -54,25 +58,15 @@ bool CreateNailPolishScene::init() {
     this->addChild(polishBtn);
     //获取左边按钮
     auto purpleCB = (Button *)(bg->getChildByName("yellowBottle"));
-//    purpleCB->setSkewY(-6);
-//    purpleCB->setSkewX(6);
     purpleCB->setTag(lYellow);
     auto whiteCB = (Button *)(bg->getChildByName("blackBottle"));
     whiteCB->setTag(lBlack);
-//    whiteCB->setSkewY(-3);
-//    whiteCB->setSkewX(3);
     auto redCB = (Button *)(bg->getChildByName("blueBottle"));
     redCB->setTag(lBlue);
-//    redCB->setSkewY(-6);
-//    redCB->setSkewX(6);
     auto blackCB = (Button *)(bg->getChildByName("pinkBottle"));
     blackCB->setTag(lPink);
-//    blackCB->setSkewY(-4);
-//    blackCB->setSkewX(4);
     auto yellowCB = (Button *)(bg->getChildByName("whiteBottle"));
     yellowCB->setTag(lWhite);
-//    yellowCB->setSkewY(-3);
-//    yellowCB->setSkewX(3);
     //按钮事件
     purpleCB->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickColor, this, purpleCB, potPosition));
     whiteCB->addClickEventListener(CC_CALLBACK_0(CreateNailPolishScene::onClickColor, this, whiteCB, potPosition));
@@ -170,7 +164,7 @@ bool CreateNailPolishScene::init() {
         mixBtn->setTitleText("混合");
         color_title->setString("颜色");
         shape_title->setString("形状");
-        saveNtc->setString("要保存这个指甲油吗？");
+        saveNtc->setString("是否保存？");
         yesBtn->setTitleText("是");
         noBtn->setTitleText("不");
     }
@@ -224,9 +218,12 @@ void CreateNailPolishScene::onClickColor(Button *btn, Vec2 movePosition) {
     }
     //创建动画
     auto sprite = createSpriteWithTagAndPosition(tag, btn->convertToWorldSpace(btn->getContentSize()/2));
-    this->addChild(sprite);
-    btn->setCascadeOpacityEnabled(false);
-    btn->setOpacity(0);
+    if (result != 4) {
+        this->addChild(sprite);
+        btn->setCascadeOpacityEnabled(false);
+        btn->setOpacity(0);
+        btn->setTouchEnabled(false);
+    }
     switch (result) {
         case 0:
         case 1:
@@ -260,14 +257,14 @@ void CreateNailPolishScene::onClickColor(Button *btn, Vec2 movePosition) {
 void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPositionAndButtton(Sprite *sprite, Vec2 movePosition, Button *btn) {
     //音效
     Audio::getInstance()->playEffect(C_LEFT);
-    //创建屏蔽点击事件层
-    auto layout = Layout::create();
-#define LAYOUTTAG 11
-    layout->setTag(LAYOUTTAG);
-    layout->setContentSize(Size(SCREAN_SIZE.width, SCREAN_SIZE.height));
-    layout->setAnchorPoint(Vec2(0, 0));
-    layout->setTouchEnabled(true);
-    this->addChild(layout);
+//    //创建屏蔽点击事件层
+//    auto layout = Layout::create();
+//#define LAYOUTTAG 11
+//    layout->setTag(LAYOUTTAG);
+//    layout->setContentSize(Size(SCREAN_SIZE.width, SCREAN_SIZE.height));
+//    layout->setAnchorPoint(Vec2(0, 0));
+//    layout->setTouchEnabled(true);
+//    this->addChild(layout);
     //判断按钮位置
     bool isLeftButton = false;
     
@@ -277,10 +274,21 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
     }
     //获取最开始位置
     Vec2 firstPstn;
+    Sprite *effects;  //特效精灵
     if (isLeftButton) {
         firstPstn = sprite->getPosition();
+        if (choices.lFirstC == btn->getTag()) {
+            isL1Animating = true;
+            effects = (Sprite *)(this->getChildByName("bg")->getChildByName("pBg")->getChildByName("effect"));
+        } else {
+            effects = (Sprite *)(this->getChildByName("bg")->getChildByName("pBg")->getChildByName("effect2"));
+            isL2Animating = true;
+        }
+        
     } else {
+        effects = (Sprite *)(this->getChildByName("bg")->getChildByName("pBg")->getChildByName("effect3"));
         firstPstn = sprite->convertToWorldSpace(sprite->getContentSize()/2);
+        isTAnimaitng = true;
     }
     //创建动画:缩小、放大并上升、摇晃、移动、倾倒、返回
     auto scaleS = ScaleBy::create(0.1, 1, 0.5);
@@ -314,8 +322,6 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
         //播放音效
         Audio::getInstance()->playEffect(MOVE);
     }), NULL);
-    //倒水动画
-    auto efects = (Sprite *)(this->getChildByName("bg")->getChildByName("pBg")->getChildByName("efects"));
     TargetedAction *efectsMove;
 //    auto pstn = efects->getPosition();
     auto catche = SpriteFrameCache::getInstance();
@@ -325,41 +331,41 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
         //创建精灵帧
         switch (btn->getTag()) {
             case lYellow:
-                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/yellowDrop.png"));
+                effects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/yellowDrop.png"));
                 break;
             case lBlack:
-                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blackDrop.png"));
+                effects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blackDrop.png"));
                 break;
             case lBlue:
-                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blueDrop.png"));
+                effects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blueDrop.png"));
                 break;
             case lPink:
-                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/pinkDrop.png"));
+                effects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/pinkDrop.png"));
                 break;
             case lWhite:
-                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/whiteDrop.png"));
+                effects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/whiteDrop.png"));
                 break;
             default:
-                efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blackDrop.png"));
+                effects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/blackDrop.png"));
                 break;
         }
         //滴水效果
-        efects->setAnchorPoint(Vec2(0.5, 1));
+        effects->setAnchorPoint(Vec2(0.5, 1));
         auto scaleL = ScaleBy::create(0.1, 1, 1.5);
         auto scaleLB = ScaleTo::create(0.3, 1, 0.5);
         auto scaleB = ScaleBy::create(0.2, 1, 2);
         auto moveDown = EaseBackIn::create(MoveBy::create(0.3, Vec2(0, -50)));
         auto moveBack = MoveBy::create(0.1, Vec2(0, 50));
-        efectsMove = TargetedAction::create(efects, Sequence::create(fadeIn, scaleL, scaleLB, scaleB, moveDown, fadeOut, moveBack, fadeIn->clone(), scaleL->clone(), scaleLB->clone(), scaleB->clone(), moveDown->clone(), fadeOut->clone(), moveBack->clone(), NULL));
+        efectsMove = TargetedAction::create(effects, Sequence::create(fadeIn, scaleL, scaleLB, scaleB, moveDown, fadeOut, moveBack, fadeIn->clone(), scaleL->clone(), scaleLB->clone(), scaleB->clone(), moveDown->clone(), fadeOut->clone(), moveBack->clone(), NULL));
     }else {
-        efects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/dumpedSpecialEffect.png"));
+        effects->setSpriteFrame(catche->getSpriteFrameByName("firstSceneView/dumpedSpecialEffect.png"));
         //创建效果
-        efects->setAnchorPoint(Vec2(0.5, 0.5));
+        effects->setAnchorPoint(Vec2(0.5, 0.5));
         auto flipY = FlipY::create(true);
         auto flipBack = FlipY::create(false);
         auto moveDown = MoveBy::create(0.3, Vec2(0, -30));
         auto moveBack = MoveBy::create(0.3, Vec2(0, 30));
-        efectsMove = TargetedAction::create(efects, Sequence::create(flipY, fadeIn, moveDown, moveBack, moveDown->clone(), moveBack->clone(), fadeOut, flipBack, NULL));
+        efectsMove = TargetedAction::create(effects, Sequence::create(flipY, fadeIn, moveDown, moveBack, moveDown->clone(), moveBack->clone(), fadeOut, flipBack, NULL));
     }
     
     auto effectWithAudio = Spawn::create(efectsMove, CallFunc::create([=](){
@@ -378,15 +384,9 @@ void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPo
 
 #pragma mark 创建右边的动画
 void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositionAndButton(Sprite* sprite, Vec2 movePosition, Button *btn) {
+    isRAnimating = true;
     //音效
     Audio::getInstance()->playEffect(C_RIGHT);
-    //设置不可点击层
-    auto layout = Layout::create();
-    layout->setTag(LAYOUTTAG);
-    layout->setContentSize(Size(SCREAN_SIZE.width, SCREAN_SIZE.height));
-    layout->setAnchorPoint(Vec2(0, 0));
-    layout->setTouchEnabled(true);
-    this->addChild(layout);
     //缩小、放大并弹出塞子、移动、倾倒、返回
     Vec2 firstPstn = sprite->getPosition();
     auto moveUpHight = sprite->getContentSize().height/3;
@@ -550,8 +550,8 @@ void CreateNailPolishScene::onClickMixButton() {
     //罐子动画
     auto potShake1 = TargetedAction::create(pot, RotateBy::create(0.15, 10));
     auto potShake2 = TargetedAction::create(pot, RotateBy::create(0.15, -10));
-    auto potScaleS = TargetedAction::create(pot, ScaleBy::create(0.1, 0.5));
-    auto potScaleB = EaseBackInOut::create(TargetedAction::create(pot, ScaleBy::create(0.3, 2)));
+    auto potScaleS = TargetedAction::create(pot, ScaleBy::create(0.1, 1, 0.6));
+    auto potScaleB = EaseBackInOut::create(TargetedAction::create(pot, ScaleTo::create(0.3, 1)));
     auto mixScaleB = Spawn::create(EaseInOut::create(TargetedAction::create(mixSuccess, ScaleBy::create(0.5, 10)), 10), CallFunc::create([](){
         //播放音效
         Audio::getInstance()->playEffect(MIXRESULT);
@@ -575,9 +575,18 @@ bool CreateNailPolishScene::isBottleFull() {
 
 //回调函数
 void CreateNailPolishScene::clearSprite(Sprite* s, Button* btn) {
-    this->removeChildByTag(LAYOUTTAG);
+    if (choices.lFirstC == btn->getTag()) {
+        isL1Animating = false;
+    } else if (choices.lSecondC == btn->getTag()) {
+        isL2Animating = false;
+    } else if (choices.rChoice == btn->getTag()) {
+        isRAnimating = false;
+    } else {
+        isTAnimaitng = false;
+    }
     this->removeChild(s);
     btn->setOpacity(255);
+    btn->setTouchEnabled(true);
     this->chechStateOfMixButton();
     this->showCenterBottleWithTag(btn->getTag());
 }
@@ -601,6 +610,10 @@ void CreateNailPolishScene::showNotice() {
         specailCondition = true;
     }
     //提示
+    auto mixNotice = (Sprite *)(this->getChildByName("bg")->getChildByName("MixBtn")->getChildByName("notice"));
+    if (canSelectedMixButton) {
+        this->showNoticeAnimationBySprite(mixNotice);
+    }
     if (noticeAreaL == true) {
         //获取右边的notice节点
         for (int i = lWhite; i<=lBlue; i++) {
@@ -609,7 +622,7 @@ void CreateNailPolishScene::showNotice() {
         }
     }
     if (noticeAreaR == true) {
-        for (int i = rSlash; i<=rHeart; i++) {
+        for (int i = rShap; i<=rHeart; i++) {
             auto notice = (Sprite *)(this->getChildByName("bg")->getChildByTag(i)->getChildByName("notice"));
             this->showNoticeAnimationBySprite(notice);
         }
@@ -684,7 +697,8 @@ Sprite* CreateNailPolishScene::createSpriteWithTagAndPosition(int tag, Vec2 posi
 
 //判断是否能够选择
 void CreateNailPolishScene::chechStateOfMixButton() {
-    if (((choices.lFirstC != 0 || choices.lSecondC != 0)&&choices.rChoice != 0)||(choices.lFirstC != 0 && choices.lSecondC == 0)) {
+    //判断:是否只选第一个或者两个颜色加上形状必须没有尽兴动画
+    if ((((choices.lFirstC != 0 || choices.lSecondC != 0)&&choices.rChoice != 0)||(choices.lFirstC != 0 && choices.lSecondC == 0)) && isL2Animating == false&&isL1Animating==false && isRAnimating == false && isTAnimaitng == false) {
         canSelectedMixButton = true;
     } else {
         canSelectedMixButton = false;
