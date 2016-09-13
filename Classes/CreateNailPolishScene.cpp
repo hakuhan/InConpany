@@ -257,17 +257,8 @@ void CreateNailPolishScene::onClickColor(Button *btn, Vec2 movePosition) {
 void CreateNailPolishScene::showLeftAndTopButtonClickedAnimationsWithSpriteAndPositionAndButtton(Sprite *sprite, Vec2 movePosition, Button *btn) {
     //音效
     Audio::getInstance()->playEffect(C_LEFT);
-//    //创建屏蔽点击事件层
-//    auto layout = Layout::create();
-//#define LAYOUTTAG 11
-//    layout->setTag(LAYOUTTAG);
-//    layout->setContentSize(Size(SCREAN_SIZE.width, SCREAN_SIZE.height));
-//    layout->setAnchorPoint(Vec2(0, 0));
-//    layout->setTouchEnabled(true);
-//    this->addChild(layout);
     //判断按钮位置
     bool isLeftButton = false;
-    
     
     if (btn->getTag()>10 &&btn->getTag()<16) {
         isLeftButton = true;
@@ -448,29 +439,29 @@ void CreateNailPolishScene::showRightButtonClickedAnimationsWithSpriteAndPositio
             break;
         case rFlower:
             {
-                fNm1 = "firstSceneView/slashD.png";
-                fNm2 = "firstSceneView/slashD1.png";
-                fNm3 = "firstSceneView/slashD2.png";
-                fNm4 = "firstSceneView/slashD1.png";
-                fNm5 = "firstSceneView/slashD2.png";
+                fNm1 = "firstSceneView/flowerD.png";
+                fNm2 = "firstSceneView/flowerD1.png";
+                fNm3 = "firstSceneView/flowerD2.png";
+                fNm4 = "firstSceneView/flowerD1.png";
+                fNm5 = "firstSceneView/flowerD2.png";
             }
             break;
         case rShap:
             {
-                fNm1 = "firstSceneView/slashD.png";
-                fNm2 = "firstSceneView/slashD1.png";
-                fNm3 = "firstSceneView/slashD2.png";
-                fNm4 = "firstSceneView/slashD1.png";
-                fNm5 = "firstSceneView/slashD2.png";
+                fNm1 = "firstSceneView/shapD.png";
+                fNm2 = "firstSceneView/shapD1.png";
+                fNm3 = "firstSceneView/shapD2.png";
+                fNm4 = "firstSceneView/shapD1.png";
+                fNm5 = "firstSceneView/shapD2.png";
             }
             break;
         case rHeart:
             {
-                fNm1 = "firstSceneView/slashD.png";
-                fNm2 = "firstSceneView/slashD1.png";
-                fNm3 = "firstSceneView/slashD2.png";
-                fNm4 = "firstSceneView/slashD1.png";
-                fNm5 = "firstSceneView/slashD2.png";
+                fNm1 = "firstSceneView/heartD.png";
+                fNm2 = "firstSceneView/heartD1.png";
+                fNm3 = "firstSceneView/heartD2.png";
+                fNm4 = "firstSceneView/heartD1.png";
+                fNm5 = "firstSceneView/heartD2.png";
             }
             break;
             
@@ -640,11 +631,14 @@ void CreateNailPolishScene::showNotice() {
 
 //通知的动画
 void CreateNailPolishScene::showNoticeAnimationBySprite(Sprite *sprite) {
+    auto position = sprite->getPosition();
     auto fadeIn = FadeIn::create(0.1);
     auto moveUp = MoveBy::create(0.3, Vec2(0, -30));
     auto moveDown = MoveBy::create(0.3, Vec2(0, 30));
     auto fadeOut = FadeOut::create(0.1);
-    auto sqnc = Sequence::create(fadeIn, moveUp, moveDown, moveUp->clone(), moveDown->clone(), fadeOut, NULL);
+    auto sqnc = Sequence::create(fadeIn, moveUp, moveDown, moveUp->clone(), moveDown->clone(), fadeOut, CallFunc::create([=](){
+        sprite->setPosition(position);
+    }), NULL);
     sprite->runAction(sqnc);
 }
 
